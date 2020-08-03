@@ -2,9 +2,14 @@ import React from "react";
 
 function App() {
   return (
-    <div className="App">
-      <h1>pokedex</h1>
-    </div>
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=50").then((response) =>
+      console.log(response)
+    ),
+    (
+      <div className="App">
+        <h1>pokedex</h1>
+      </div>
+    )
   );
 }
 
