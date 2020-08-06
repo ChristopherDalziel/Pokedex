@@ -6,9 +6,10 @@ function App() {
       console.log(response)
     ),
     (
-      <div className="App">
-        <h1>pokedex</h1>
-      </div>
+      <main>
+        <h1>Pokèdex</h1>
+        <h2>Using Pokèmon api</h2>
+      </main>
     )
   );
 }
