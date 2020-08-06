@@ -6,7 +6,7 @@ function App() {
       console.log(response)
     ),
     (
-      <main>
+      <main className="test">
         <h1>Pokèdex</h1>
         <h2>Using Pokèmon api</h2>
       </main>
