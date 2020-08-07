@@ -1,6 +1,6 @@
 import React from "react";
 
-function App() {
+function Landing() {
   return (
     // fetch("https://pokeapi.co/api/v2/pokemon?limit=50").then((response) =>
     //   console.log(response)
@@ -11,4 +11,4 @@ function App() {
   );
 }
 
-export default App;
+export default Landing;
