@@ -1,14 +1,15 @@
 import React from "react";
+import Pokedex from "../Pokedex";
 
-function Landing() {
+const Landing = () => {
   return (
     // fetch("https://pokeapi.co/api/v2/pokemon?limit=50").then((response) =>
     //   console.log(response)
     // ),
     <main className="container">
-      <div className="pokedex"></div>
+      <Pokedex />
     </main>
   );
-}
+};
 
 export default Landing;
