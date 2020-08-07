@@ -1,6 +1,23 @@
-$pokedex-image: url("../../assets/pokedex.png");
+$pokedex-image: url("https://github.com/ChristopherDalziel/Pokedex/blob/master/src/assets/pokedex.png?raw=true");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: yellow;
+}
 
 .pokedex {
+  margin-top: 125px;
+  width: 786px;
+  height: 577px;
   background-image: $pokedex-image;
-  background-size: cover;
+  background-repeat: no-repeat;
 }
