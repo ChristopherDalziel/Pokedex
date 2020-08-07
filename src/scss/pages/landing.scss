@@ -1,5 +1,3 @@
-$pokedex-image: url("https://github.com/ChristopherDalziel/Pokedex/blob/master/src/assets/pokedex.png?raw=true");
-
 * {
   margin: 0;
   padding: 0;
@@ -12,12 +10,4 @@ $pokedex-image: url("https://github.com/ChristopherDalziel/Pokedex/blob/master/s
   align-items: center;
   flex-direction: column;
   background-color: yellow;
-}
-
-.pokedex {
-  margin-top: 125px;
-  width: 786px;
-  height: 577px;
-  background-image: $pokedex-image;
-  background-repeat: no-repeat;
 }
