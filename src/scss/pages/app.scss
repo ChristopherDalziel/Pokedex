@@ -1,3 +1,6 @@
-.test {
-  background-color: red;
+$pokedex-image: url("../../assets/pokedex.png");
+
+.pokedex {
+  background-image: $pokedex-image;
+  background-size: cover;
 }
