@@ -1,3 +1,5 @@
+import errorMessage from "../utils/errorMessage";
+
 export const FETCH_POKEMON_START = "FETCH_POKEMON_START";
 export const FETCH_POKEMON_SUCCESS = "FETCH_POKEMON_SUCCESS";
 export const FETCH_POKEMON_FAILURE = "FETCH_POKEMON_FAILURE";
@@ -23,8 +25,7 @@ export const fetchPokemon = (number = 1) => {
       .then(errorMessage)
       .then((response) => response.json())
       .then((pokemonInfo) => {
-        dispatch(fetchPokemonSuccess(pokemonInfo)) &&
-          console.log("pokemon info: ", pokemonInfo.name);
+        dispatch(fetchPokemonSuccess(pokemonInfo));
         return pokemonInfo;
       })
       .catch((error) => {
@@ -32,12 +33,3 @@ export const fetchPokemon = (number = 1) => {
       });
   };
 };
-
-const errorMessage = (res) => {
-  if (!res.ok) {
-    throw Error(res.statusText);
-  }
-  return res;
-};
-
-export default errorMessage;
