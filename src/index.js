@@ -5,8 +5,11 @@ import AppRouter from "./routers/AppRouter";
 import * as serviceWorker from "./serviceWorker";
 import configureStore from "./store/configureStore";
 import "./css/style.css";
+import { fetchPokemon } from "./actions";
 
 const store = configureStore();
+
+store.dispatch(fetchPokemon());
 
 ReactDOM.render(
   <Provider store={store}>
