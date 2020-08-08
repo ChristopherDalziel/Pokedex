@@ -17,17 +17,16 @@ const fetchPokemonFailure = (error) => ({
 });
 
 // attempting to fetch the first 151 and console log
-export const fetchPokemon = () => {
-  console.log("start fetch");
+export const fetchPokemon = (number = 1) => {
   return (dispatch) => {
     dispatch(fetchPokemonStart());
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
+    fetch(`https://pokeapi.co/api/v2/pokemon/${number}`)
       .then(errorMessage)
       .then((response) => response.json())
-      .then((allPokemon) => {
-        dispatch(fetchPokemonSuccess(allPokemon.results)) &&
-          console.log("151", allPokemon);
-        return allPokemon;
+      .then((pokemonInfo) => {
+        dispatch(fetchPokemonSuccess(pokemonInfo)) &&
+          console.log("pokemon info: ", pokemonInfo.name);
+        return pokemonInfo;
       })
       .catch((error) => {
         dispatch(fetchPokemonFailure(error));
