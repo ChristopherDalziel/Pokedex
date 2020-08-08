@@ -24,9 +24,9 @@ export const fetchPokemon = () => {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
       .then(errorMessage)
       .then((response) => response.json())
-      .then((allPokemon) => console.log("151", allPokemon))
       .then((allPokemon) => {
-        dispatch(fetchPokemonSuccess(allPokemon)) && console.log("fetched?");
+        dispatch(fetchPokemonSuccess(allPokemon.results)) &&
+          console.log("151", allPokemon);
         return allPokemon;
       })
       .catch((error) => {
