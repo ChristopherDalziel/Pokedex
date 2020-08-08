@@ -16,7 +16,6 @@ const fetchPokemonFailure = (error) => ({
   payload: { error },
 });
 
-// attempting to fetch the first 151 and console log
 export const fetchPokemon = (number = 1) => {
   return (dispatch) => {
     dispatch(fetchPokemonStart());
