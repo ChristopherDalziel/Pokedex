@@ -1,9 +1,9 @@
-// $pokedex-image: url("https://github.com/ChristopherDalziel/Pokedex/blob/master/src/assets/pokedex.png?raw=true");
+$pokedex-image: url("https://gdurl.com/8gND");
 
 .pokedex {
   margin-top: 125px;
   width: 786px;
   height: 577px;
-  // background-image: $pokedex-image;
+  background-image: $pokedex-image;
   background-repeat: no-repeat;
 }
