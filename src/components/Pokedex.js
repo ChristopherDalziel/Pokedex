@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const Pokedex = () => {
-  const [data, setData] = useState({ pokemon: [] });
+  const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -17,12 +17,10 @@ const Pokedex = () => {
     setIsLoading(false);
   }, []);
 
-  console.log("loading? : ", isLoading);
-  console.log(data.sprites);
+  console.log("loading: ", isLoading);
 
   return (
-    <>
-      {/* <div className="pokedex"> */}
+    <div className="pokedex">
       {isLoading ? (
         <p>Loading..</p>
       ) : (
@@ -31,8 +29,7 @@ const Pokedex = () => {
           <img src={data.sprites?.front_default} alt="poke sprite" />
         </>
       )}
-      {/* </div> */}
-    </>
+    </div>
   );
 };
 
