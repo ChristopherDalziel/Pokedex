@@ -1,20 +1,28 @@
 import React from "react";
+import { connect } from "react-redux";
 
-const Pokedex = () => {
+const Pokedex = (props) => {
+  console.log("props", props);
   // const handleInput = (e) => {
   //   e.preventDefault();
   // };
 
+  const { loading, pokemon } = props;
   return (
     <div className="pokedex">
-      <form>
+      {loading ? <p>loading</p> : <p>loadingfinished</p>}
+
+      {/* <form>
         <input type="number" name="pokemonNumber"></input>
         <button>test</button>
-      </form>
+      </form> */}
     </div>
   );
 };
 
-// mapStateToProps = () => {};
+const mapStateToProps = (state) => ({
+  pokemon: state.pokemon.data.pokemon,
+  loading: state.pokemon.loading,
+});
 
-export default Pokedex;
+export default connect(mapStateToProps)(Pokedex);
