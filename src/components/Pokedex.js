@@ -1,28 +1,27 @@
-import React from "react";
-import { connect } from "react-redux";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-const Pokedex = (props) => {
-  console.log("props", props);
-  // const handleInput = (e) => {
-  //   e.preventDefault();
-  // };
+const Pokedex = () => {
+  const [data, setData] = useState({ pokemon: [] });
 
-  const { loading, pokemon } = props;
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios("https://pokeapi.co/api/v2/pokemon/1");
+
+      setData(result.data);
+    };
+
+    fetchData();
+  }, []);
+
+  console.log(data);
+
   return (
     <div className="pokedex">
-      {loading ? <p>loading</p> : <p>loadingfinished</p>}
-
-      {/* <form>
-        <input type="number" name="pokemonNumber"></input>
-        <button>test</button>
-      </form> */}
+      <div>{data.name}</div>
+      <img src={data.sprites.map((sprite) => sprite.front_default)} />
     </div>
   );
 };
 
-const mapStateToProps = (state) => ({
-  pokemon: state.pokemon.data.pokemon,
-  loading: state.pokemon.loading,
-});
-
-export default connect(mapStateToProps)(Pokedex);
+export default Pokedex;
