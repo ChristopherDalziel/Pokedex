@@ -4,11 +4,14 @@ import axios from "axios";
 const Pokedex = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const pokemonId = 1;
 
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
-      const result = await axios("https://pokeapi.co/api/v2/pokemon/1");
+      const result = await axios(
+        `https://pokeapi.co/api/v2/pokemon/${pokemonId}`
+      );
 
       setData(result.data);
     };
