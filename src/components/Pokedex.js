@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import spinner from "../assets/pika-load.gif";
 
 const Pokedex = () => {
   const [data, setData] = useState({});
@@ -24,7 +25,7 @@ const Pokedex = () => {
   return (
     <div className="pokedex">
       {isLoading ? (
-        <p>Loading..</p>
+        <img src={spinner} />
       ) : (
         <>
           <div>{data.name}</div>
