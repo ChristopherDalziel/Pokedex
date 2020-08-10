@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 .pokedex {
+  font-family: "Nunito", sans-serif;
   position: relative;
   margin-top: 125px;
   width: 786px;
