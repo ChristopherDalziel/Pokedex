@@ -1,9 +1,26 @@
 .pokedex {
+  position: relative;
   margin-top: 125px;
   width: 786px;
   height: 577px;
   background-image: url("https://gdurl.com/8gND");
   background-repeat: no-repeat; }
+  .pokedex--screen {
+    width: 237px;
+    height: 158px;
+    background: #002923;
+    color: #fff;
+    position: absolute;
+    top: 169px;
+    left: 73px;
+    border-radius: 10px; }
+    .pokedex--screen__sprite {
+      width: 237px;
+      position: absolute;
+      margin-top: -30px; }
+    .pokedex--screen__pokeNumber {
+      margin-left: 5px;
+      font-size: 24px; }
 
 * {
   margin: 0;
@@ -15,4 +32,4 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: yellow; }
+  background-color: #87caea; }

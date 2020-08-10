@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import spinner from "../assets/pika-load.gif";
+import pokeNumber from "../utils/pokeNumber";
 
 const Pokedex = () => {
   const [data, setData] = useState({});
@@ -27,10 +28,15 @@ const Pokedex = () => {
       {isLoading ? (
         <img src={spinner} />
       ) : (
-        <>
-          <div>{data.name}</div>
-          <img src={data.sprites.front_default} alt={"spite"} />
-        </>
+        <div className="pokedex--screen">
+          {/* <div>{data.name}</div> */}
+          <img
+            className="pokedex--screen__sprite"
+            src={data.sprites.front_default}
+            alt={"pokemon spite"}
+          />
+          <p className="pokedex--screen__pokeNumber">{pokeNumber(pokemonId)}</p>
+        </div>
       )}
     </div>
   );

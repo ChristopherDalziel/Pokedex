@@ -1,9 +1,32 @@
 $pokedex-image: url("https://gdurl.com/8gND");
 
 .pokedex {
+  position: relative;
   margin-top: 125px;
   width: 786px;
   height: 577px;
   background-image: $pokedex-image;
   background-repeat: no-repeat;
+
+  &--screen {
+    width: 237px;
+    height: 158px;
+    background: #002923;
+    color: #fff;
+    position: absolute;
+    top: 169px;
+    left: 73px;
+    border-radius: 10px;
+
+    &__sprite {
+      width: 237px;
+      position: absolute;
+      margin-top: -30px;
+    }
+
+    &__pokeNumber {
+      margin-left: 5px;
+      font-size: 24px;
+    }
+  }
 }
