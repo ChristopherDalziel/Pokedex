@@ -40,7 +40,7 @@ $pokedex-image: url("https://gdurl.com/8gND");
     }
   }
 
-  &--button {
+  &--onButton {
     position: absolute;
     left: 40px;
     top: 385px;
@@ -52,7 +52,35 @@ $pokedex-image: url("https://gdurl.com/8gND");
     color: #fff;
   }
 
-  &--button:focus {
+  &--onButton:focus {
     outline: none;
+  }
+
+  &--negativeButton {
+    position: absolute;
+    left: 257px;
+    top: 415px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 40px;
+  }
+
+  &--negativeButton:focus {
+    // outline: none;
+  }
+
+  &--positiveButton {
+    position: absolute;
+    left: 312px;
+    top: 425px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+  }
+
+  &--positiveButton:focus {
+    // outline: none;
   }
 }

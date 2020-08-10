@@ -30,7 +30,7 @@
     .pokedex--screen__pokeNumber {
       margin-left: 5px;
       font-size: 24px; }
-  .pokedex--button {
+  .pokedex--onButton {
     position: absolute;
     left: 40px;
     top: 385px;
@@ -40,8 +40,24 @@
     background-color: transparent;
     border: none;
     color: #fff; }
-  .pokedex--button:focus {
+  .pokedex--onButton:focus {
     outline: none; }
+  .pokedex--negativeButton {
+    position: absolute;
+    left: 257px;
+    top: 415px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 40px; }
+  .pokedex--positiveButton {
+    position: absolute;
+    left: 312px;
+    top: 425px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 30px; }
 
 * {
   margin: 0;

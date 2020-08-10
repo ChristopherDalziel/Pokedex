@@ -6,7 +6,7 @@ import pokeNumber from "../utils/pokeNumber";
 const Pokedex = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const pokemonId = 11;
+  const [pokemonId, setPokemonId] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,11 +21,27 @@ const Pokedex = () => {
     fetchData();
   }, []);
 
-  console.log("loading: ", isLoading);
-
   return (
     <div className="pokedex">
-      <button className="pokedex--button">On</button>
+      <button className="pokedex--onButton">On</button>
+      <span>
+        <button
+          className="pokedex--negativeButton"
+          onClick={() => {
+            setPokemonId(pokemonId - 1);
+          }}
+        >
+          -
+        </button>
+        <button
+          className="pokedex--positiveButton"
+          onClick={() => {
+            setPokemonId(pokemonId + 1);
+          }}
+        >
+          +
+        </button>
+      </span>
       {isLoading ? (
         <img className="pokedex--screen__load" src={spinner} />
       ) : (
