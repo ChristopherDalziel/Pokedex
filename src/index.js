@@ -1,20 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
 import AppRouter from "./routers/AppRouter";
 import * as serviceWorker from "./serviceWorker";
-import configureStore from "./store/configureStore";
 import "./css/style.css";
-import { fetchPokemon } from "./actions";
-
-const store = configureStore();
-
-store.dispatch(fetchPokemon());
 
 ReactDOM.render(
-  <Provider store={store}>
+  <React.StrictMode>
     <AppRouter />
-  </Provider>,
+  </React.StrictMode>,
   document.getElementById("root")
 );
 
