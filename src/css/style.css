@@ -16,6 +16,13 @@
     top: 169px;
     left: 73px;
     border-radius: 10px; }
+    .pokedex--screen__load {
+      width: 237px;
+      height: 158px;
+      position: absolute;
+      top: 169px;
+      left: 73px;
+      border-radius: 10px; }
     .pokedex--screen__sprite {
       width: 237px;
       position: absolute;
@@ -23,6 +30,18 @@
     .pokedex--screen__pokeNumber {
       margin-left: 5px;
       font-size: 24px; }
+  .pokedex--button {
+    position: absolute;
+    left: 40px;
+    top: 385px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    color: #fff; }
+  .pokedex--button:focus {
+    outline: none; }
 
 * {
   margin: 0;

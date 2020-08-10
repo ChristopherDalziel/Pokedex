@@ -6,7 +6,7 @@ import pokeNumber from "../utils/pokeNumber";
 const Pokedex = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const pokemonId = 1;
+  const pokemonId = 11;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,8 +25,9 @@ const Pokedex = () => {
 
   return (
     <div className="pokedex">
+      <button className="pokedex--button">On</button>
       {isLoading ? (
-        <img src={spinner} />
+        <img className="pokedex--screen__load" src={spinner} />
       ) : (
         <div className="pokedex--screen">
           {/* <div>{data.name}</div> */}
