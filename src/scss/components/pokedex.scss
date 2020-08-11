@@ -50,6 +50,11 @@ $pokedex-image: url("https://gdurl.com/8gND");
     background-color: transparent;
     border: none;
     color: #fff;
+    z-index: 1;
+  }
+
+  &--shinnyButton:focus {
+    outline: none;
   }
 
   &--onButton {
