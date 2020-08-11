@@ -64,7 +64,11 @@ const Pokedex = () => {
           +
         </button>
       </span>
-      <input className="pokedex--search" autoFocus></input>
+      <input
+        className="pokedex--search"
+        placeholder={data.name}
+        autoFocus
+      ></input>
       {isLoading ? (
         <img className="pokedex--screen__load" src={spinner} alt="Loading..." />
       ) : (

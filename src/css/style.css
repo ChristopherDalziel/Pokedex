@@ -80,9 +80,13 @@
     left: 117px;
     width: 78px;
     background: none;
-    border: none; }
+    border: none;
+    font-size: 16px;
+    text-transform: capitalize; }
     .pokedex--search:focus {
       outline: none; }
+    .pokedex--search::placeholder {
+      color: #000; }
 
 * {
   margin: 0;

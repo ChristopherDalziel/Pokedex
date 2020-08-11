@@ -108,9 +108,15 @@
     width: 78px;
     background: none;
     border: none;
+    font-size: 16px;
+    text-transform: capitalize;
 
     &:focus {
       outline: none;
+    }
+
+    &::placeholder {
+      color: #000;
     }
   }
 }
