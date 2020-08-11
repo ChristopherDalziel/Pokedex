@@ -6,10 +6,11 @@ import pokeNumber from "../utils/pokeNumber";
 const Pokedex = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const [pokemonId, setPokemonId] = useState();
+  const [pokemonId, setPokemonId] = useState(1);
 
   useEffect(() => {
     const fetchData = async () => {
+      setIsLoading(true);
       const result = await axios(
         `https://pokeapi.co/api/v2/pokemon/${pokemonId}`
       );
@@ -19,7 +20,7 @@ const Pokedex = () => {
     };
 
     fetchData();
-  }, []);
+  }, [pokemonId]);
 
   return (
     <div className="pokedex">
