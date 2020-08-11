@@ -1,4 +1,5 @@
-$pokedex-image: url("https://gdurl.com/8gND");
+// $pokedex-image: 'url("https://gdurl.com/8gND")';
+// $pokedex-image: url("../../assets/pokedex.png");
 
 .pokedex {
   font-family: "Nunito", sans-serif;
@@ -6,7 +7,6 @@ $pokedex-image: url("https://gdurl.com/8gND");
   margin-top: 125px;
   width: 786px;
   height: 577px;
-  background-image: $pokedex-image;
   background-repeat: no-repeat;
 
   &--screen {

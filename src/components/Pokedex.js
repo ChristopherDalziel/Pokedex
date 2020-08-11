@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import spinner from "../assets/pika-load.gif";
 import pokeNumber from "../utils/pokeNumber";
+import pokedex from "../assets/pokedex.png";
 
 const Pokedex = () => {
   const [data, setData] = useState({});
@@ -32,7 +33,7 @@ const Pokedex = () => {
   };
 
   return (
-    <div className="pokedex">
+    <div className="pokedex" style={{ backgroundImage: `url(${pokedex})` }}>
       <button
         className="pokedex--shinyButton"
         onClick={() => setShinyButton(!shinyButton)}
