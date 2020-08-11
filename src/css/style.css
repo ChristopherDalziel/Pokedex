@@ -50,6 +50,8 @@
     border: none;
     color: #fff;
     font-size: 40px; }
+  .pokedex--negativeButton:focus {
+    outline: none; }
   .pokedex--positiveButton {
     position: absolute;
     left: 312px;
@@ -58,6 +60,8 @@
     border: none;
     color: #fff;
     font-size: 30px; }
+  .pokedex--positiveButton:focus {
+    outline: none; }
 
 * {
   margin: 0;

@@ -67,7 +67,7 @@ $pokedex-image: url("https://gdurl.com/8gND");
   }
 
   &--negativeButton:focus {
-    // outline: none;
+    outline: none;
   }
 
   &--positiveButton {
@@ -81,6 +81,6 @@ $pokedex-image: url("https://gdurl.com/8gND");
   }
 
   &--positiveButton:focus {
-    // outline: none;
+    outline: none;
   }
 }
