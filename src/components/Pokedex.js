@@ -73,15 +73,26 @@ const Pokedex = () => {
       {isLoading ? (
         <img className="pokedex--screen__load" src={spinner} alt="Loading..." />
       ) : (
-        <div className="pokedex--screen">
-          {/* <div>{data.name}</div> */}
-          <img
-            className="pokedex--screen__sprite"
-            src={displayShinny()}
-            alt={"pokemon spite"}
-          />
-          <p className="pokedex--screen__pokeNumber">{pokeNumber(data.id)}</p>
-        </div>
+        <>
+          <div className="pokedex--screen">
+            <img
+              className="pokedex--screen__sprite"
+              src={displayShinny()}
+              alt={"pokemon spite"}
+            />
+            <p className="pokedex--screen__pokeNumber">{pokeNumber(data.id)}</p>
+          </div>
+          <div className="pokedex--stats"></div>
+          <div className="pokedex--abilities"></div>
+          <span>
+            <button className="pokedex--stats__button">Stats</button>
+            <button className="pokedex--abilities__button">Abilities</button>
+          </span>
+          <span>
+            <div className="pokedex--type"></div>
+            <div className="pokedex--type"></div>
+          </span>
+        </>
       )}
     </div>
   );
