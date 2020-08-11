@@ -40,7 +40,7 @@ $pokedex-image: url("https://gdurl.com/8gND");
     }
   }
 
-  &--shinnyButton {
+  &--shinyButton {
     position: absolute;
     left: 96px;
     top: 344px;
@@ -53,7 +53,7 @@ $pokedex-image: url("https://gdurl.com/8gND");
     z-index: 1;
   }
 
-  &--shinnyButton:focus {
+  &--shinyButton:focus {
     outline: none;
   }
 

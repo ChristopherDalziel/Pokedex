@@ -30,7 +30,7 @@
     .pokedex--screen__pokeNumber {
       margin-left: 5px;
       font-size: 24px; }
-  .pokedex--shinnyButton {
+  .pokedex--shinyButton {
     position: absolute;
     left: 96px;
     top: 344px;
@@ -41,7 +41,7 @@
     border: none;
     color: #fff;
     z-index: 1; }
-  .pokedex--shinnyButton:focus {
+  .pokedex--shinyButton:focus {
     outline: none; }
   .pokedex--onButton {
     position: absolute;

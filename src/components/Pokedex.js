@@ -7,7 +7,7 @@ const Pokedex = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [pokemonId, setPokemonId] = useState(1);
-  const [shinnyButton, setShinnyButton] = useState(false);
+  const [shinyButton, setShinyButton] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,7 +24,7 @@ const Pokedex = () => {
   }, [pokemonId]);
 
   const displayShinny = () => {
-    if (shinnyButton === false) {
+    if (shinyButton === false) {
       return data.sprites.front_default;
     } else {
       return data.sprites.front_shiny;
@@ -34,8 +34,8 @@ const Pokedex = () => {
   return (
     <div className="pokedex">
       <button
-        className="pokedex--shinnyButton"
-        onClick={() => setShinnyButton(!shinnyButton)}
+        className="pokedex--shinyButton"
+        onClick={() => setShinyButton(!shinyButton)}
       >
         S
       </button>
