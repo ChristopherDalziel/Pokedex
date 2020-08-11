@@ -40,8 +40,8 @@
     border: none;
     color: #fff;
     z-index: 1; }
-  .pokedex--shinyButton:focus {
-    outline: none; }
+    .pokedex--shinyButton:focus {
+      outline: none; }
   .pokedex--onButton {
     position: absolute;
     left: 40px;
@@ -52,8 +52,8 @@
     background-color: transparent;
     border: none;
     color: #fff; }
-  .pokedex--onButton:focus {
-    outline: none; }
+    .pokedex--onButton:focus {
+      outline: none; }
   .pokedex--negativeButton {
     position: absolute;
     left: 257px;
@@ -62,8 +62,8 @@
     border: none;
     color: #fff;
     font-size: 40px; }
-  .pokedex--negativeButton:focus {
-    outline: none; }
+    .pokedex--negativeButton:focus {
+      outline: none; }
   .pokedex--positiveButton {
     position: absolute;
     left: 312px;
@@ -72,8 +72,8 @@
     border: none;
     color: #fff;
     font-size: 30px; }
-  .pokedex--positiveButton:focus {
-    outline: none; }
+    .pokedex--positiveButton:focus {
+      outline: none; }
   .pokedex--search {
     position: absolute;
     top: 469px;
@@ -81,8 +81,8 @@
     width: 78px;
     background: none;
     border: none; }
-  .pokedex--search:focus {
-    outline: none; }
+    .pokedex--search:focus {
+      outline: none; }
 
 * {
   margin: 0;

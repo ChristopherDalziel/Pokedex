@@ -66,7 +66,7 @@ const Pokedex = () => {
       </span>
       <input className="pokedex--search" autoFocus></input>
       {isLoading ? (
-        <img className="pokedex--screen__load" src={spinner} />
+        <img className="pokedex--screen__load" src={spinner} alt="Loading..." />
       ) : (
         <div className="pokedex--screen">
           {/* <div>{data.name}</div> */}

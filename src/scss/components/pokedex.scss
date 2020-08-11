@@ -51,10 +51,10 @@
     border: none;
     color: #fff;
     z-index: 1;
-  }
 
-  &--shinyButton:focus {
-    outline: none;
+    &:focus {
+      outline: none;
+    }
   }
 
   &--onButton {
@@ -67,10 +67,10 @@
     background-color: transparent;
     border: none;
     color: #fff;
-  }
 
-  &--onButton:focus {
-    outline: none;
+    &:focus {
+      outline: none;
+    }
   }
 
   &--negativeButton {
@@ -81,10 +81,10 @@
     border: none;
     color: #fff;
     font-size: 40px;
-  }
 
-  &--negativeButton:focus {
-    outline: none;
+    &:focus {
+      outline: none;
+    }
   }
 
   &--positiveButton {
@@ -95,10 +95,10 @@
     border: none;
     color: #fff;
     font-size: 30px;
-  }
 
-  &--positiveButton:focus {
-    outline: none;
+    &:focus {
+      outline: none;
+    }
   }
 
   &--search {
@@ -108,9 +108,9 @@
     width: 78px;
     background: none;
     border: none;
-  }
 
-  &--search:focus {
-    outline: none;
+    &:focus {
+      outline: none;
+    }
   }
 }
