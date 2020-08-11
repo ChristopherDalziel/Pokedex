@@ -40,6 +40,18 @@ $pokedex-image: url("https://gdurl.com/8gND");
     }
   }
 
+  &--shinnyButton {
+    position: absolute;
+    left: 96px;
+    top: 344px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+  }
+
   &--onButton {
     position: absolute;
     left: 40px;
@@ -81,6 +93,19 @@ $pokedex-image: url("https://gdurl.com/8gND");
   }
 
   &--positiveButton:focus {
+    outline: none;
+  }
+
+  &--search {
+    position: absolute;
+    top: 469px;
+    left: 117px;
+    width: 78px;
+    background: none;
+    border: none;
+  }
+
+  &--search:focus {
     outline: none;
   }
 }

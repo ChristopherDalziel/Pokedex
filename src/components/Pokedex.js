@@ -24,6 +24,7 @@ const Pokedex = () => {
 
   return (
     <div className="pokedex">
+      <button className="pokedex--shinnyButton">S</button>
       <button className="pokedex--onButton">On</button>
       <span>
         <button
@@ -43,6 +44,7 @@ const Pokedex = () => {
           +
         </button>
       </span>
+      <input className="pokedex--search" autoFocus></input>
       {isLoading ? (
         <img className="pokedex--screen__load" src={spinner} />
       ) : (
