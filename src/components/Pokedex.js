@@ -7,7 +7,7 @@ import pokedex from "../assets/pokedex.png";
 const Pokedex = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const [pokemonId, setPokemonId] = useState(1);
+  const [pokemonId, setPokemonId] = useState("bulbasaur");
   const [shinyButton, setShinyButton] = useState(false);
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const Pokedex = () => {
         <button
           className="pokedex--negativeButton"
           onClick={() => {
-            setPokemonId(pokemonId - 1);
+            setPokemonId(data.id - 1);
           }}
         >
           -
@@ -58,7 +58,7 @@ const Pokedex = () => {
         <button
           className="pokedex--positiveButton"
           onClick={() => {
-            setPokemonId(pokemonId + 1);
+            setPokemonId(data.id + 1);
           }}
         >
           +
@@ -67,6 +67,7 @@ const Pokedex = () => {
       <input
         className="pokedex--search"
         placeholder={data.name}
+        name="pokemon"
         autoFocus
       ></input>
       {isLoading ? (
@@ -79,7 +80,7 @@ const Pokedex = () => {
             src={displayShinny()}
             alt={"pokemon spite"}
           />
-          <p className="pokedex--screen__pokeNumber">{pokeNumber(pokemonId)}</p>
+          <p className="pokedex--screen__pokeNumber">{pokeNumber(data.id)}</p>
         </div>
       )}
     </div>
