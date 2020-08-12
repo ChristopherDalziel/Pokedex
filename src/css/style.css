@@ -99,15 +99,17 @@
     height: 80px;
     font-size: 10px;
     z-index: 2; }
-    .pokedex--data__stats__button {
-      position: absolute;
-      top: 402px;
-      left: 465px;
-      background: none;
-      border: none;
-      font-size: 12px; }
-      .pokedex--data__stats__button:focus {
-        outline: none; }
+    .pokedex--data__stats {
+      text-transform: capitalize; }
+      .pokedex--data__stats__button {
+        position: absolute;
+        top: 402px;
+        left: 465px;
+        background: none;
+        border: none;
+        font-size: 12px; }
+        .pokedex--data__stats__button:focus {
+          outline: none; }
     .pokedex--data__abilities {
       text-transform: capitalize; }
       .pokedex--data__abilities__button {

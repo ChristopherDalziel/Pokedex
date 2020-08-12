@@ -127,11 +127,12 @@
     color: white;
     width: 225px;
     height: 80px;
-    // background-color: darkblue;
     font-size: 10px;
-
     z-index: 2;
+
     &__stats {
+      text-transform: capitalize;
+
       &__button {
         position: absolute;
         top: 402px;
