@@ -9,7 +9,7 @@ const Pokedex = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [pokemonId, setPokemonId] = useState("bulbasaur");
   const [shinyButton, setShinyButton] = useState(false);
-  const [statsAbilities, setStatsAbilities] = useState(true);
+  const [statsAbilities, setStatsAbilities] = useState("stats");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -84,7 +84,7 @@ const Pokedex = () => {
             <p className="pokedex--screen__pokeNumber">{pokeNumber(data.id)}</p>
           </div>
           <div className="pokedex--data">
-            {statsAbilities === true ? (
+            {statsAbilities === "stats" ? (
               <div className="pokedex--data__stats">
                 <p>Health:</p>
                 <p>Attack:</p>
@@ -104,13 +104,13 @@ const Pokedex = () => {
           <span>
             <button
               className="pokedex--data__stats__button"
-              onClick={() => setStatsAbilities(true)}
+              onClick={() => setStatsAbilities("stats")}
             >
               Stats
             </button>
             <button
               className="pokedex--data__abilities__button"
-              onClick={() => setStatsAbilities(false)}
+              onClick={() => setStatsAbilities("abilities")}
             >
               Abilities
             </button>
