@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import spinner from "../assets/pika-load.gif";
 import pokeNumber from "../utils/pokeNumber";
+import getRandomNumber from "../utils/randomNumber";
 import pokedex from "../assets/pokedex.png";
 
 const Pokedex = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const [pokemonId, setPokemonId] = useState("bulbasaur");
+  const [pokemonId, setPokemonId] = useState(807);
   const [shinyButton, setShinyButton] = useState(false);
   const [statsAbilities, setStatsAbilities] = useState("stats");
 
@@ -101,6 +102,24 @@ const Pokedex = () => {
               </div>
             )}
           </div>
+          <table className="pokedex--table">
+            <tbody>
+              <tr>
+                <td className="pokedex--table__cell">{getRandomNumber()}</td>
+                <td className="pokedex--table__cell">{getRandomNumber()}</td>
+                <td className="pokedex--table__cell">{getRandomNumber()}</td>
+                <td className="pokedex--table__cell">{getRandomNumber()}</td>
+                <td className="pokedex--table__cell">{getRandomNumber()}</td>
+              </tr>
+              <tr>
+                <td className="pokedex--table__cell">{getRandomNumber()}</td>
+                <td className="pokedex--table__cell">{getRandomNumber()}</td>
+                <td className="pokedex--table__cell">{getRandomNumber()}</td>
+                <td className="pokedex--table__cell">{getRandomNumber()}</td>
+                <td className="pokedex--table__cell">{getRandomNumber()}</td>
+              </tr>
+            </tbody>
+          </table>
           <span>
             <button
               className="pokedex--data__stats__button"

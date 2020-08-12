@@ -158,6 +158,21 @@
     }
   }
 
+  &--table {
+    position: absolute;
+    right: 100px;
+    top: 290px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+
+    &__cell {
+      height: 30px;
+      width: 43px;
+    }
+  }
+
   &--types {
     position: absolute;
     top: 469px;
