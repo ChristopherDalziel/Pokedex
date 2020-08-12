@@ -117,31 +117,43 @@
     }
   }
 
-  &--stats {
-    &__button {
-      position: absolute;
-      top: 402px;
-      left: 465px;
-      background: none;
-      border: none;
-      font-size: 12px;
+  &--data {
+    position: absolute;
+    top: 185px;
+    right: 100px;
+    color: white;
+    width: 225px;
+    height: 80px;
+    background-color: darkblue;
+    font-size: 10px;
 
-      &:focus {
-        outline: none;
+    z-index: 2;
+    &__stats {
+      &__button {
+        position: absolute;
+        top: 402px;
+        left: 465px;
+        background: none;
+        border: none;
+        font-size: 12px;
+
+        &:focus {
+          outline: none;
+        }
       }
     }
-  }
 
-  &--abilities {
-    &__button {
-      position: absolute;
-      top: 402px;
-      left: 509.5px;
-      background: none;
-      border: none;
-      font-size: 12px;
-      &:focus {
-        outline: none;
+    &__abilities {
+      &__button {
+        position: absolute;
+        top: 402px;
+        left: 509.5px;
+        background: none;
+        border: none;
+        font-size: 12px;
+        &:focus {
+          outline: none;
+        }
       }
     }
   }
