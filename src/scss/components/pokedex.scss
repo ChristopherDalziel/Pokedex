@@ -7,10 +7,13 @@
   background-repeat: no-repeat;
 
   &--screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 237px;
     height: 158px;
-    background: #002923;
-    color: #fff;
+    background: #fff;
+    color: #ccc;
     position: absolute;
     top: 169px;
     left: 73px;
@@ -26,14 +29,14 @@
     }
 
     &__sprite {
-      width: 237px;
       position: absolute;
-      margin-top: -30px;
+      width: 120px;
     }
 
     &__pokeNumber {
       margin-left: 5px;
-      font-size: 24px;
+      font-size: 94px;
+      font-weight: 1000;
     }
   }
 

@@ -7,10 +7,13 @@
   height: 577px;
   background-repeat: no-repeat; }
   .pokedex--screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 237px;
     height: 158px;
-    background: #002923;
-    color: #fff;
+    background: #fff;
+    color: #ccc;
     position: absolute;
     top: 169px;
     left: 73px;
@@ -23,12 +26,12 @@
       left: 73px;
       border-radius: 10px; }
     .pokedex--screen__sprite {
-      width: 237px;
       position: absolute;
-      margin-top: -30px; }
+      width: 120px; }
     .pokedex--screen__pokeNumber {
       margin-left: 5px;
-      font-size: 24px; }
+      font-size: 94px;
+      font-weight: 1000; }
   .pokedex--shinyButton {
     position: absolute;
     left: 96px;
