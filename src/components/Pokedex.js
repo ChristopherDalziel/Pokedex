@@ -34,11 +34,6 @@ const Pokedex = () => {
     }
   };
 
-  // console.log(data.types?.map((types) => types.type.name));
-  // console.log(data.abilities?.map((abilities) => abilities.ability.name));
-  // console.log(data.stats?.map((stats) => stats.stat.name));
-  // console.log(data.stats?.map((stats) => stats.base_stat));
-
   return (
     <div className="pokedex" style={{ backgroundImage: `url(${pokedex})` }}>
       <button
