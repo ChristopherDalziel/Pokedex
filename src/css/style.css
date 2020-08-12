@@ -97,7 +97,6 @@
     color: white;
     width: 225px;
     height: 80px;
-    background-color: darkblue;
     font-size: 10px;
     z-index: 2; }
     .pokedex--data__stats__button {
@@ -109,15 +108,17 @@
       font-size: 12px; }
       .pokedex--data__stats__button:focus {
         outline: none; }
-    .pokedex--data__abilities__button {
-      position: absolute;
-      top: 402px;
-      left: 509.5px;
-      background: none;
-      border: none;
-      font-size: 12px; }
-      .pokedex--data__abilities__button:focus {
-        outline: none; }
+    .pokedex--data__abilities {
+      text-transform: capitalize; }
+      .pokedex--data__abilities__button {
+        position: absolute;
+        top: 402px;
+        left: 509.5px;
+        background: none;
+        border: none;
+        font-size: 12px; }
+        .pokedex--data__abilities__button:focus {
+          outline: none; }
   .pokedex--table {
     position: absolute;
     right: 100px;

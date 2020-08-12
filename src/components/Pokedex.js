@@ -8,7 +8,7 @@ import pokedex from "../assets/pokedex.png";
 const Pokedex = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const [pokemonId, setPokemonId] = useState(807);
+  const [pokemonId, setPokemonId] = useState(1); //807 max
   const [shinyButton, setShinyButton] = useState(false);
   const [statsAbilities, setStatsAbilities] = useState("stats");
 
@@ -33,6 +33,11 @@ const Pokedex = () => {
       return data.sprites.front_shiny;
     }
   };
+
+  // console.log(data.types?.map((types) => types.type.name));
+  // console.log(data.abilities?.map((abilities) => abilities.ability.name));
+  // console.log(data.stats?.map((stats) => stats.stat.name));
+  // console.log(data.stats?.map((stats) => stats.base_stat));
 
   return (
     <div className="pokedex" style={{ backgroundImage: `url(${pokedex})` }}>
@@ -96,9 +101,10 @@ const Pokedex = () => {
               </div>
             ) : (
               <div className="pokedex--data__abilities">
-                <p>Ability One:</p>
-                <p>Ability Two:</p>
-                <p>Ability Three:</p>
+                <h1>Abilities:</h1>
+                {data.abilities.map((abilities) => (
+                  <p key={abilities.ability.name}>{abilities.ability.name}</p>
+                ))}
               </div>
             )}
           </div>
