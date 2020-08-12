@@ -9,6 +9,7 @@ const Pokedex = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [pokemonId, setPokemonId] = useState("bulbasaur");
   const [shinyButton, setShinyButton] = useState(false);
+  const [statsAbilities, setStatsAbilities] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -83,23 +84,34 @@ const Pokedex = () => {
             <p className="pokedex--screen__pokeNumber">{pokeNumber(data.id)}</p>
           </div>
           <div className="pokedex--data">
-            <div className="pokedex--data__stats">
-              <p>Health:</p>
-              <p>Attack:</p>
-              <p>Defense:</p>
-              <p>Special Attack:</p>
-              <p>Special Defense:</p>
-              <p>Speed:</p>
-            </div>
-            {/* <div className="pokedex--data__abilities">
-              <p>Ability One:</p>
-              <p>Ability Two:</p>
-              <p>Ability Three:</p>
-            </div> */}
+            {statsAbilities === true ? (
+              <div className="pokedex--data__stats">
+                <p>Health:</p>
+                <p>Attack:</p>
+                <p>Defense:</p>
+                <p>Special Attack:</p>
+                <p>Special Defense:</p>
+                <p>Speed:</p>
+              </div>
+            ) : (
+              <div className="pokedex--data__abilities">
+                <p>Ability One:</p>
+                <p>Ability Two:</p>
+                <p>Ability Three:</p>
+              </div>
+            )}
           </div>
           <span>
-            <button className="pokedex--data__stats__button">Stats</button>
-            <button className="pokedex--data__abilities__button">
+            <button
+              className="pokedex--data__stats__button"
+              onClick={() => setStatsAbilities(true)}
+            >
+              Stats
+            </button>
+            <button
+              className="pokedex--data__abilities__button"
+              onClick={() => setStatsAbilities(false)}
+            >
               Abilities
             </button>
           </span>
