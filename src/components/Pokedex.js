@@ -88,9 +88,9 @@ const Pokedex = () => {
             <button className="pokedex--stats__button">Stats</button>
             <button className="pokedex--abilities__button">Abilities</button>
           </span>
-          <span>
-            <div className="pokedex--type"></div>
-            <div className="pokedex--type"></div>
+          <span className="pokedex--types">
+            <div className="pokedex--types__one">type 1</div>
+            <div className="pokedex--types__two">type 2</div>
           </span>
         </>
       )}

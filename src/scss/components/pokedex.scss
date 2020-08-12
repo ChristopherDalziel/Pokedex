@@ -1,6 +1,3 @@
-// $pokedex-image: 'url("https://gdurl.com/8gND")';
-// $pokedex-image: url("../../assets/pokedex.png");
-
 .pokedex {
   font-family: "Nunito", sans-serif;
   position: relative;
@@ -117,6 +114,48 @@
 
     &::placeholder {
       color: #000;
+    }
+  }
+
+  &--stats {
+    &__button {
+      position: absolute;
+      top: 402px;
+      left: 465px;
+      background: none;
+      border: none;
+      font-size: 12px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &--abilities {
+    &__button {
+      position: absolute;
+      top: 402px;
+      left: 509.5px;
+      background: none;
+      border: none;
+      font-size: 12px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &--types {
+    position: absolute;
+    top: 469px;
+    left: 550px;
+    margin-left: 20px;
+    color: white;
+
+    &__one {
+    }
+    &__two {
     }
   }
 }

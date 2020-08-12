@@ -87,6 +87,30 @@
       outline: none; }
     .pokedex--search::placeholder {
       color: #000; }
+  .pokedex--stats__button {
+    position: absolute;
+    top: 402px;
+    left: 465px;
+    background: none;
+    border: none;
+    font-size: 12px; }
+    .pokedex--stats__button:focus {
+      outline: none; }
+  .pokedex--abilities__button {
+    position: absolute;
+    top: 402px;
+    left: 509.5px;
+    background: none;
+    border: none;
+    font-size: 12px; }
+    .pokedex--abilities__button:focus {
+      outline: none; }
+  .pokedex--types {
+    position: absolute;
+    top: 469px;
+    left: 550px;
+    margin-left: 20px;
+    color: white; }
 
 * {
   margin: 0;
