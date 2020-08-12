@@ -135,9 +135,15 @@
   .pokedex--types {
     position: absolute;
     top: 469px;
-    left: 550px;
     margin-left: 20px;
-    color: white; }
+    color: white;
+    text-transform: capitalize; }
+    .pokedex--types__0 {
+      position: absolute;
+      left: 465px; }
+    .pokedex--types__1 {
+      position: absolute;
+      left: 595px; }
 
 * {
   margin: 0;

@@ -36,8 +36,8 @@ const Pokedex = () => {
 
   // console.log(data.types?.map((types) => types.type.name));
   // console.log(data.abilities?.map((abilities) => abilities.ability.name));
-  console.log(data.stats?.map((stats) => stats.stat.name));
-  console.log(data.stats?.map((stats) => stats.base_stat));
+  // console.log(data.stats?.map((stats) => stats.stat.name));
+  // console.log(data.stats?.map((stats) => stats.base_stat));
 
   return (
     <div className="pokedex" style={{ backgroundImage: `url(${pokedex})` }}>
@@ -92,8 +92,8 @@ const Pokedex = () => {
           <div className="pokedex--data">
             {statsAbilities === "stats" ? (
               <div className="pokedex--data__stats">
-                {data.stats.map((stat) => (
-                  <p key={stat.stat.name}>
+                {data.stats.map((stat, i) => (
+                  <p key={i}>
                     {stat.stat.name}: {stat.base_stat}
                   </p>
                 ))}
@@ -101,8 +101,8 @@ const Pokedex = () => {
             ) : (
               <div className="pokedex--data__abilities">
                 <h1>Abilities:</h1>
-                {data.abilities.map((abilities) => (
-                  <p key={abilities.ability.name}>{abilities.ability.name}</p>
+                {data.abilities.map((abilities, i) => (
+                  <p key={i}>{abilities.ability.name}</p>
                 ))}
               </div>
             )}
@@ -140,8 +140,11 @@ const Pokedex = () => {
             </button>
           </span>
           <span className="pokedex--types">
-            <div className="pokedex--types__one">type 1</div>
-            <div className="pokedex--types__two">type 2</div>
+            {data.types.map((types, i) => (
+              <div className={`pokedex--types__${i}`} key={i}>
+                {types.type.name}
+              </div>
+            ))}
           </span>
         </>
       )}

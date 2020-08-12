@@ -149,6 +149,7 @@
 
     &__abilities {
       text-transform: capitalize;
+
       &__button {
         position: absolute;
         top: 402px;
@@ -181,13 +182,17 @@
   &--types {
     position: absolute;
     top: 469px;
-    left: 550px;
     margin-left: 20px;
     color: white;
+    text-transform: capitalize;
 
-    &__one {
+    &__0 {
+      position: absolute;
+      left: 465px;
     }
-    &__two {
+    &__1 {
+      position: absolute;
+      left: 595px;
     }
   }
 }
