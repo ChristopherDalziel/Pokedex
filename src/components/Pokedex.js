@@ -11,6 +11,7 @@ const Pokedex = () => {
   const [pokemonId, setPokemonId] = useState(1); //807 max
   const [shinyButton, setShinyButton] = useState(false);
   const [statsAbilities, setStatsAbilities] = useState("stats");
+  const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,6 +33,16 @@ const Pokedex = () => {
     } else {
       return data.sprites.front_shiny;
     }
+  };
+
+  const onInputChange = (e) => {
+    e.preventDefault();
+    setInputValue(e.target.value);
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setPokemonId(inputValue);
   };
 
   return (
@@ -66,12 +77,16 @@ const Pokedex = () => {
           +
         </button>
       </span>
-      <input
-        className="pokedex--search"
-        placeholder={data.name}
-        name="pokemon"
-        autoFocus
-      ></input>
+      <form onSubmit={onSubmit}>
+        <input
+          className="pokedex--search"
+          placeholder={data.name}
+          name="pokemon"
+          onChange={onInputChange}
+          autoFocus
+        ></input>
+        <input type="submit"></input>
+      </form>
       {isLoading ? (
         <img className="pokedex--screen__load" src={spinner} alt="Loading..." />
       ) : (
