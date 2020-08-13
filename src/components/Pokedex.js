@@ -14,17 +14,21 @@ const Pokedex = () => {
   const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
-      const result = await axios(
-        `https://pokeapi.co/api/v2/pokemon/${pokemonId}`
-      );
+    try {
+      const fetchData = async () => {
+        setIsLoading(true);
+        const result = await axios(
+          `https://pokeapi.co/api/v2/pokemon/${pokemonId}`
+        );
 
-      setData(result.data);
-      setIsLoading(false);
-    };
+        setData(result.data);
+        setIsLoading(false);
+      };
 
-    fetchData();
+      fetchData();
+    } catch (error) {
+      console.log(error.response);
+    }
   }, [pokemonId]);
 
   const displayShinny = () => {
