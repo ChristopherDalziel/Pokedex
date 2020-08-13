@@ -77,15 +77,19 @@ const Pokedex = () => {
           +
         </button>
       </span>
-      <form onSubmit={onSubmit}>
+      <form className="pokedex--form" onSubmit={onSubmit}>
         <input
-          className="pokedex--search"
+          className="pokedex--form__search"
           placeholder={data.name}
           name="pokemon"
           onChange={onInputChange}
           autoFocus
         ></input>
-        <input type="submit"></input>
+        <input
+          className="pokedex--form__button"
+          type="submit"
+          value="Go"
+        ></input>
       </form>
       {isLoading ? (
         <img className="pokedex--screen__load" src={spinner} alt="Loading..." />
