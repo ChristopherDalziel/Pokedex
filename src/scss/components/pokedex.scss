@@ -97,10 +97,6 @@
       font-size: 16px;
       text-transform: capitalize;
 
-      &:focus {
-        outline: none;
-      }
-
       &::placeholder {
         color: #000;
       }
@@ -131,10 +127,6 @@
         background: none;
         border: none;
         font-size: 12px;
-
-        &:focus {
-          outline: none;
-        }
       }
     }
 
@@ -148,9 +140,6 @@
         background: none;
         border: none;
         font-size: 12px;
-        &:focus {
-          outline: none;
-        }
       }
     }
   }

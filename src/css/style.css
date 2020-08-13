@@ -83,8 +83,6 @@
       border: none;
       font-size: 16px;
       text-transform: capitalize; }
-      .pokedex--form__search:focus {
-        outline: none; }
       .pokedex--form__search::placeholder {
         color: #000; }
     .pokedex--form__button {
@@ -107,8 +105,6 @@
         background: none;
         border: none;
         font-size: 12px; }
-        .pokedex--data__stats__button:focus {
-          outline: none; }
     .pokedex--data__abilities {
       text-transform: capitalize; }
       .pokedex--data__abilities__button {
@@ -118,8 +114,6 @@
         background: none;
         border: none;
         font-size: 12px; }
-        .pokedex--data__abilities__button:focus {
-          outline: none; }
   .pokedex--table {
     position: absolute;
     right: 100px;
