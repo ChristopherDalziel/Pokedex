@@ -75,7 +75,7 @@
     font-size: 30px; }
   .pokedex--form {
     position: absolute;
-    top: 469px;
+    top: 464px;
     left: 100px; }
     .pokedex--form__search {
       width: 78px;
@@ -89,8 +89,8 @@
       background: black;
       color: white;
       border: none;
-      height: 25px;
-      width: 25px;
+      height: 30px;
+      width: 30px;
       border-radius: 50%; }
   .pokedex--data {
     position: absolute;
