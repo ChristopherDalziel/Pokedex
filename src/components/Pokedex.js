@@ -37,7 +37,7 @@ const Pokedex = () => {
 
   const onInputChange = (e) => {
     e.preventDefault();
-    let newInputValue = e.target.value;
+    let newInputValue = e.target.value.toLowerCase();
     if (newInputValue === "") {
       return "invalid pokemon";
     } else {
