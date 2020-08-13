@@ -9,7 +9,8 @@
   margin-top: 125px;
   width: 786px;
   height: 577px;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  text-transform: capitalize; }
   .pokedex--screen {
     display: flex;
     justify-content: center;
@@ -32,6 +33,9 @@
     .pokedex--screen__sprite {
       position: absolute;
       width: 120px; }
+    .pokedex--screen__name {
+      position: absolute;
+      top: 10px; }
     .pokedex--screen__pokeNumber {
       margin-left: 5px;
       font-size: 94px;
@@ -81,8 +85,7 @@
       width: 78px;
       background: none;
       border: none;
-      font-size: 16px;
-      text-transform: capitalize; }
+      font-size: 16px; }
       .pokedex--form__search::placeholder {
         color: #555; }
     .pokedex--form__button {
@@ -101,24 +104,20 @@
     height: 80px;
     font-size: 10px;
     z-index: 2; }
-    .pokedex--data__stats {
-      text-transform: capitalize; }
-      .pokedex--data__stats__button {
-        position: absolute;
-        top: 402px;
-        left: 465px;
-        background: none;
-        border: none;
-        font-size: 12px; }
-    .pokedex--data__abilities {
-      text-transform: capitalize; }
-      .pokedex--data__abilities__button {
-        position: absolute;
-        top: 402px;
-        left: 509.5px;
-        background: none;
-        border: none;
-        font-size: 12px; }
+    .pokedex--data__stats__button {
+      position: absolute;
+      top: 402px;
+      left: 465px;
+      background: none;
+      border: none;
+      font-size: 12px; }
+    .pokedex--data__abilities__button {
+      position: absolute;
+      top: 402px;
+      left: 509.5px;
+      background: none;
+      border: none;
+      font-size: 12px; }
   .pokedex--table {
     position: absolute;
     right: 100px;
@@ -134,8 +133,7 @@
     position: absolute;
     top: 469px;
     margin-left: 20px;
-    color: white;
-    text-transform: capitalize; }
+    color: white; }
     .pokedex--types__0 {
       position: absolute;
       left: 460px; }

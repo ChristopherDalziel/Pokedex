@@ -5,6 +5,7 @@
   width: 786px;
   height: 577px;
   background-repeat: no-repeat;
+  text-transform: capitalize;
 
   &--screen {
     display: flex;
@@ -31,6 +32,11 @@
     &__sprite {
       position: absolute;
       width: 120px;
+    }
+
+    &__name {
+      position: absolute;
+      top: 10px;
     }
 
     &__pokeNumber {
@@ -95,7 +101,6 @@
       background: none;
       border: none;
       font-size: 16px;
-      text-transform: capitalize;
 
       &::placeholder {
         color: #555;
@@ -123,8 +128,6 @@
     z-index: 2;
 
     &__stats {
-      text-transform: capitalize;
-
       &__button {
         position: absolute;
         top: 402px;
@@ -136,8 +139,6 @@
     }
 
     &__abilities {
-      text-transform: capitalize;
-
       &__button {
         position: absolute;
         top: 402px;
@@ -169,7 +170,6 @@
     top: 469px;
     margin-left: 20px;
     color: white;
-    text-transform: capitalize;
 
     &__0 {
       position: absolute;
