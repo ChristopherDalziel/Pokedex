@@ -38,16 +38,16 @@ const Pokedex = () => {
   const onInputChange = (e) => {
     e.preventDefault();
     let newInputValue = e.target.value.toLowerCase();
-    if (newInputValue === "") {
-      return "invalid pokemon";
-    } else {
-      setInputValue(newInputValue);
-    }
+    setInputValue(newInputValue);
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    setPokemonId(inputValue);
+    if (inputValue === "") {
+      setInputValue(1);
+    } else {
+      setPokemonId(inputValue);
+    }
   };
 
   return (
