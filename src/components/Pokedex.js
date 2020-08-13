@@ -14,21 +14,17 @@ const Pokedex = () => {
   const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
-    try {
-      const fetchData = async () => {
-        setIsLoading(true);
-        const result = await axios(
-          `https://pokeapi.co/api/v2/pokemon/${pokemonId}`
-        );
+    const fetchData = async () => {
+      setIsLoading(true);
+      const result = await axios(
+        `https://pokeapi.co/api/v2/pokemon/${pokemonId}`
+      );
 
-        setData(result.data);
-        setIsLoading(false);
-      };
+      setData(result.data);
+      setIsLoading(false);
+    };
 
-      fetchData();
-    } catch (error) {
-      console.log(error.response);
-    }
+    fetchData();
   }, [pokemonId]);
 
   const displayShinny = () => {
@@ -132,7 +128,7 @@ const Pokedex = () => {
           </div>
           <table className="pokedex--table">
             <tbody>
-              <tr>
+              {/* <tr>
                 <td className="pokedex--table__cell">{getRandomNumber()}</td>
                 <td className="pokedex--table__cell">{getRandomNumber()}</td>
                 <td className="pokedex--table__cell">{getRandomNumber()}</td>
@@ -145,7 +141,7 @@ const Pokedex = () => {
                 <td className="pokedex--table__cell">{getRandomNumber()}</td>
                 <td className="pokedex--table__cell">{getRandomNumber()}</td>
                 <td className="pokedex--table__cell">{getRandomNumber()}</td>
-              </tr>
+              </tr> */}
             </tbody>
           </table>
           <span>
