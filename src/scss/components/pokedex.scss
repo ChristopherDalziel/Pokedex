@@ -103,7 +103,12 @@
     }
 
     &__button {
-      background: none;
+      background: black;
+      color: white;
+      border: none;
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
     }
   }
 

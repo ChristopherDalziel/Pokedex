@@ -86,7 +86,12 @@
       .pokedex--form__search::placeholder {
         color: #000; }
     .pokedex--form__button {
-      background: none; }
+      background: black;
+      color: white;
+      border: none;
+      height: 25px;
+      width: 25px;
+      border-radius: 50%; }
   .pokedex--data {
     position: absolute;
     top: 185px;
