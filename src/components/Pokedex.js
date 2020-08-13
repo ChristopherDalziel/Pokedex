@@ -85,7 +85,7 @@ const Pokedex = () => {
       <form className="pokedex--form" onSubmit={onSubmit}>
         <input
           className="pokedex--form__search"
-          placeholder={data.name}
+          placeholder="Search..."
           name="pokemon"
           onChange={onInputChange}
           autoFocus
