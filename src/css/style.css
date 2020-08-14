@@ -23,6 +23,19 @@
     top: 169px;
     left: 73px;
     border-radius: 10px; }
+    .pokedex--screen__error {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 169px;
+      left: 73px;
+      border-radius: 10px;
+      width: 232px;
+      height: 158px;
+      text-align: center;
+      background-color: #fff;
+      padding: 5px; }
     .pokedex--screen__load {
       width: 237px;
       height: 158px;

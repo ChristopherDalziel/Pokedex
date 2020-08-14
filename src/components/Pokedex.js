@@ -14,30 +14,6 @@ const Pokedex = () => {
   const [statsAbilities, setStatsAbilities] = useState("stats");
   const [inputValue, setInputValue] = useState("");
 
-  // useEffect(() => {
-  //   // setError(false);
-
-  //   try {
-  //     const fetchData = async () => {
-  //       setIsLoading(true);
-
-  //       const result = await axios.get(
-  //         `https://pokeapi.co/api/v2/pokemon/${pokemonId}`
-  //       );
-
-  //       setData(result.data);
-  //       setIsLoading(false);
-  //     };
-
-  //     fetchData();
-  //     // Currently when a fetch call fails it does not hit the catch block
-  //   } catch (error) {
-  //     setError(true);
-  //     console.log("error", error);
-  //     setIsLoading(false);
-  //   }
-  // }, [pokemonId]);
-
   useEffect(() => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
@@ -47,11 +23,14 @@ const Pokedex = () => {
       })
       .catch((err) => {
         if (err.response) {
-          setError(true);
+          // pokemon not found
+          setError("Response");
         } else if (err.request) {
-          console.log("request error");
+          // api error
+          setError("Request");
         } else {
-          console.log("something else error");
+          // everything else
+          setError(true);
         }
       });
   }, [pokemonId]);
@@ -61,6 +40,15 @@ const Pokedex = () => {
       return data.sprites.front_default;
     } else {
       return data.sprites.front_shiny;
+    }
+  };
+
+  const errorHandling = () => {
+    if (error === "Response") {
+      return <p>Pokemon not found, Please try again.</p>;
+    }
+    if ((error = "Request")) {
+      return <p>Please reload the Pokèdex and try again.</p>;
     }
   };
 
@@ -140,11 +128,9 @@ const Pokedex = () => {
           </div>
 
           {error ? (
-            <div style={{ color: `red` }}>
-              some error occurred, while fetching api
-            </div>
+            <div className="pokedex--screen__error">{errorHandling()}</div>
           ) : (
-            <p>no error</p>
+            ""
           )}
 
           <div className="pokedex--data">
