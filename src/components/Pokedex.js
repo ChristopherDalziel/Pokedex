@@ -15,6 +15,7 @@ const Pokedex = () => {
   const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
+    setError(false);
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
       .then((res) => {
@@ -126,13 +127,11 @@ const Pokedex = () => {
             <p className="pokedex--screen__name">{data.name}</p>
             <p className="pokedex--screen__pokeNumber">{pokeNumber(data.id)}</p>
           </div>
-
           {error ? (
             <div className="pokedex--screen__error">{errorHandling()}</div>
           ) : (
             ""
           )}
-
           <div className="pokedex--data">
             {statsAbilities === "stats" ? (
               <div className="pokedex--data__stats">
@@ -153,8 +152,10 @@ const Pokedex = () => {
           </div>
           <table className="pokedex--table">
             <tbody>
-              {/* <tr>
-                <td className="pokedex--table__cell">{getRandomNumber()}</td>
+              <tr>
+                <td className="pokedex--table__cell">
+                  <button>{getRandomNumber()}</button>
+                </td>
                 <td className="pokedex--table__cell">{getRandomNumber()}</td>
                 <td className="pokedex--table__cell">{getRandomNumber()}</td>
                 <td className="pokedex--table__cell">{getRandomNumber()}</td>
@@ -166,7 +167,7 @@ const Pokedex = () => {
                 <td className="pokedex--table__cell">{getRandomNumber()}</td>
                 <td className="pokedex--table__cell">{getRandomNumber()}</td>
                 <td className="pokedex--table__cell">{getRandomNumber()}</td>
-              </tr> */}
+              </tr>
             </tbody>
           </table>
           <span>
