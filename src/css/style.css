@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-*:focus {
+:focus {
   border: none;
   outline: none; }
 
@@ -132,14 +132,18 @@
       border: none;
       font-size: 12px; }
   .pokedex--table {
-    position: absolute;
-    right: 100px;
-    top: 290px;
     text-align: center;
     font-size: 20px;
-    color: white;
-    cursor: pointer; }
-    .pokedex--table__cell {
+    color: white; }
+    .pokedex--table__rowOne {
+      display: flex;
+      flex-direction: row !important;
+      top: 290px;
+      height: 30px;
+      width: 243px; }
+    .pokedex--table__rowTwo {
+      position: absolute;
+      top: 350px;
       height: 30px;
       width: 43px; }
   .pokedex--types {

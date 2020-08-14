@@ -15,6 +15,7 @@ const Pokedex = () => {
   const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
+    setIsLoading(true);
     setError(false);
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
@@ -67,6 +68,10 @@ const Pokedex = () => {
       setPokemonId(inputValue);
     }
   };
+
+  let numbers = Array.from({ length: 10 }, () =>
+    Math.floor(Math.random() * 807)
+  );
 
   return (
     <div className="pokedex" style={{ backgroundImage: `url(${pokedex})` }}>
@@ -150,26 +155,29 @@ const Pokedex = () => {
               </div>
             )}
           </div>
-          <table className="pokedex--table">
+          {/* <table className="pokedex--table">
             <tbody>
-              <tr>
-                <td className="pokedex--table__cell">
-                  <button>{getRandomNumber()}</button>
-                </td>
-                <td className="pokedex--table__cell">{getRandomNumber()}</td>
-                <td className="pokedex--table__cell">{getRandomNumber()}</td>
-                <td className="pokedex--table__cell">{getRandomNumber()}</td>
-                <td className="pokedex--table__cell">{getRandomNumber()}</td>
-              </tr>
-              <tr>
-                <td className="pokedex--table__cell">{getRandomNumber()}</td>
-                <td className="pokedex--table__cell">{getRandomNumber()}</td>
-                <td className="pokedex--table__cell">{getRandomNumber()}</td>
-                <td className="pokedex--table__cell">{getRandomNumber()}</td>
-                <td className="pokedex--table__cell">{getRandomNumber()}</td>
-              </tr>
+              {numbers.map((number, i) =>
+                i < 5 ? (
+                  <tr className="pokedex--table__rowOne">
+                    <td>
+                      <button onClick={() => setPokemonId(number)}>
+                        {number}
+                      </button>
+                    </td>
+                  </tr>
+                ) : (
+                  <tr className="pokedex--table__rowTwo">
+                    <td>
+                      <button onClick={() => setPokemonId(number)}>
+                        {number}
+                      </button>
+                    </td>
+                  </tr>
+                )
+              )}
             </tbody>
-          </table>
+          </table> */}
           <span>
             <button
               className="pokedex--data__stats__button"
