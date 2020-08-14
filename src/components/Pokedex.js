@@ -7,6 +7,7 @@ import pokedex from "../assets/pokedex.png";
 
 const Pokedex = () => {
   const [data, setData] = useState({});
+  const [error, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [pokemonId, setPokemonId] = useState(1); //807 max
   const [shinyButton, setShinyButton] = useState(false);
@@ -14,8 +15,12 @@ const Pokedex = () => {
   const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
+    // setError(false);
+
+    // try {
     const fetchData = async () => {
       setIsLoading(true);
+
       const result = await axios(
         `https://pokeapi.co/api/v2/pokemon/${pokemonId}`
       );
@@ -25,6 +30,9 @@ const Pokedex = () => {
     };
 
     fetchData();
+    // } catch (error) {
+    //   setError(true);
+    // }
   }, [pokemonId]);
 
   const displayShinny = () => {
@@ -109,6 +117,11 @@ const Pokedex = () => {
             <p className="pokedex--screen__name">{data.name}</p>
             <p className="pokedex--screen__pokeNumber">{pokeNumber(data.id)}</p>
           </div>
+          {error && (
+            <div style={{ color: `red` }}>
+              some error occurred, while fetching api
+            </div>
+          )}
           <div className="pokedex--data">
             {statsAbilities === "stats" ? (
               <div className="pokedex--data__stats">
