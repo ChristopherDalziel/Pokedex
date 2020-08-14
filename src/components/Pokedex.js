@@ -14,26 +14,46 @@ const Pokedex = () => {
   const [statsAbilities, setStatsAbilities] = useState("stats");
   const [inputValue, setInputValue] = useState("");
 
+  // useEffect(() => {
+  //   // setError(false);
+
+  //   try {
+  //     const fetchData = async () => {
+  //       setIsLoading(true);
+
+  //       const result = await axios.get(
+  //         `https://pokeapi.co/api/v2/pokemon/${pokemonId}`
+  //       );
+
+  //       setData(result.data);
+  //       setIsLoading(false);
+  //     };
+
+  //     fetchData();
+  //     // Currently when a fetch call fails it does not hit the catch block
+  //   } catch (error) {
+  //     setError(true);
+  //     console.log("error", error);
+  //     setIsLoading(false);
+  //   }
+  // }, [pokemonId]);
+
   useEffect(() => {
-    // setError(false);
-
-    // try {
-    const fetchData = async () => {
-      setIsLoading(true);
-
-      const result = await axios(
-        `https://pokeapi.co/api/v2/pokemon/${pokemonId}`
-      );
-
-      setData(result.data);
-      setIsLoading(false);
-    };
-
-    fetchData();
-    // Currently when a fetch call fails it does not hit the catch block
-    // } catch (error) {
-    //   setError(true);
-    // }
+    axios
+      .get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
+      .then((res) => {
+        setData(res.data);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        if (err.response) {
+          setError(true);
+        } else if (err.request) {
+          console.log("request error");
+        } else {
+          console.log("something else error");
+        }
+      });
   }, [pokemonId]);
 
   const displayShinny = () => {
@@ -119,13 +139,13 @@ const Pokedex = () => {
             <p className="pokedex--screen__pokeNumber">{pokeNumber(data.id)}</p>
           </div>
 
-          {/* {error ? (
+          {error ? (
             <div style={{ color: `red` }}>
               some error occurred, while fetching api
             </div>
           ) : (
             <p>no error</p>
-          )} */}
+          )}
 
           <div className="pokedex--data">
             {statsAbilities === "stats" ? (
