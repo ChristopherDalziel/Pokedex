@@ -30,6 +30,7 @@ const Pokedex = () => {
     };
 
     fetchData();
+    // Currently when a fetch call fails it does not hit the catch block
     // } catch (error) {
     //   setError(true);
     // }
@@ -117,11 +118,15 @@ const Pokedex = () => {
             <p className="pokedex--screen__name">{data.name}</p>
             <p className="pokedex--screen__pokeNumber">{pokeNumber(data.id)}</p>
           </div>
-          {error && (
+
+          {/* {error ? (
             <div style={{ color: `red` }}>
               some error occurred, while fetching api
             </div>
-          )}
+          ) : (
+            <p>no error</p>
+          )} */}
+
           <div className="pokedex--data">
             {statsAbilities === "stats" ? (
               <div className="pokedex--data__stats">
