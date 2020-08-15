@@ -164,6 +164,7 @@ const Pokedex = () => {
                     <button
                       className="pokedex--select__button"
                       onClick={() => setPokemonId(number)}
+                      key={i}
                     >
                       {number}
                     </button>
@@ -171,6 +172,7 @@ const Pokedex = () => {
                     <button
                       className="pokedex--select__button"
                       onClick={() => setPokemonId(number)}
+                      key={i}
                     >
                       {number}
                     </button>
