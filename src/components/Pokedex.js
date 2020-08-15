@@ -155,33 +155,26 @@ const Pokedex = () => {
               </div>
             )}
           </div>
-          {/* <table className="pokedex--table">
-            <tbody> */}
-          {numbers.map((number, i) =>
-            i < 5 ? (
-              <div className="test">
-                {/* <td> */}
+          <div className="pokedex--select">
+            {numbers.map((number, i) =>
+              i < 5 ? (
                 <button
-                  className="testButton"
+                  className="pokedex--select__button"
                   onClick={() => setPokemonId(number)}
                 >
                   {number}
                 </button>
-                {/* </td> */}
-              </div>
-            ) : (
-              ""
-              // <tr className="pokedex--table__rowTwo">
-              //   <td className="pokedex--table__cell">
-              //     <button onClick={() => setPokemonId(number)}>
-              //       {number}
-              //     </button>
-              //   </td>
-              // </tr>
-            )
-          )}
-          {/* </tbody>
-          </table> */}
+              ) : (
+                <button
+                  className="pokedex--select__button"
+                  onClick={() => setPokemonId(number)}
+                >
+                  {number}
+                </button>
+              )
+            )}
+          </div>
+
           <span>
             <button
               className="pokedex--data__stats__button"

@@ -63,7 +63,8 @@
     background-color: transparent;
     border: none;
     color: #fff;
-    z-index: 1; }
+    z-index: 1;
+    cursor: pointer; }
   .pokedex--onButton {
     position: absolute;
     left: 40px;
@@ -73,7 +74,8 @@
     border-radius: 50%;
     background-color: transparent;
     border: none;
-    color: #fff; }
+    color: #fff;
+    cursor: pointer; }
   .pokedex--negativeButton {
     position: absolute;
     left: 257px;
@@ -81,7 +83,8 @@
     background-color: transparent;
     border: none;
     color: #fff;
-    font-size: 40px; }
+    font-size: 40px;
+    cursor: pointer; }
   .pokedex--positiveButton {
     position: absolute;
     left: 312px;
@@ -89,7 +92,8 @@
     background-color: transparent;
     border: none;
     color: #fff;
-    font-size: 30px; }
+    font-size: 30px;
+    cursor: pointer; }
   .pokedex--form {
     position: absolute;
     top: 464px;
@@ -107,7 +111,8 @@
       border: none;
       height: 32px;
       width: 32px;
-      border-radius: 50%; }
+      border-radius: 50%;
+      cursor: pointer; }
   .pokedex--data {
     position: absolute;
     top: 185px;
@@ -123,14 +128,29 @@
       left: 465px;
       background: none;
       border: none;
-      font-size: 12px; }
+      font-size: 12px;
+      cursor: pointer; }
     .pokedex--data__abilities__button {
       position: absolute;
       top: 402px;
       left: 509.5px;
       background: none;
       border: none;
-      font-size: 12px; }
+      font-size: 12px;
+      cursor: pointer; }
+  .pokedex--select {
+    position: absolute;
+    top: 300px;
+    left: 460px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 250px; }
+    .pokedex--select__button {
+      margin: 1px 22px 17px 1px;
+      background: none;
+      border: none;
+      cursor: pointer; }
   .pokedex--types {
     position: absolute;
     top: 469px;
