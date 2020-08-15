@@ -6,6 +6,7 @@ import numbers from "../utils/numbers";
 import pokedex from "../assets/pokedex.png";
 
 const Pokedex = () => {
+  const [on, setOn] = useState(false);
   const [data, setData] = useState({});
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -71,128 +72,137 @@ const Pokedex = () => {
 
   return (
     <div className="pokedex" style={{ backgroundImage: `url(${pokedex})` }}>
-      <button
-        className="pokedex--shinyButton"
-        onClick={() => setShinyButton(!shinyButton)}
-      >
-        S
+      <button className="pokedex--onButton" onClick={() => setOn(!on)}>
+        {on ? "Off" : "On"}
       </button>
-      <button
-        className="pokedex--onButton"
-        onClick={() => console.log("on click")}
-      >
-        On
-      </button>
-      <span>
-        <button
-          className="pokedex--negativeButton"
-          onClick={() => {
-            setPokemonId(data.id - 1);
-          }}
-        >
-          -
-        </button>
-        <button
-          className="pokedex--positiveButton"
-          onClick={() => {
-            setPokemonId(data.id + 1);
-          }}
-        >
-          +
-        </button>
-      </span>
-      <form className="pokedex--form" onSubmit={onSubmit}>
-        <input
-          className="pokedex--form__search"
-          placeholder="Search..."
-          name="pokemon"
-          onChange={onInputChange}
-          autoFocus
-        ></input>
-        <input
-          className="pokedex--form__button"
-          type="submit"
-          value="Go"
-        ></input>
-      </form>
-      {loading ? (
-        <img className="pokedex--screen__load" src={spinner} alt="Loading..." />
-      ) : (
+      {on ? (
         <>
-          <div className="pokedex--screen">
-            <img
-              className="pokedex--screen__sprite"
-              src={displayShinny()}
-              alt={"pokemon spite"}
-            />
-            <p className="pokedex--screen__name">{data.name}</p>
-            <p className="pokedex--screen__pokeNumber">{pokeNumber(data.id)}</p>
-          </div>
-          {error ? (
-            <div className="pokedex--screen__error">{errorHandling()}</div>
-          ) : (
-            ""
-          )}
-          <div className="pokedex--data">
-            {statsAbilities === "stats" ? (
-              <div className="pokedex--data__stats">
-                {data.stats.map((stat, i) => (
-                  <p key={i}>
-                    {stat.stat.name}: {stat.base_stat}
-                  </p>
-                ))}
-              </div>
-            ) : (
-              <div className="pokedex--data__abilities">
-                <h1>Abilities:</h1>
-                {data.abilities.map((abilities, i) => (
-                  <p key={i}>{abilities.ability.name}</p>
-                ))}
-              </div>
-            )}
-          </div>
-          <div className="pokedex--select">
-            {numbers.map((number, i) =>
-              i < 5 ? (
-                <button
-                  className="pokedex--select__button"
-                  onClick={() => setPokemonId(number)}
-                >
-                  {number}
-                </button>
-              ) : (
-                <button
-                  className="pokedex--select__button"
-                  onClick={() => setPokemonId(number)}
-                >
-                  {number}
-                </button>
-              )
-            )}
-          </div>
-
+          <button
+            className="pokedex--shinyButton"
+            onClick={() => setShinyButton(!shinyButton)}
+          >
+            S
+          </button>
           <span>
             <button
-              className="pokedex--data__stats__button"
-              onClick={() => setStatsAbilities("stats")}
+              className="pokedex--negativeButton"
+              onClick={() => {
+                setPokemonId(data.id - 1);
+              }}
             >
-              Stats
+              -
             </button>
             <button
-              className="pokedex--data__abilities__button"
-              onClick={() => setStatsAbilities("abilities")}
+              className="pokedex--positiveButton"
+              onClick={() => {
+                setPokemonId(data.id + 1);
+              }}
             >
-              Abilities
+              +
             </button>
           </span>
-          <span className="pokedex--types">
-            {data.types.map((types, i) => (
-              <div className={`pokedex--types__${i}`} key={i}>
-                {types.type.name}
+          <form className="pokedex--form" onSubmit={onSubmit}>
+            <input
+              className="pokedex--form__search"
+              placeholder="Search..."
+              name="pokemon"
+              onChange={onInputChange}
+              autoFocus
+            ></input>
+            <input
+              className="pokedex--form__button"
+              type="submit"
+              value="Go"
+            ></input>
+          </form>
+          {loading ? (
+            <img
+              className="pokedex--screen__load"
+              src={spinner}
+              alt="Loading..."
+            />
+          ) : (
+            <>
+              <div className="pokedex--screen">
+                <img
+                  className="pokedex--screen__sprite"
+                  src={displayShinny()}
+                  alt={"pokemon spite"}
+                />
+                <p className="pokedex--screen__name">{data.name}</p>
+                <p className="pokedex--screen__pokeNumber">
+                  {pokeNumber(data.id)}
+                </p>
               </div>
-            ))}
-          </span>
+              {error ? (
+                <div className="pokedex--screen__error">{errorHandling()}</div>
+              ) : (
+                ""
+              )}
+              <div className="pokedex--data">
+                {statsAbilities === "stats" ? (
+                  <div className="pokedex--data__stats">
+                    {data.stats.map((stat, i) => (
+                      <p key={i}>
+                        {stat.stat.name}: {stat.base_stat}
+                      </p>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="pokedex--data__abilities">
+                    <h1>Abilities:</h1>
+                    {data.abilities.map((abilities, i) => (
+                      <p key={i}>{abilities.ability.name}</p>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <div className="pokedex--select">
+                {numbers.map((number, i) =>
+                  i < 5 ? (
+                    <button
+                      className="pokedex--select__button"
+                      onClick={() => setPokemonId(number)}
+                    >
+                      {number}
+                    </button>
+                  ) : (
+                    <button
+                      className="pokedex--select__button"
+                      onClick={() => setPokemonId(number)}
+                    >
+                      {number}
+                    </button>
+                  )
+                )}
+              </div>
+
+              <span>
+                <button
+                  className="pokedex--data__stats__button"
+                  onClick={() => setStatsAbilities("stats")}
+                >
+                  Stats
+                </button>
+                <button
+                  className="pokedex--data__abilities__button"
+                  onClick={() => setStatsAbilities("abilities")}
+                >
+                  Abilities
+                </button>
+              </span>
+              <span className="pokedex--types">
+                {data.types.map((types, i) => (
+                  <div className={`pokedex--types__${i}`} key={i}>
+                    {types.type.name}
+                  </div>
+                ))}
+              </span>
+            </>
+          )}
         </>
+      ) : (
+        ""
       )}
     </div>
   );
