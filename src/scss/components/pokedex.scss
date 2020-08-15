@@ -7,18 +7,40 @@
   background-repeat: no-repeat;
   text-transform: capitalize;
 
+  &--light {
+    width: 58px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    animation-duration: 1s;
+    animation-name: light;
+    animation-iteration-count: infinite;
+  }
+
   &--screen {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 237px;
     height: 158px;
-    background: #fff;
+    background-color: #fff;
     color: #ccc;
     position: absolute;
     top: 169px;
     left: 73px;
     border-radius: 10px;
+
+    &__off {
+      width: 237px;
+      height: 158px;
+      background-color: #012924;
+      position: absolute;
+      top: 169px;
+      left: 73px;
+      border-radius: 10px;
+    }
 
     &__error {
       display: flex;

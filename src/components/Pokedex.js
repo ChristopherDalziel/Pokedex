@@ -77,6 +77,7 @@ const Pokedex = () => {
       </button>
       {on ? (
         <>
+          <div className="pokedex--light" />
           <button
             className="pokedex--shinyButton"
             onClick={() => setShinyButton(!shinyButton)}
@@ -202,7 +203,7 @@ const Pokedex = () => {
           )}
         </>
       ) : (
-        ""
+        <div className="pokedex--screen__off" />
       )}
     </div>
   );
