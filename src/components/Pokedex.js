@@ -8,20 +8,20 @@ import pokedex from "../assets/pokedex.png";
 const Pokedex = () => {
   const [data, setData] = useState({});
   const [error, setError] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
   const [pokemonId, setPokemonId] = useState(1); //807 max
   const [shinyButton, setShinyButton] = useState(false);
   const [statsAbilities, setStatsAbilities] = useState("stats");
   const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
-    setIsLoading(true);
+    setLoading(true);
     setError(false);
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
       .then((res) => {
         setData(res.data);
-        setIsLoading(false);
+        setLoading(false);
       })
       .catch((err) => {
         if (err.response) {
@@ -115,7 +115,7 @@ const Pokedex = () => {
           value="Go"
         ></input>
       </form>
-      {isLoading ? (
+      {loading ? (
         <img className="pokedex--screen__load" src={spinner} alt="Loading..." />
       ) : (
         <>
