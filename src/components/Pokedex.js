@@ -25,6 +25,7 @@ const Pokedex = () => {
         setLoading(false);
       })
       .catch((err) => {
+        setLoading(false);
         if (err.response) {
           // pokemon not found
           setError("Response");
@@ -64,7 +65,7 @@ const Pokedex = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     if (inputValue === "") {
-      setInputValue(1);
+      setInputValue("Invalid input");
     } else {
       setPokemonId(inputValue);
     }
