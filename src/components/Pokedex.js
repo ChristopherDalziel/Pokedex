@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import spinner from "../assets/pika-load.gif";
 import pokeNumber from "../utils/pokeNumber";
-import getRandomNumber from "../utils/randomNumber";
+import numbers from "../utils/numbers";
 import pokedex from "../assets/pokedex.png";
 
 const Pokedex = () => {
@@ -68,10 +68,6 @@ const Pokedex = () => {
       setPokemonId(inputValue);
     }
   };
-
-  let numbers = Array.from({ length: 10 }, () =>
-    Math.floor(Math.random() * 807)
-  );
 
   return (
     <div className="pokedex" style={{ backgroundImage: `url(${pokedex})` }}>
