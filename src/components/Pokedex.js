@@ -14,7 +14,6 @@ const Pokedex = () => {
   const [shinyButton, setShinyButton] = useState(false);
   const [statsAbilities, setStatsAbilities] = useState("stats");
   const [inputValue, setInputValue] = useState("");
-  const [threeLights, setThreeLights] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -59,7 +58,7 @@ const Pokedex = () => {
 
   const onInputChange = (e) => {
     e.preventDefault();
-    let newInputValue = e.target.value.toLowerCase();
+    let newInputValue = e.target.value.toLowerCase().trim();
     setInputValue(newInputValue);
   };
 
@@ -69,6 +68,7 @@ const Pokedex = () => {
       setInputValue("Invalid input");
     } else {
       setPokemonId(inputValue);
+      e.target.reset();
     }
   };
 
