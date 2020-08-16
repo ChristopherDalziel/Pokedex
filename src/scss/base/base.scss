@@ -2,3 +2,16 @@
   border: none;
   outline: none;
 }
+
+button {
+  transition: transform 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-1.5px) scale(1.01);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}

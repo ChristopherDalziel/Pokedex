@@ -36,6 +36,14 @@
   border: none;
   outline: none; }
 
+button {
+  transition: transform 0.3s; }
+  button:hover {
+    cursor: pointer;
+    transform: translateY(-1.5px) scale(1.01); }
+  button:active {
+    transform: translateY(0); }
+
 .pokedex {
   font-family: "Nunito", sans-serif;
   position: relative;
@@ -157,8 +165,7 @@
     background-color: transparent;
     border: none;
     color: #fff;
-    z-index: 1;
-    cursor: pointer; }
+    z-index: 1; }
   .pokedex--onButton {
     position: absolute;
     left: 40px;
@@ -168,8 +175,7 @@
     border-radius: 50%;
     background-color: transparent;
     border: none;
-    color: #fff;
-    cursor: pointer; }
+    color: #fff; }
   .pokedex--negativeButton {
     position: absolute;
     left: 257px;
@@ -177,8 +183,7 @@
     background-color: transparent;
     border: none;
     color: #fff;
-    font-size: 40px;
-    cursor: pointer; }
+    font-size: 40px; }
   .pokedex--positiveButton {
     position: absolute;
     left: 312px;
@@ -186,8 +191,7 @@
     background-color: transparent;
     border: none;
     color: #fff;
-    font-size: 30px;
-    cursor: pointer; }
+    font-size: 30px; }
   .pokedex--form {
     position: absolute;
     top: 464px;
@@ -206,7 +210,12 @@
       height: 32px;
       width: 32px;
       border-radius: 50%;
-      cursor: pointer; }
+      transition: transform 0.3s; }
+      .pokedex--form__button:hover {
+        cursor: pointer;
+        transform: translateY(-1.5px) scale(1.01); }
+      .pokedex--form__button:active {
+        transform: translateY(0); }
   .pokedex--data {
     position: absolute;
     top: 185px;

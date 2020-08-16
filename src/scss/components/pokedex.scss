@@ -146,7 +146,6 @@
     border: none;
     color: #fff;
     z-index: 1;
-    cursor: pointer;
   }
 
   &--onButton {
@@ -159,7 +158,6 @@
     background-color: transparent;
     border: none;
     color: #fff;
-    cursor: pointer;
   }
 
   &--negativeButton {
@@ -170,7 +168,6 @@
     border: none;
     color: #fff;
     font-size: 40px;
-    cursor: pointer;
   }
 
   &--positiveButton {
@@ -181,7 +178,6 @@
     border: none;
     color: #fff;
     font-size: 30px;
-    cursor: pointer;
   }
 
   &--form {
@@ -207,7 +203,16 @@
       height: 32px;
       width: 32px;
       border-radius: 50%;
-      cursor: pointer;
+      transition: transform 0.3s;
+
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-1.5px) scale(1.01);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
     }
   }
 
