@@ -8,7 +8,7 @@ import pokedex from "../assets/pokedex.png";
 const Pokedex = () => {
   const [on, setOn] = useState(false);
   const [data, setData] = useState({});
-  const [error, setError] = useState(false);
+  let [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
   const [pokemonId, setPokemonId] = useState(1); //807 max
   const [shinyButton, setShinyButton] = useState(false);
