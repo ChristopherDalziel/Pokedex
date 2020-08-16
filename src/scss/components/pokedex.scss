@@ -82,6 +82,7 @@
     top: 169px;
     left: 73px;
     border-radius: 10px;
+    animation: fade-in 1s;
 
     &__off {
       width: 237px;
@@ -219,6 +220,7 @@
     height: 80px;
     font-size: 10px;
     z-index: 2;
+    animation: fade-in 1s;
 
     &__stats {
       &__button {
@@ -254,6 +256,7 @@
     justify-content: space-evenly;
     width: 250px;
     padding: 5px;
+    animation: fade-in 1s;
 
     &__button {
       margin: -1px 22px 17px 1px;
