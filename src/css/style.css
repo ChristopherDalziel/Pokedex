@@ -10,6 +10,22 @@
     background-color: #39beff4a;
     box-shadow: none; } }
 
+@keyframes lightSecondary {
+  0% {
+    box-shadow: none; }
+  50% {
+    box-shadow: 0 0 12px 8px white; }
+  100% {
+    box-shadow: none; } }
+
+@keyframes lightSmall {
+  0% {
+    box-shadow: none; }
+  50% {
+    box-shadow: 0 0 10px 6px white; }
+  100% {
+    box-shadow: none; } }
+
 :focus {
   border: none;
   outline: none; }
@@ -32,6 +48,48 @@
     animation-duration: 1s;
     animation-name: light;
     animation-iteration-count: infinite; }
+    .pokedex--light__red {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      position: absolute;
+      top: 16.1px;
+      left: 119.2px;
+      animation-duration: 1s;
+      animation-name: lightSmall;
+      animation-iteration-count: 2; }
+    .pokedex--light__yellow {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      position: absolute;
+      top: 16.1px;
+      left: 152px;
+      animation-delay: 0.5s;
+      animation-duration: 1s;
+      animation-name: lightSmall;
+      animation-iteration-count: 2; }
+      .pokedex--light__yellow_big {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        position: absolute;
+        top: 403.8px;
+        right: 91.5px;
+        animation-duration: 1s;
+        animation-name: lightSecondary;
+        animation-iteration-count: 3; }
+    .pokedex--light__green {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      position: absolute;
+      top: 16.1px;
+      left: 182.5px;
+      animation-delay: 1s;
+      animation-duration: 1s;
+      animation-name: lightSmall;
+      animation-iteration-count: 2; }
   .pokedex--screen {
     display: flex;
     justify-content: center;

@@ -17,6 +17,59 @@
     animation-duration: 1s;
     animation-name: light;
     animation-iteration-count: infinite;
+
+    &__red {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      // background-color: red;
+      position: absolute;
+      top: 16.1px;
+      left: 119.2px;
+      animation-duration: 1s;
+      animation-name: lightSmall;
+      animation-iteration-count: 2;
+    }
+
+    &__yellow {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+
+      position: absolute;
+      top: 16.1px;
+      left: 152px;
+      animation-delay: 0.5s;
+      animation-duration: 1s;
+      animation-name: lightSmall;
+      animation-iteration-count: 2;
+
+      &_big {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        position: absolute;
+        top: 403.8px;
+        right: 91.5px;
+        animation-duration: 1s;
+        animation-name: lightSecondary;
+        animation-iteration-count: 3;
+      }
+    }
+
+    &__green {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      // background-color: green;
+      position: absolute;
+      top: 16.1px;
+      left: 182.5px;
+      animation-delay: 1s;
+      animation-duration: 1s;
+      animation-name: lightSmall;
+      animation-iteration-count: 2;
+    }
   }
 
   &--screen {

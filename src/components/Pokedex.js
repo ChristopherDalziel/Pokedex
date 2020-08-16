@@ -14,6 +14,7 @@ const Pokedex = () => {
   const [shinyButton, setShinyButton] = useState(false);
   const [statsAbilities, setStatsAbilities] = useState("stats");
   const [inputValue, setInputValue] = useState("");
+  const [threeLights, setThreeLights] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -78,7 +79,6 @@ const Pokedex = () => {
       </button>
       {on ? (
         <>
-          <div className="pokedex--light" />
           <button
             className="pokedex--shinyButton"
             onClick={() => setShinyButton(!shinyButton)}
@@ -125,6 +125,11 @@ const Pokedex = () => {
             />
           ) : (
             <>
+              <div className="pokedex--light" />
+              <div className="pokedex--light__red" />
+              <div className="pokedex--light__yellow" />
+              <div className="pokedex--light__green" />
+              <div className="pokedex--light__yellow_big " />
               <div className="pokedex--screen">
                 <img
                   className="pokedex--screen__sprite"

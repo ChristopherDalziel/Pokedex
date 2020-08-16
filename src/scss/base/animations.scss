@@ -12,3 +12,27 @@
     box-shadow: none;
   }
 }
+
+@keyframes lightSecondary {
+  0% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 12px 8px white;
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+@keyframes lightSmall {
+  0% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 10px 6px white;
+  }
+  100% {
+    box-shadow: none;
+  }
+}
