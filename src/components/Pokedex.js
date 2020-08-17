@@ -73,7 +73,12 @@ const Pokedex = () => {
   };
 
   return (
-    <div className="pokedex" style={{ backgroundImage: `url(${pokedex})` }}>
+    <div
+      alt="Pokedex"
+      data-testid="Pokedex"
+      className="pokedex"
+      style={{ backgroundImage: `url(${pokedex})` }}
+    >
       <button className="pokedex--onButton" onClick={() => setOn(!on)}>
         {on ? "Off" : "On"}
       </button>

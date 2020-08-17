@@ -1,13 +1,13 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 
 import Pokedex from "../components/Pokedex";
 
 describe("Pokèdex", () => {
-  test("Renders Pokèdex component", () => {
+  test("Renders Pokèdex component in it's 'off' state", () => {
     render(<Pokedex />);
 
-    // Screen.debug displays component to the testing screen, allows you to ensure that it's visible.
-    // screen.debug();
+    expect(screen.getByTestId("Pokedex")).toBeInTheDocument();
+    expect(screen.getByText("On")).toBeInTheDocument();
   });
 });
