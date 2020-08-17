@@ -141,7 +141,9 @@ const Pokedex = () => {
                   src={displayShinny()}
                   alt={"pokemon spite"}
                 />
-                <p className="pokedex--screen__name">{data.name}</p>
+                <p data-testid="pokemon-name" className="pokedex--screen__name">
+                  {data.name}
+                </p>
                 <p className="pokedex--screen__pokeNumber">
                   {pokeNumber(data.id)}
                 </p>
