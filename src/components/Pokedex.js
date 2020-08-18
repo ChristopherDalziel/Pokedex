@@ -4,6 +4,8 @@ import spinner from "../assets/pika-load.gif";
 import pokeNumber from "../utils/pokeNumber";
 import numbers from "../utils/numbers";
 import pokedex from "../assets/pokedex.png";
+import displayShiny from "../utils/displayShiny";
+import errorHandling from "../utils/errorHandling";
 
 const Pokedex = () => {
   const [on, setOn] = useState(false);
@@ -38,23 +40,6 @@ const Pokedex = () => {
         }
       });
   }, [pokemonId]);
-
-  const displayShinny = () => {
-    if (shinyButton === false) {
-      return data.sprites.front_default;
-    } else {
-      return data.sprites.front_shiny;
-    }
-  };
-
-  const errorHandling = () => {
-    if (error === "Response") {
-      return <p>Pokemon not found, Please try again.</p>;
-    }
-    if ((error = "Request")) {
-      return <p>Please reload the Pokèdex and try again.</p>;
-    }
-  };
 
   const onInputChange = (e) => {
     e.preventDefault();
@@ -143,7 +128,11 @@ const Pokedex = () => {
               <div className="pokedex--screen">
                 <img
                   className="pokedex--screen__sprite"
-                  src={displayShinny()}
+                  src={displayShiny(
+                    shinyButton,
+                    data.sprites.front_default,
+                    data.sprites.front_shiny
+                  )}
                   alt={"pokemon spite"}
                 />
                 <p data-testid="pokemon-name" className="pokedex--screen__name">
@@ -154,7 +143,9 @@ const Pokedex = () => {
                 </p>
               </div>
               {error ? (
-                <div className="pokedex--screen__error">{errorHandling()}</div>
+                <div className="pokedex--screen__error">
+                  {errorHandling(error)}
+                </div>
               ) : (
                 ""
               )}
