@@ -79,7 +79,11 @@ const Pokedex = () => {
       className="pokedex"
       style={{ backgroundImage: `url(${pokedex})` }}
     >
-      <button className="pokedex--onButton" onClick={() => setOn(!on)}>
+      <button
+        className="pokedex--onButton"
+        data-testid="on-off"
+        onClick={() => setOn(!on)}
+      >
         {on ? "Off" : "On"}
       </button>
       {on ? (
@@ -124,12 +128,13 @@ const Pokedex = () => {
           </form>
           {loading ? (
             <img
+              data-testid="loading"
               className="pokedex--screen__load"
               src={spinner}
               alt="Loading..."
             />
           ) : (
-            <>
+            <div data-testid="resolved">
               <div className="pokedex--light" />
               <div className="pokedex--light__red" />
               <div className="pokedex--light__yellow" />
@@ -214,7 +219,7 @@ const Pokedex = () => {
                   </div>
                 ))}
               </span>
-            </>
+            </div>
           )}
         </>
       ) : (
