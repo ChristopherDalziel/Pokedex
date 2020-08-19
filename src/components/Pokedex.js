@@ -9,12 +9,8 @@ import errorHandling from "../utils/errorHandling";
 
 const Pokedex = ({ ...props }) => {
   const [power, setPower] = useState(false);
-  // const [data, setData] = useState({});
-  // let [error, setError] = useState(false);
-  // const [loading, setLoading] = useState(true);
   const [pokemonId, setPokemonId] = useState(1); //807 max
   const [shinyDisplay, setShinyDisplay] = useState(false);
-  // const [statsAbilities, setStatsAbilities] = useState("stats");
   // const [inputValue, setInputValue] = useState("");
 
   // const onInputChange = (e) => {
@@ -33,6 +29,7 @@ const Pokedex = ({ ...props }) => {
   //   }
   // };
 
+  const { error, pokemon, loading } = props;
   return (
     <div
       alt="Pokedex"
@@ -41,8 +38,8 @@ const Pokedex = ({ ...props }) => {
       style={{ backgroundImage: `url(${pokedex})` }}
     >
       <PowerButton power={power} onClick={() => setPower(!power)} />
-      {props.error ? (
-        errorHandling(props.error)
+      {error ? (
+        errorHandling(error)
       ) : (
         <>
           <button
@@ -55,7 +52,7 @@ const Pokedex = ({ ...props }) => {
             <button
               className="pokedex--negativeButton"
               onClick={() => {
-                setPokemonId(props.pokemon.id - 1);
+                setPokemonId(pokemon.id - 1);
               }}
             >
               -
@@ -63,7 +60,7 @@ const Pokedex = ({ ...props }) => {
             <button
               className="pokedex--positiveButton"
               onClick={() => {
-                setPokemonId(props.pokemon.id + 1);
+                setPokemonId(pokemon.id + 1);
               }}
             >
               +
@@ -72,17 +69,14 @@ const Pokedex = ({ ...props }) => {
           <div className="pokedex--screen">
             <PokedexScreen
               shiny={shinyDisplay}
-              pokemon={props.pokemon}
-              loading={props.loading}
-              error={props.error}
+              pokemon={pokemon}
+              loading={loading}
+              error={error}
             />
 
-            <PokedexAbilitiesTypes
-              loading={props.loading}
-              pokemon={props.pokemon}
-            />
+            <PokedexAbilitiesTypes loading={loading} pokemon={pokemon} />
 
-            <PokedexTypes pokemon={props.pokemon} loading={props.loading} />
+            <PokedexTypes pokemon={pokemon} loading={loading} />
           </div>
         </>
       )}

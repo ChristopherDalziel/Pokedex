@@ -9,7 +9,7 @@ const Landing = () => {
   const [data, setData] = useState({});
   let [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [pokemonId, setPokemonId] = useState(18767876); //807 max
+  const [pokemonId, setPokemonId] = useState(1); //807 max
   const [shinyDisplay, setShinyDisplay] = useState(false);
   const [statsAbilities, setStatsAbilities] = useState("stats");
   const [inputValue, setInputValue] = useState("");
