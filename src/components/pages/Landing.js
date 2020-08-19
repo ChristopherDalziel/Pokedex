@@ -5,7 +5,6 @@ import PowerButton from "../PowerButton";
 import SetButton from "../SetButton";
 
 const Landing = () => {
-  // const [power, setPower] = useState(false);
   const [data, setData] = useState({});
   let [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);

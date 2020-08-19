@@ -37,11 +37,20 @@ const Pokedex = ({ ...props }) => {
       className="pokedex"
       style={{ backgroundImage: `url(${pokedex})` }}
     >
-      <PowerButton power={power} onClick={() => setPower(!power)} />
+      <button className="pokedex--onButton" onClick={() => setPower(!power)}>
+        {power ? "Off" : "On"}
+      </button>
+
       {error ? (
         errorHandling(error)
-      ) : (
+      ) : power ? (
         <>
+          <div className="pokedex--light" />
+          <div className="pokedex--light__red" />
+          <div className="pokedex--light__yellow" />
+          <div className="pokedex--light__green" />
+          <div className="pokedex--light__yellow_big " />
+
           <button
             className="pokedex--shinyButton"
             onClick={() => setShinyDisplay(!shinyDisplay)}
@@ -79,28 +88,23 @@ const Pokedex = ({ ...props }) => {
             <PokedexTypes pokemon={pokemon} loading={loading} />
           </div>
         </>
+      ) : (
+        <div className="pokedex--screen__off" />
       )}
       {/* <form className="pokedex--form" onSubmit={onSubmit}>
-          <input
-            className="pokedex--form__search"
-            placeholder="Search..."
-            name="pokemon"
-            onChange={onInputChange}
-            autoFocus
-          ></input>
-          <input
-            className="pokedex--form__button"
-            type="submit"
-            value="Go"
-          ></input>
-        </form> */}
-      <div className="pokedex--light" />
-      <div className="pokedex--light__red" />
-      <div className="pokedex--light__yellow" />
-      <div className="pokedex--light__green" />
-      <div className="pokedex--light__yellow_big " />
-
-      {/* <div className="pokedex--screen__off" /> */}
+        <input
+          className="pokedex--form__search"
+          placeholder="Search..."
+          name="pokemon"
+          onChange={onInputChange}
+          autoFocus
+        ></input>
+        <input
+          className="pokedex--form__button"
+          type="submit"
+          value="Go"
+        ></input>
+      </form> */}
     </div>
   );
 };
