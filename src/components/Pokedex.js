@@ -1,47 +1,21 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-import spinner from "../assets/pika-load.gif";
-import pokeNumber from "../utils/pokeNumber";
-import numbers from "../utils/numbers";
 import pokedex from "../assets/pokedex.png";
-import displayShiny from "../utils/displayShiny";
-import errorHandling from "../utils/errorHandling";
 import PowerButton from "./PowerButton";
+import PokedexScreen from "./PokedexScreen";
+import PokedexAbilitiesTypes from "../components/PokedexAbilitiesTypes";
+import PokedexTypes from "./PokedexTypes";
+import SetButton from "./SetButton";
+import errorHandling from "../utils/errorHandling";
 
 const Pokedex = ({ ...props }) => {
+  const [power, setPower] = useState(false);
   // const [data, setData] = useState({});
   // let [error, setError] = useState(false);
   // const [loading, setLoading] = useState(true);
-  // const [pokemonId, setPokemonId] = useState(1); //807 max
-  // const [shinyButton, setShinyButton] = useState(false);
+  const [pokemonId, setPokemonId] = useState(1); //807 max
+  const [shinyDisplay, setShinyDisplay] = useState(false);
   // const [statsAbilities, setStatsAbilities] = useState("stats");
   // const [inputValue, setInputValue] = useState("");
-
-  console.log(props);
-
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setError(false);
-  //   axios
-  //     .get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
-  //     .then((res) => {
-  //       setData(res.data);
-  //       setLoading(false);
-  //     })
-  //     .catch((err) => {
-  //       setLoading(false);
-  //       if (err.response) {
-  //         // pokemon not found
-  //         setError("Response");
-  //       } else if (err.request) {
-  //         // api error
-  //         setError("Request");
-  //       } else {
-  //         // everything else
-  //         setError(true);
-  //       }
-  //     });
-  // }, [pokemonId]);
 
   // const onInputChange = (e) => {
   //   e.preventDefault();
@@ -59,165 +33,82 @@ const Pokedex = ({ ...props }) => {
   //   }
   // };
 
-  // console.log(power);
-
   return (
     <div
       alt="Pokedex"
       data-testid="Pokedex"
       className="pokedex"
       style={{ backgroundImage: `url(${pokedex})` }}
-    ></div>
+    >
+      <PowerButton power={power} onClick={() => setPower(!power)} />
+      {props.error ? (
+        errorHandling(props.error)
+      ) : (
+        <>
+          <button
+            className="pokedex--shinyButton"
+            onClick={() => setShinyDisplay(!shinyDisplay)}
+          >
+            S
+          </button>
+          <span>
+            <button
+              className="pokedex--negativeButton"
+              onClick={() => {
+                setPokemonId(props.pokemon.id - 1);
+              }}
+            >
+              -
+            </button>
+            <button
+              className="pokedex--positiveButton"
+              onClick={() => {
+                setPokemonId(props.pokemon.id + 1);
+              }}
+            >
+              +
+            </button>
+          </span>
+          <div className="pokedex--screen">
+            <PokedexScreen
+              shiny={shinyDisplay}
+              pokemon={props.pokemon}
+              loading={props.loading}
+              error={props.error}
+            />
+
+            <PokedexAbilitiesTypes
+              loading={props.loading}
+              pokemon={props.pokemon}
+            />
+
+            <PokedexTypes pokemon={props.pokemon} loading={props.loading} />
+          </div>
+        </>
+      )}
+      {/* <form className="pokedex--form" onSubmit={onSubmit}>
+          <input
+            className="pokedex--form__search"
+            placeholder="Search..."
+            name="pokemon"
+            onChange={onInputChange}
+            autoFocus
+          ></input>
+          <input
+            className="pokedex--form__button"
+            type="submit"
+            value="Go"
+          ></input>
+        </form> */}
+      <div className="pokedex--light" />
+      <div className="pokedex--light__red" />
+      <div className="pokedex--light__yellow" />
+      <div className="pokedex--light__green" />
+      <div className="pokedex--light__yellow_big " />
+
+      {/* <div className="pokedex--screen__off" /> */}
+    </div>
   );
 };
-
-//   return (
-//       {power ? (
-//         <>
-//           {/* <button
-//             className="pokedex--shinyButton"
-//             onClick={() => setShinyButton(!shinyButton)}
-//           >
-//             S
-//           </button>
-//           <span>
-//             <button
-//               className="pokedex--negativeButton"
-//               onClick={() => {
-//                 setPokemonId(data.id - 1);
-//               }}
-//             >
-//               -
-//             </button>
-//             <button
-//               className="pokedex--positiveButton"
-//               onClick={() => {
-//                 setPokemonId(data.id + 1);
-//               }}
-//             >
-//               +
-//             </button>
-//           </span> */}
-//           {/* <form className="pokedex--form" onSubmit={onSubmit}>
-//             <input
-//               className="pokedex--form__search"
-//               placeholder="Search..."
-//               name="pokemon"
-//               onChange={onInputChange}
-//               autoFocus
-//             ></input>
-//             <input
-//               className="pokedex--form__button"
-//               type="submit"
-//               value="Go"
-//             ></input>
-//           </form> */}
-//           {loading ? (
-//             <img
-//               data-testid="loading"
-//               className="pokedex--screen__load"
-//               src={spinner}
-//               alt="Loading..."
-//             />
-//           ) : (
-//             <div data-testid="resolved">
-//               <div className="pokedex--light" />
-//               <div className="pokedex--light__red" />
-//               <div className="pokedex--light__yellow" />
-//               <div className="pokedex--light__green" />
-//               <div className="pokedex--light__yellow_big " />
-//               <div className="pokedex--screen">
-//                 <img
-//                   className="pokedex--screen__sprite"
-//                   src={displayShiny(
-//                     shinyButton,
-//                     data.sprites.front_default,
-//                     data.sprites.front_shiny
-//                   )}
-//                   alt={"pokemon spite"}
-//                 />
-//                 <p data-testid="pokemon-name" className="pokedex--screen__name">
-//                   {data.name}
-//                 </p>
-//                 <p className="pokedex--screen__pokeNumber">
-//                   {pokeNumber(data.id)}
-//                 </p>
-//               </div>
-//               {error ? (
-//                 <div className="pokedex--screen__error">
-//                   {errorHandling(error)}
-//                 </div>
-//               ) : (
-//                 ""
-//               )}
-//               <div className="pokedex--data">
-//                 {statsAbilities === "stats" ? (
-//                   <div className="pokedex--data__stats">
-//                     {data.stats.map((stat, i) => (
-//                       <p key={i}>
-//                         {stat.stat.name}: {stat.base_stat}
-//                       </p>
-//                     ))}
-//                   </div>
-//                 ) : (
-//                   <div className="pokedex--data__abilities">
-//                     <h1>Abilities:</h1>
-//                     {data.abilities.map((abilities, i) => (
-//                       <p key={i}>{abilities.ability.name}</p>
-//                     ))}
-//                   </div>
-//                 )}
-//               </div>
-//               <div className="pokedex--select">
-//                 {numbers.map((number, i) =>
-//                   i < 5 ? (
-//                     <button
-//                       className="pokedex--select__button"
-//                       onClick={() => setPokemonId(number)}
-//                       key={i}
-//                     >
-//                       {number}
-//                     </button>
-//                   ) : (
-//                     <button
-//                       className="pokedex--select__button"
-//                       onClick={() => setPokemonId(number)}
-//                       key={i}
-//                     >
-//                       {number}
-//                     </button>
-//                   )
-//                 )}
-//               </div>
-//               <span>
-//                 <button
-//                   className="pokedex--data__stats__button"
-//                   onClick={() => setStatsAbilities("stats")}
-//                 >
-//                   Stats
-//                 </button>
-//                 <button
-//                   className="pokedex--data__abilities__button"
-//                   onClick={() => setStatsAbilities("abilities")}
-//                 >
-//                   Abilities
-//                 </button>
-//               </span>
-//               <span className="pokedex--types">
-//                 {data.types.map((types, i) => (
-//                   <div className={`pokedex--types__${i}`} key={i}>
-//                     {types.type.name}
-//                   </div>
-//                 ))}
-//               </span>
-//             </div>
-//           )}
-//         </>
-//       ) : (
-//         <div className="pokedex--screen__off" />
-//       )}
-//     </div>
-//   );
-// };
 
 export default Pokedex;
