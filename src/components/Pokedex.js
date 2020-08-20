@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import pokedex from "../assets/pokedex.png";
 import PowerButton from "./PowerButton";
 import PokedexScreen from "./PokedexScreen";
-import PokedexAbilitiesTypes from "../components/PokedexAbilitiesTypes";
+import PokedexAbilitiesTypes from "./PokedexAbilitiesStats";
 import PokedexTypes from "./PokedexTypes";
 import SetButton from "./SetButton";
 import errorHandling from "../utils/errorHandling";

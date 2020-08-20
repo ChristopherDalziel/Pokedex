@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const PokedexAbilitiesTypes = ({ error, loading, pokemon }) => {
+const PokedexAbilitiesStats = ({ error, loading, pokemon }) => {
   const [statsAbilities, setStatsAbilities] = useState("stats");
 
   return (
@@ -48,4 +48,4 @@ const PokedexAbilitiesTypes = ({ error, loading, pokemon }) => {
   );
 };
 
-export default PokedexAbilitiesTypes;
+export default PokedexAbilitiesStats;

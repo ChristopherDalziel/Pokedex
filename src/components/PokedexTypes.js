@@ -1,6 +1,6 @@
 import React from "react";
 
-const PokedexTypes = ({ pokemon, loading }) => {
+const PokedexTypes = ({ error, pokemon, loading }) => {
   return (
     <>
       {error ? (
