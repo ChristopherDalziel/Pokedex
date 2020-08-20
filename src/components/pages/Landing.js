@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Pokedex from "../Pokedex";
+import DPad from "../DPad";
 import SetButton from "../SetButton";
 
 const Landing = () => {
   const [data, setData] = useState({});
   let [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [pokemonId, setPokemonId] = useState(1); //807 max
+  let [pokemonId, setPokemonId] = useState(1242); //807 max
   const [shinyDisplay, setShinyDisplay] = useState(false);
   const [statsAbilities, setStatsAbilities] = useState("stats");
   const [inputValue, setInputValue] = useState("");

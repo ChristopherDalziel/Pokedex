@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import displayShiny from "../utils/displayShiny";
 import spinner from "../assets/pika-load.gif";
 import pokeNumber from "../utils/pokeNumber";
@@ -7,10 +7,10 @@ import errorHandling from "../utils/errorHandling";
 const PokedexScreen = ({ pokemon, loading, error, shiny }) => {
   return (
     <>
-      {loading ? (
-        <img className="pokedex--screen__load" src={spinner} alt="Loading..." />
-      ) : error ? (
+      {error ? (
         errorHandling(error)
+      ) : loading ? (
+        <img className="pokedex--screen__load" src={spinner} alt="Loading..." />
       ) : (
         <div className="pokedex--screen">
           <img
@@ -30,8 +30,6 @@ const PokedexScreen = ({ pokemon, loading, error, shiny }) => {
           </p>
         </div>
       )}
-
-      {/* {error ? errorHandling(error) : ""} */}
     </>
   );
 };

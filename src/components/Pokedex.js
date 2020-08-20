@@ -6,10 +6,11 @@ import PokedexAbilitiesTypes from "../components/PokedexAbilitiesTypes";
 import PokedexTypes from "./PokedexTypes";
 import SetButton from "./SetButton";
 import errorHandling from "../utils/errorHandling";
+import DPad from "./DPad";
 
 const Pokedex = ({ ...props }) => {
   const [power, setPower] = useState(false);
-  const [pokemonId, setPokemonId] = useState(1); //807 max
+  // const [pokemonId, setPokemonId] = useState(1); //807 max
   const [shinyDisplay, setShinyDisplay] = useState(false);
   // const [inputValue, setInputValue] = useState("");
 
@@ -30,6 +31,7 @@ const Pokedex = ({ ...props }) => {
   // };
 
   const { error, pokemon, loading } = props;
+  console.log("poke", error);
   return (
     <div
       alt="Pokedex"
@@ -81,13 +83,19 @@ const Pokedex = ({ ...props }) => {
               error={error}
             />
 
-            <PokedexAbilitiesTypes
-              loading={loading}
-              pokemon={pokemon}
-              error={error}
-            />
+            {error ? (
+              ""
+            ) : (
+              <>
+                <PokedexAbilitiesTypes
+                  loading={loading}
+                  pokemon={pokemon}
+                  error={error}
+                />
 
-            <PokedexTypes pokemon={pokemon} loading={loading} />
+                <PokedexTypes pokemon={pokemon} loading={loading} />
+              </>
+            )}
           </div>
         </>
       ) : (
