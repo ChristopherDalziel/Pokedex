@@ -83,19 +83,13 @@ const Pokedex = ({ ...props }) => {
               error={error}
             />
 
-            {error ? (
-              ""
-            ) : (
-              <>
-                <PokedexAbilitiesTypes
-                  loading={loading}
-                  pokemon={pokemon}
-                  error={error}
-                />
+            <PokedexAbilitiesTypes
+              loading={loading}
+              pokemon={pokemon}
+              error={error}
+            />
 
-                <PokedexTypes pokemon={pokemon} loading={loading} />
-              </>
-            )}
+            <PokedexTypes pokemon={pokemon} loading={loading} error={error} />
           </div>
         </>
       ) : (

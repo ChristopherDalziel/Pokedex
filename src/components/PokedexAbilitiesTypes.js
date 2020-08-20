@@ -5,8 +5,9 @@ const PokedexAbilitiesTypes = ({ error, loading, pokemon }) => {
 
   return (
     <>
-      {/* {error ? "error" : "not error"} */}
-      {loading ? (
+      {error ? (
+        ""
+      ) : loading ? (
         "loading"
       ) : (
         <div className="pokedex--data">

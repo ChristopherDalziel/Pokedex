@@ -3,7 +3,9 @@ import React from "react";
 const PokedexTypes = ({ pokemon, loading }) => {
   return (
     <>
-      {loading ? (
+      {error ? (
+        ""
+      ) : loading ? (
         "loading"
       ) : (
         <span className="pokedex--types">
