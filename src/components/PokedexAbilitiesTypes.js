@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 
-const PokedexAbilitiesTypes = ({ loading, pokemon }) => {
+const PokedexAbilitiesTypes = ({ error, loading, pokemon }) => {
   const [statsAbilities, setStatsAbilities] = useState("stats");
 
   return (
     <>
+      {/* {error ? "error" : "not error"} */}
       {loading ? (
         "loading"
       ) : (
         <div className="pokedex--data">
           {statsAbilities === "stats" ? (
             <div className="pokedex--data__stats">
-              {pokemon?.stats.map((stat, i) => (
+              {pokemon.stats.map((stat, i) => (
                 <p key={i}>
                   {stat.stat.name}: {stat.base_stat}
                 </p>
@@ -20,7 +21,7 @@ const PokedexAbilitiesTypes = ({ loading, pokemon }) => {
           ) : (
             <div className="pokedex--data__abilities">
               <h1>Abilities:</h1>
-              {pokemon?.abilities.map((abilities, i) => (
+              {pokemon.abilities.map((abilities, i) => (
                 <p key={i}>{abilities.ability.name}</p>
               ))}
             </div>

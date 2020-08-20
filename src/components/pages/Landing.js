@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Pokedex from "../Pokedex";
-import PowerButton from "../PowerButton";
 import SetButton from "../SetButton";
 
 const Landing = () => {

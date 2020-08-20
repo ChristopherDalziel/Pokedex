@@ -41,9 +41,7 @@ const Pokedex = ({ ...props }) => {
         {power ? "Off" : "On"}
       </button>
 
-      {error ? (
-        errorHandling(error)
-      ) : power ? (
+      {power ? (
         <>
           <div className="pokedex--light" />
           <div className="pokedex--light__red" />
@@ -57,7 +55,7 @@ const Pokedex = ({ ...props }) => {
           >
             S
           </button>
-          <span>
+          {/* <span>
             <button
               className="pokedex--negativeButton"
               onClick={() => {
@@ -74,7 +72,7 @@ const Pokedex = ({ ...props }) => {
             >
               +
             </button>
-          </span>
+          </span> */}
           <div className="pokedex--screen">
             <PokedexScreen
               shiny={shinyDisplay}
@@ -83,14 +81,19 @@ const Pokedex = ({ ...props }) => {
               error={error}
             />
 
-            <PokedexAbilitiesTypes loading={loading} pokemon={pokemon} />
+            <PokedexAbilitiesTypes
+              loading={loading}
+              pokemon={pokemon}
+              error={error}
+            />
 
             <PokedexTypes pokemon={pokemon} loading={loading} />
           </div>
         </>
       ) : (
-        <div className="pokedex--screen__off" />
+        ""
       )}
+
       {/* <form className="pokedex--form" onSubmit={onSubmit}>
         <input
           className="pokedex--form__search"
