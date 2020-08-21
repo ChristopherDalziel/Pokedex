@@ -12,9 +12,13 @@ import PokedexSelect from "./PokedexSelect";
 const Pokedex = () => {
   const [power, setPower] = useState(false);
   const [shinyDisplay, setShinyDisplay] = useState(false);
-  const [state, setState, error, loading, setPokemonId] = useContext(
+  const [state, setState, error, loading, setPokemonId, pokemonId] = useContext(
     PokedexContext
   );
+
+  console.log(pokemonId);
+
+  // console.log(setPokemonId(50));
 
   return (
     <div
@@ -55,17 +59,13 @@ const Pokedex = () => {
           <span>
             <button
               className="pokedex--negativeButton"
-              onClick={() => {
-                setPokemonId(state.id - 1);
-              }}
+              // onClick={}
             >
               -
             </button>
             <button
               className="pokedex--positiveButton"
-              onClick={() => {
-                setPokemonId(state.id + 1);
-              }}
+              //  onClick={}
             >
               +
             </button>
