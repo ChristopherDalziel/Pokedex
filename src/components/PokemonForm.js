@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { PokedexContext } from "../context/PokedexContext";
 
-const PokemonForm = (pokemonId) => {
+const PokemonForm = () => {
+  const [setPokemonId] = useContext(PokedexContext);
+  const [inputValue, setInputValue] = useState("");
+
   const onInputChange = (e) => {
     e.preventDefault();
     let newInputValue = e.target.value.toLowerCase().trim();

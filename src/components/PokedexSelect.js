@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { PokedexContext } from "../context/PokedexContext";
 import numbers from "../utils/numbers";
-import SetButton from "./SetButton";
 
 const PokedexSelect = () => {
+  const [setPokemonId] = useContext(PokedexContext);
+
   return (
     <div className="pokedex--select">
       {numbers.map((number, i) =>

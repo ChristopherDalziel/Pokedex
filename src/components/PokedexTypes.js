@@ -1,21 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import { PokedexContext } from "../context/PokedexContext";
 
-const PokedexTypes = ({ error, pokemon, loading }) => {
+const PokedexTypes = () => {
+  const [state] = useContext(PokedexContext);
+
   return (
     <>
-      {error ? (
-        ""
-      ) : loading ? (
-        "loading"
-      ) : (
-        <span className="pokedex--types">
-          {pokemon.types.map((types, i) => (
-            <div className={`pokedex--types__${i}`} key={i}>
-              {types.type.name}
-            </div>
-          ))}
-        </span>
-      )}
+      <span className="pokedex--types">
+        {state.types.map((types, i) => (
+          <div className={`pokedex--types__${i}`} key={i}>
+            {types.type.name}
+          </div>
+        ))}
+      </span>
     </>
   );
 };
