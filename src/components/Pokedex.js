@@ -75,22 +75,20 @@ const Pokedex = ({ ...props }) => {
               +
             </button>
           </span> */}
-          <div className="pokedex--screen">
-            <PokedexScreen
-              shiny={shinyDisplay}
-              pokemon={pokemon}
-              loading={loading}
-              error={error}
-            />
+          <PokedexScreen
+            shiny={shinyDisplay}
+            pokemon={pokemon}
+            loading={loading}
+            error={error}
+          />
 
-            <PokedexAbilitiesTypes
-              loading={loading}
-              pokemon={pokemon}
-              error={error}
-            />
+          <PokedexAbilitiesTypes
+            loading={loading}
+            pokemon={pokemon}
+            error={error}
+          />
 
-            <PokedexTypes pokemon={pokemon} loading={loading} error={error} />
-          </div>
+          <PokedexTypes pokemon={pokemon} loading={loading} error={error} />
         </>
       ) : (
         ""

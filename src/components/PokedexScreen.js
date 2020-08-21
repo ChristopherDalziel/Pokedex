@@ -6,13 +6,13 @@ import errorHandling from "../utils/errorHandling";
 
 const PokedexScreen = ({ pokemon, loading, error, shiny }) => {
   return (
-    <>
+    <div className="pokedex--screen">
       {error ? (
         <div className="pokedex--screen__error">{errorHandling(error)}</div>
       ) : loading ? (
         <img className="pokedex--screen__load" src={spinner} alt="Loading..." />
       ) : (
-        <div className="pokedex--screen">
+        <>
           <img
             className="pokedex--screen__sprite"
             src={displayShiny(
@@ -28,9 +28,9 @@ const PokedexScreen = ({ pokemon, loading, error, shiny }) => {
           <p className="pokedex--screen__pokeNumber">
             {pokeNumber(pokemon.id)}
           </p>
-        </div>
+        </>
       )}
-    </>
+    </div>
   );
 };
 
