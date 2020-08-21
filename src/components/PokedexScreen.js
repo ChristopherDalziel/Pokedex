@@ -8,7 +8,7 @@ const PokedexScreen = ({ pokemon, loading, error, shiny }) => {
   return (
     <>
       {error ? (
-        errorHandling(error)
+        <div className="pokedex--screen__error">{errorHandling(error)}</div>
       ) : loading ? (
         <img className="pokedex--screen__load" src={spinner} alt="Loading..." />
       ) : (
