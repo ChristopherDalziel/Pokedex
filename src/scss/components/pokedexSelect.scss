@@ -1,0 +1,16 @@
+.pokedex--select {
+  position: absolute;
+  top: 290px;
+  left: 455px;
+  display: flex;
+  flex-flow: row wrap;
+  width: 250px;
+  animation: fade-in 1s;
+
+  &__button {
+    width: 47.5px;
+    height: 36.5px;
+    background: none;
+    border: none;
+  }
+}

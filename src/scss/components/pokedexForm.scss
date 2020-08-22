@@ -1,0 +1,35 @@
+.pokedex--form {
+  position: absolute;
+  top: 464px;
+  left: 100px;
+
+  &__search {
+    width: 78px;
+    background: none;
+    border: none;
+    font-size: 16px;
+
+    &::placeholder {
+      color: #555;
+    }
+  }
+
+  &__button {
+    background: black;
+    color: white;
+    border: none;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-1.5px) scale(1.01);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}

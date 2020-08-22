@@ -104,57 +104,6 @@ button {
       animation-duration: 1s;
       animation-name: lightSmall;
       animation-iteration-count: 2; }
-  .pokedex--screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 237px;
-    height: 158px;
-    background-color: #fff;
-    color: #ccc;
-    position: absolute;
-    top: 169px;
-    left: 73px;
-    border-radius: 10px;
-    animation: fade-in 1s; }
-    .pokedex--screen__off {
-      width: 237px;
-      height: 158px;
-      background-color: #012924;
-      position: absolute;
-      top: 169px;
-      left: 73px;
-      border-radius: 10px; }
-    .pokedex--screen__error {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 169px;
-      left: 73px;
-      border-radius: 10px;
-      width: 232px;
-      height: 158px;
-      text-align: center;
-      background-color: #fff;
-      padding: 5px; }
-    .pokedex--screen__load {
-      width: 237px;
-      height: 158px;
-      position: absolute;
-      top: 169px;
-      left: 73px;
-      border-radius: 10px; }
-    .pokedex--screen__sprite {
-      position: absolute;
-      width: 120px; }
-    .pokedex--screen__name {
-      position: absolute;
-      top: 10px; }
-    .pokedex--screen__pokeNumber {
-      margin-left: 5px;
-      font-size: 94px;
-      font-weight: 1000; }
   .pokedex--shinyButton {
     position: absolute;
     left: 96px;
@@ -192,80 +141,136 @@ button {
     border: none;
     color: #fff;
     font-size: 30px; }
-  .pokedex--form {
+
+.pokedex--data {
+  position: absolute;
+  top: 185px;
+  right: 100px;
+  color: white;
+  width: 225px;
+  height: 80px;
+  font-size: 10px;
+  z-index: 2;
+  animation: fade-in 1s; }
+  .pokedex--data__stats__button {
     position: absolute;
-    top: 464px;
-    left: 100px; }
-    .pokedex--form__search {
-      width: 78px;
-      background: none;
-      border: none;
-      font-size: 16px; }
-      .pokedex--form__search::placeholder {
-        color: #555; }
-    .pokedex--form__button {
-      background: black;
-      color: white;
-      border: none;
-      height: 32px;
-      width: 32px;
-      border-radius: 50%;
-      transition: transform 0.3s; }
-      .pokedex--form__button:hover {
-        cursor: pointer;
-        transform: translateY(-1.5px) scale(1.01); }
-      .pokedex--form__button:active {
-        transform: translateY(0); }
-  .pokedex--data {
+    top: 402px;
+    left: 465px;
+    background: none;
+    border: none;
+    font-size: 12px;
+    cursor: pointer; }
+  .pokedex--data__abilities__button {
     position: absolute;
-    top: 185px;
-    right: 100px;
+    top: 402px;
+    left: 509.5px;
+    background: none;
+    border: none;
+    font-size: 12px;
+    cursor: pointer; }
+
+.pokedex--form {
+  position: absolute;
+  top: 464px;
+  left: 100px; }
+  .pokedex--form__search {
+    width: 78px;
+    background: none;
+    border: none;
+    font-size: 16px; }
+    .pokedex--form__search::placeholder {
+      color: #555; }
+  .pokedex--form__button {
+    background: black;
     color: white;
-    width: 225px;
-    height: 80px;
-    font-size: 10px;
-    z-index: 2;
-    animation: fade-in 1s; }
-    .pokedex--data__stats__button {
-      position: absolute;
-      top: 402px;
-      left: 465px;
-      background: none;
-      border: none;
-      font-size: 12px;
-      cursor: pointer; }
-    .pokedex--data__abilities__button {
-      position: absolute;
-      top: 402px;
-      left: 509.5px;
-      background: none;
-      border: none;
-      font-size: 12px;
-      cursor: pointer; }
-  .pokedex--select {
+    border: none;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    transition: transform 0.3s; }
+    .pokedex--form__button:hover {
+      cursor: pointer;
+      transform: translateY(-1.5px) scale(1.01); }
+    .pokedex--form__button:active {
+      transform: translateY(0); }
+
+.pokedex--screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 237px;
+  height: 158px;
+  background-color: #fff;
+  color: #ccc;
+  position: absolute;
+  top: 169px;
+  left: 73px;
+  border-radius: 10px;
+  animation: fade-in 1s; }
+  .pokedex--screen__off {
+    width: 237px;
+    height: 158px;
+    background-color: #012924;
     position: absolute;
-    top: 290px;
-    left: 455px;
+    top: 169px;
+    left: 73px;
+    border-radius: 10px; }
+  .pokedex--screen__error {
     display: flex;
-    flex-flow: row wrap;
-    width: 250px;
-    animation: fade-in 1s; }
-    .pokedex--select__button {
-      width: 47.5px;
-      height: 36.5px;
-      background: none;
-      border: none; }
-  .pokedex--types {
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 469px;
-    margin-left: 20px;
-    color: white; }
-    .pokedex--types__0 {
-      position: absolute;
-      left: 460px; }
-    .pokedex--types__1 {
-      position: absolute;
-      left: 595px; }
+    top: 169px;
+    left: 73px;
+    border-radius: 10px;
+    width: 232px;
+    height: 158px;
+    text-align: center;
+    background-color: #fff;
+    padding: 5px; }
+  .pokedex--screen__load {
+    width: 237px;
+    height: 158px;
+    position: absolute;
+    top: 169px;
+    left: 73px;
+    border-radius: 10px; }
+  .pokedex--screen__sprite {
+    position: absolute;
+    width: 120px; }
+  .pokedex--screen__name {
+    position: absolute;
+    top: 10px; }
+  .pokedex--screen__pokeNumber {
+    margin-left: 5px;
+    font-size: 94px;
+    font-weight: 1000; }
+
+.pokedex--select {
+  position: absolute;
+  top: 290px;
+  left: 455px;
+  display: flex;
+  flex-flow: row wrap;
+  width: 250px;
+  animation: fade-in 1s; }
+  .pokedex--select__button {
+    width: 47.5px;
+    height: 36.5px;
+    background: none;
+    border: none; }
+
+.pokedex--types {
+  position: absolute;
+  top: 469px;
+  margin-left: 20px;
+  color: white; }
+  .pokedex--types__0 {
+    position: absolute;
+    left: 460px; }
+  .pokedex--types__1 {
+    position: absolute;
+    left: 595px; }
 
 * {
   margin: 0;
