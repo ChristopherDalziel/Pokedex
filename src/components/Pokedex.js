@@ -13,6 +13,7 @@ const Pokedex = () => {
   const [state, setState, error, loading, setPokemonId, pokemonId] = useContext(
     PokedexContext
   );
+
   const [power, setPower] = useState(false);
   const [shinyDisplay, setShinyDisplay] = useState(false);
 
@@ -63,7 +64,7 @@ const Pokedex = () => {
             </button>
             <button
               className="pokedex--positiveButton"
-              //  onClick={}
+              // onClick={() => positiveButton()}
             >
               +
             </button>
