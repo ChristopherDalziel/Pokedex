@@ -4,11 +4,11 @@ import Pokedex from "../Pokedex";
 
 const Landing = () => {
   return (
-    <PokedexProvider>
-      <main className="container">
-        <Pokedex />
-      </main>
-    </PokedexProvider>
+    // <PokedexProvider>
+    <main className="container">
+      <Pokedex />
+    </main>
+    // </PokedexProvider>
   );
 };
 

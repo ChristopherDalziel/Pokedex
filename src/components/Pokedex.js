@@ -8,6 +8,7 @@ import { PokedexContext } from "../context/PokedexContext";
 import spinner from "../assets/pika-load.gif";
 import PokedexForm from "./PokemonForm";
 import PokedexSelect from "./PokedexSelect";
+import { PokedexProvider } from "../context/PokedexContext";
 
 const Pokedex = () => {
   const [power, setPower] = useState(false);
@@ -18,68 +19,68 @@ const Pokedex = () => {
 
   console.log(pokemonId);
 
-  // console.log(setPokemonId(50));
-
   return (
-    <div
-      alt="Pokedex"
-      data-testid="Pokedex"
-      className="pokedex"
-      style={{ backgroundImage: `url(${pokedex})` }}
-    >
-      <button className="pokedex--onButton" onClick={() => setPower(!power)}>
-        {power ? "Off" : "On"}
-      </button>
+    <PokedexProvider>
+      <div
+        alt="Pokedex"
+        data-testid="Pokedex"
+        className="pokedex"
+        style={{ backgroundImage: `url(${pokedex})` }}
+      >
+        <button className="pokedex--onButton" onClick={() => setPower(!power)}>
+          {power ? "Off" : "On"}
+        </button>
 
-      {error ? (
-        <div className="pokedex--screen__error">{errorHandling(error)}</div>
-      ) : power ? (
-        <>
-          {loading ? (
-            <img
-              className="pokedex--screen__load"
-              src={spinner}
-              alt="Loading..."
-            />
-          ) : (
-            "not loading"
-          )}
-          <div className="pokedex--light" />
-          <div className="pokedex--light__red" />
-          <div className="pokedex--light__yellow" />
-          <div className="pokedex--light__green" />
-          <div className="pokedex--light__yellow_big" />
+        {error ? (
+          <div className="pokedex--screen__error">{errorHandling(error)}</div>
+        ) : power ? (
+          <>
+            {loading ? (
+              <img
+                className="pokedex--screen__load"
+                src={spinner}
+                alt="Loading..."
+              />
+            ) : (
+              "not loading"
+            )}
+            <div className="pokedex--light" />
+            <div className="pokedex--light__red" />
+            <div className="pokedex--light__yellow" />
+            <div className="pokedex--light__green" />
+            <div className="pokedex--light__yellow_big" />
 
-          <button
-            className="pokedex--shinyButton"
-            onClick={() => setShinyDisplay(!shinyDisplay)}
-          >
-            S
-          </button>
-          <span>
             <button
-              className="pokedex--negativeButton"
-              // onClick={}
+              className="pokedex--shinyButton"
+              onClick={() => setShinyDisplay(!shinyDisplay)}
             >
-              -
+              S
             </button>
-            <button
-              className="pokedex--positiveButton"
-              //  onClick={}
-            >
-              +
-            </button>
-          </span>
-          <PokedexScreen shiny={shinyDisplay} />
-          <PokedexAbilitiesTypes />
-          <PokedexTypes />
-          <PokedexSelect />
-          <PokedexForm />
-        </>
-      ) : (
-        <div className="pokedex--screen__off" />
-      )}
-    </div>
+            <span>
+              <button
+                className="pokedex--negativeButton"
+                onClick={() => setPokemonId(state.id - 1)}
+              >
+                -
+              </button>
+              <button
+                className="pokedex--positiveButton"
+                //  onClick={}
+              >
+                +
+              </button>
+            </span>
+            <PokedexScreen shiny={shinyDisplay} />
+            <PokedexAbilitiesTypes />
+            <PokedexTypes />
+            <PokedexSelect />
+            <PokedexForm />
+          </>
+        ) : (
+          <div className="pokedex--screen__off" />
+        )}
+      </div>
+    </PokedexProvider>
   );
 };
 
