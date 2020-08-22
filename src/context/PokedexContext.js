@@ -35,7 +35,7 @@ const PokedexProvider = (props) => {
 
   return (
     <PokedexContext.Provider
-      value={[
+      value={{
         state,
         setState,
         error,
@@ -43,7 +43,7 @@ const PokedexProvider = (props) => {
         setLoading,
         pokemonId,
         setPokemonId,
-      ]}
+      }}
     >
       {props.children}
     </PokedexContext.Provider>

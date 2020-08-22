@@ -3,7 +3,7 @@ import { PokedexContext } from "../context/PokedexContext";
 
 const PokedexAbilitiesStats = () => {
   const [statsAbilities, setStatsAbilities] = useState("stats");
-  const [state] = useContext(PokedexContext);
+  const { state } = useContext(PokedexContext);
 
   return (
     <>

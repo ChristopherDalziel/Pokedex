@@ -10,19 +10,11 @@ import PokedexForm from "./PokemonForm";
 import PokedexSelect from "./PokedexSelect";
 
 const Pokedex = () => {
-  const [
-    state,
-    setState,
-    error,
-    loading,
-    setLoading,
-    pokemonId,
-    setPokemonId,
-  ] = useContext(PokedexContext);
+  const { error, loading, pokemonId, setPokemonId } = useContext(
+    PokedexContext
+  );
   const [power, setPower] = useState(false);
   const [shinyDisplay, setShinyDisplay] = useState(false);
-
-  console.log(pokemonId);
 
   return (
     <div
@@ -46,39 +38,40 @@ const Pokedex = () => {
               alt="Loading..."
             />
           ) : (
-            ""
-          )}
-          <div className="pokedex--light" />
-          <div className="pokedex--light__red" />
-          <div className="pokedex--light__yellow" />
-          <div className="pokedex--light__green" />
-          <div className="pokedex--light__yellow_big" />
+            <>
+              <div className="pokedex--light" />
+              <div className="pokedex--light__red" />
+              <div className="pokedex--light__yellow" />
+              <div className="pokedex--light__green" />
+              <div className="pokedex--light__yellow_big" />
 
-          <button
-            className="pokedex--shinyButton"
-            onClick={() => setShinyDisplay(!shinyDisplay)}
-          >
-            S
-          </button>
-          <span>
-            <button
-              className="pokedex--negativeButton"
-              onClick={() => setPokemonId(pokemonId - 1)}
-            >
-              -
-            </button>
-            <button
-              className="pokedex--positiveButton"
-              onClick={() => setPokemonId(pokemonId + 1)}
-            >
-              +
-            </button>
-          </span>
-          <PokedexScreen shiny={shinyDisplay} />
-          <PokedexAbilitiesTypes />
-          <PokedexTypes />
-          <PokedexSelect />
-          <PokedexForm />
+              <button
+                className="pokedex--shinyButton"
+                onClick={() => setShinyDisplay(!shinyDisplay)}
+              >
+                S
+              </button>
+              <span>
+                <button
+                  className="pokedex--negativeButton"
+                  onClick={() => setPokemonId(pokemonId - 1)}
+                >
+                  -
+                </button>
+                <button
+                  className="pokedex--positiveButton"
+                  onClick={() => setPokemonId(pokemonId + 1)}
+                >
+                  +
+                </button>
+              </span>
+              <PokedexScreen shiny={shinyDisplay} />
+              <PokedexAbilitiesTypes />
+              <PokedexTypes />
+              <PokedexSelect />
+              <PokedexForm />
+            </>
+          )}
         </>
       ) : (
         <div className="pokedex--screen__off" />

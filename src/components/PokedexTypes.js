@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { PokedexContext } from "../context/PokedexContext";
 
 const PokedexTypes = () => {
-  const [state] = useContext(PokedexContext);
+  const { state } = useContext(PokedexContext);
 
   return (
     <>

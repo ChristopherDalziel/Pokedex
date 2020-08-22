@@ -4,7 +4,7 @@ import pokeNumber from "../utils/pokeNumber";
 import { PokedexContext } from "../context/PokedexContext";
 
 const PokedexScreen = ({ shiny }) => {
-  const [state] = useContext(PokedexContext);
+  const { state } = useContext(PokedexContext);
 
   return (
     <div className="pokedex--screen">
