@@ -2,7 +2,15 @@ import React, { useContext, useState } from "react";
 import { PokedexContext } from "../context/PokedexContext";
 
 const PokemonForm = () => {
-  const [setPokemonId] = useContext(PokedexContext);
+  const [
+    state,
+    setState,
+    error,
+    loading,
+    setLoading,
+    pokemonId,
+    setPokemonId,
+  ] = useContext(PokedexContext);
   const [inputValue, setInputValue] = useState("");
 
   const onInputChange = (e) => {

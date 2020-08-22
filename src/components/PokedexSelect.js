@@ -3,7 +3,15 @@ import { PokedexContext } from "../context/PokedexContext";
 import numbers from "../utils/numbers";
 
 const PokedexSelect = () => {
-  const [setPokemonId] = useContext(PokedexContext);
+  const [
+    state,
+    setState,
+    error,
+    loading,
+    setLoading,
+    pokemonId,
+    setPokemonId,
+  ] = useContext(PokedexContext);
 
   return (
     <div className="pokedex--select">

@@ -10,10 +10,15 @@ import PokedexForm from "./PokemonForm";
 import PokedexSelect from "./PokedexSelect";
 
 const Pokedex = () => {
-  const [state, setState, error, loading, setPokemonId, pokemonId] = useContext(
-    PokedexContext
-  );
-
+  const [
+    state,
+    setState,
+    error,
+    loading,
+    setLoading,
+    pokemonId,
+    setPokemonId,
+  ] = useContext(PokedexContext);
   const [power, setPower] = useState(false);
   const [shinyDisplay, setShinyDisplay] = useState(false);
 
@@ -64,7 +69,7 @@ const Pokedex = () => {
             </button>
             <button
               className="pokedex--positiveButton"
-              // onClick={() => positiveButton()}
+              onClick={() => setPokemonId(pokemonId + 1)}
             >
               +
             </button>
