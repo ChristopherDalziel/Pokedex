@@ -5,7 +5,6 @@ const PokedexContext = React.createContext([{}, () => {}]);
 
 const PokedexProvider = (props) => {
   const [state, setState] = useState({});
-  // const [power, setPower] = useState(false);
   const [loading, setLoading] = useState(true);
   let [error, setError] = useState(false);
   let [pokemonId, setPokemonId] = useState(10); //807 max

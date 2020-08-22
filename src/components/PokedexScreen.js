@@ -1,8 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import displayShiny from "../utils/displayShiny";
-import spinner from "../assets/pika-load.gif";
 import pokeNumber from "../utils/pokeNumber";
-import errorHandling from "../utils/errorHandling";
 import { PokedexContext } from "../context/PokedexContext";
 
 const PokedexScreen = ({ shiny }) => {

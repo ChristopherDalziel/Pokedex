@@ -8,7 +8,6 @@ import { PokedexContext } from "../context/PokedexContext";
 import spinner from "../assets/pika-load.gif";
 import PokedexForm from "./PokemonForm";
 import PokedexSelect from "./PokedexSelect";
-import { PokedexProvider } from "../context/PokedexContext";
 
 const Pokedex = () => {
   const [state, setState, error, loading, setPokemonId, pokemonId] = useContext(
