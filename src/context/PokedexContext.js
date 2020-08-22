@@ -39,9 +39,9 @@ const PokedexProvider = (props) => {
       value={[
         state,
         setState,
+        error,
         loading,
         setLoading,
-        error,
         pokemonId,
         setPokemonId,
       ]}
