@@ -6,12 +6,14 @@ const Dpad = () => {
   return (
     <span>
       <button
+        data-testid="negativeButton"
         className="pokedex--negativeButton"
         onClick={() => setPokemonId(pokemonId - 1)}
       >
         -
       </button>
       <button
+        data-testid="positiveButton"
         className="pokedex--positiveButton"
         onClick={() => setPokemonId(pokemonId + 1)}
       >

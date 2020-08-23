@@ -1,5 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+import pokemonData from "../__fixtures__/pokemon";
 
 import Pokedex from "../../components/Pokedex";
 
@@ -12,4 +13,11 @@ describe("Pokèdex", () => {
     expect(screen.getByTestId("Pokedex")).toBeInTheDocument();
     expect(screen.getByText("On")).toBeInTheDocument();
   });
+
+  // test("Switches Pokèdex 'on'", () => {});
+
+  // test("Renders Pokèdex with data", () => {
+  //   const pokemon = {pokemonData};
+
+  // });
 });
