@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { PokedexContext } from "../context/PokedexContext";
 
-const PokedexTypes = () => {
+const Types = () => {
   const { state } = useContext(PokedexContext);
 
   return (
@@ -17,4 +17,4 @@ const PokedexTypes = () => {
   );
 };
 
-export default PokedexTypes;
+export default Types;

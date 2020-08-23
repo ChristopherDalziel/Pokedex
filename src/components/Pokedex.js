@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { PokedexContext } from "../context/PokedexContext";
 import pokedex from "../assets/pokedex.png";
 
 import Screen from "./Screen";
@@ -13,7 +14,6 @@ import Lights from "./Lights";
 import PowerButton from "./PowerButton";
 
 import errorHandling from "../utils/errorHandling";
-import { PokedexContext } from "../context/PokedexContext";
 
 const Pokedex = () => {
   const { error, loading, pokemonId, setPokemonId, power } = useContext(

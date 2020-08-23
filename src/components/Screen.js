@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
+import { PokedexContext } from "../context/PokedexContext";
 import displayShiny from "../utils/displayShiny";
 import pokeNumber from "../utils/pokeNumber";
-import { PokedexContext } from "../context/PokedexContext";
 
 const Screen = () => {
   const { state, shinyDisplay } = useContext(PokedexContext);
