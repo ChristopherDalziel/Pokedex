@@ -3,15 +3,15 @@ import displayShiny from "../utils/displayShiny";
 import pokeNumber from "../utils/pokeNumber";
 import { PokedexContext } from "../context/PokedexContext";
 
-const Screen = ({ shiny }) => {
-  const { state } = useContext(PokedexContext);
+const Screen = () => {
+  const { state, shinyDisplay } = useContext(PokedexContext);
 
   return (
     <div className="pokedex--screen">
       <img
         className="pokedex--screen__sprite"
         src={displayShiny(
-          shiny,
+          shinyDisplay,
           state.sprites.front_default,
           state.sprites.front_shiny
         )}
