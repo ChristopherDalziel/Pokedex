@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { PokedexContext } from "../context/PokedexContext";
 import numbers from "../utils/numbers";
 
-const PokedexSelect = () => {
+const PokemonSelection = () => {
   const { setPokemonId } = useContext(PokedexContext);
 
   return (
@@ -30,4 +30,4 @@ const PokedexSelect = () => {
   );
 };
 
-export default PokedexSelect;
+export default PokemonSelection;

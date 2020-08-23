@@ -3,7 +3,7 @@ import displayShiny from "../utils/displayShiny";
 import pokeNumber from "../utils/pokeNumber";
 import { PokedexContext } from "../context/PokedexContext";
 
-const PokedexScreen = ({ shiny }) => {
+const Screen = ({ shiny }) => {
   const { state } = useContext(PokedexContext);
 
   return (
@@ -25,4 +25,4 @@ const PokedexScreen = ({ shiny }) => {
   );
 };
 
-export default PokedexScreen;
+export default Screen;

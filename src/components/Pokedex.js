@@ -1,13 +1,15 @@
 import React, { useState, useContext } from "react";
 import pokedex from "../assets/pokedex.png";
-import PokedexScreen from "./PokedexScreen";
-import PokedexAbilitiesTypes from "./PokedexAbilitiesStats";
-import PokedexTypes from "./PokedexTypes";
+import Screen from "./Screen";
+import AbilitiesTypes from "./AbilitiesStats";
+import Types from "./Types";
+import PokemonSelection from "./PokemonSelection";
+import PokemonForm from "./PokemonForm";
+import Dpad from "./Dpad";
+
 import errorHandling from "../utils/errorHandling";
 import { PokedexContext } from "../context/PokedexContext";
 import spinner from "../assets/pika-load.gif";
-import PokedexForm from "./PokemonForm";
-import PokedexSelect from "./PokedexSelect";
 
 const Pokedex = () => {
   const { error, loading, pokemonId, setPokemonId } = useContext(
@@ -51,25 +53,13 @@ const Pokedex = () => {
               >
                 S
               </button>
-              <span>
-                <button
-                  className="pokedex--negativeButton"
-                  onClick={() => setPokemonId(pokemonId - 1)}
-                >
-                  -
-                </button>
-                <button
-                  className="pokedex--positiveButton"
-                  onClick={() => setPokemonId(pokemonId + 1)}
-                >
-                  +
-                </button>
-              </span>
-              <PokedexScreen shiny={shinyDisplay} />
-              <PokedexAbilitiesTypes />
-              <PokedexTypes />
-              <PokedexSelect />
-              <PokedexForm />
+
+              <Dpad />
+              <Screen shiny={shinyDisplay} />
+              <AbilitiesTypes />
+              <Types />
+              <PokemonSelection />
+              <PokemonForm />
             </>
           )}
         </>

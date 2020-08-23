@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { PokedexContext } from "../context/PokedexContext";
 
-const PokedexAbilitiesStats = () => {
+const AbilitiesStats = () => {
   const [statsAbilities, setStatsAbilities] = useState("stats");
   const { state } = useContext(PokedexContext);
 
@@ -44,4 +44,4 @@ const PokedexAbilitiesStats = () => {
   );
 };
 
-export default PokedexAbilitiesStats;
+export default AbilitiesStats;
