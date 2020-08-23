@@ -6,7 +6,7 @@ const Types = () => {
 
   return (
     <>
-      <span className="pokedex--types">
+      <span data-testid="types" className="pokedex--types">
         {state.types.map((types, i) => (
           <div className={`pokedex--types__${i}`} key={i}>
             {types.type.name}
