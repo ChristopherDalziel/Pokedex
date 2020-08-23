@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import pokedex from "../assets/pokedex.png";
 
 import Screen from "./Screen";
@@ -8,16 +8,17 @@ import PokemonSelection from "./PokemonSelection";
 import PokemonForm from "./PokemonForm";
 import Dpad from "./Dpad";
 import ShinyButton from "./ShinyButton";
+import LoadingDisplay from "./LoadingDisplay";
+import Lights from "./Lights";
+import PowerButton from "./PowerButton";
 
 import errorHandling from "../utils/errorHandling";
 import { PokedexContext } from "../context/PokedexContext";
-import spinner from "../assets/pika-load.gif";
 
 const Pokedex = () => {
-  const { error, loading, pokemonId, setPokemonId } = useContext(
+  const { error, loading, pokemonId, setPokemonId, power } = useContext(
     PokedexContext
   );
-  const [power, setPower] = useState(false);
 
   return (
     <div
@@ -26,28 +27,16 @@ const Pokedex = () => {
       className="pokedex"
       style={{ backgroundImage: `url(${pokedex})` }}
     >
-      <button className="pokedex--onButton" onClick={() => setPower(!power)}>
-        {power ? "Off" : "On"}
-      </button>
-
+      <PowerButton />
       {error ? (
         <div className="pokedex--screen__error">{errorHandling(error)}</div>
       ) : power ? (
         <>
           {loading ? (
-            <img
-              className="pokedex--screen__load"
-              src={spinner}
-              alt="Loading..."
-            />
+            <LoadingDisplay />
           ) : (
             <>
-              <div className="pokedex--light" />
-              <div className="pokedex--light__red" />
-              <div className="pokedex--light__yellow" />
-              <div className="pokedex--light__green" />
-              <div className="pokedex--light__yellow_big" />
-
+              <Lights />
               <ShinyButton />
               <Dpad />
               <Screen />

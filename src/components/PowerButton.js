@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { PokedexContext } from "../context/PokedexContext";
 
-const PowerButton = (power) => {
+const PowerButton = () => {
+  const { power, setPower } = useContext(PokedexContext);
   return (
-    <button className="pokedex--onButton" data-testid="on-off">
+    <button
+      className="pokedex--onButton"
+      onClick={() => setPower(!power)}
+      data-testid="on-off"
+    >
       {power ? "Off" : "On"}
     </button>
   );

@@ -9,6 +9,7 @@ const PokedexProvider = (props) => {
   let [error, setError] = useState(false);
   let [pokemonId, setPokemonId] = useState(10); //807 max
   const [shinyDisplay, setShinyDisplay] = useState(false);
+  const [power, setPower] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -46,6 +47,8 @@ const PokedexProvider = (props) => {
         setPokemonId,
         shinyDisplay,
         setShinyDisplay,
+        power,
+        setPower,
       }}
     >
       {props.children}
