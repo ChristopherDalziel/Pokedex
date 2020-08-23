@@ -16,9 +16,7 @@ import PowerButton from "./PowerButton";
 import errorHandling from "../utils/errorHandling";
 
 const Pokedex = () => {
-  const { error, loading, pokemonId, setPokemonId, power } = useContext(
-    PokedexContext
-  );
+  const { error, loading, power } = useContext(PokedexContext);
 
   return (
     <div
