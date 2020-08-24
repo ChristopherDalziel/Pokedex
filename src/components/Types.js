@@ -4,6 +4,9 @@ import { PokedexContext } from "../context/PokedexContext";
 const Types = () => {
   const { state } = useContext(PokedexContext);
 
+  // types returns an array
+  // console.log(state.types);
+
   return (
     <>
       <span data-testid="types" className="pokedex--types">

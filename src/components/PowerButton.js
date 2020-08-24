@@ -7,7 +7,7 @@ const PowerButton = () => {
     <button
       className="pokedex--onButton"
       onClick={() => setPower(!power)}
-      data-testid="on-off"
+      data-testid="power"
     >
       {power ? "Off" : "On"}
     </button>
