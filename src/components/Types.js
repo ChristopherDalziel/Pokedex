@@ -2,19 +2,23 @@ import React, { useContext } from "react";
 import { PokedexContext } from "../context/PokedexContext";
 
 const Types = () => {
+  // destructuring pokemon from the PokedexContext
   const { pokemon } = useContext(PokedexContext);
+
+  // Assigning the PokedexContext to the variable of dog
   // const dog = useContext(PokedexContext);
 
   // console.log(dog.state.types);
 
-  // types returns an array
-  // console.log(types);
-
   return (
     <>
-      <span data-testid="types" className="pokedex--types">
+      <span className="pokedex--types">
         {pokemon.types.map((types, i) => (
-          <div className={`pokedex--types__${i}`} key={i}>
+          <div
+            data-testid={`type-${i}`}
+            className={`pokedex--types__${i}`}
+            key={i}
+          >
             {types.type.name}
           </div>
         ))}
