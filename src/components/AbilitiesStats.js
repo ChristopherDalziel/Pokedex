@@ -3,14 +3,14 @@ import { PokedexContext } from "../context/PokedexContext";
 
 const AbilitiesStats = () => {
   const [statsAbilities, setStatsAbilities] = useState("stats");
-  const { state } = useContext(PokedexContext);
+  const { pokemon } = useContext(PokedexContext);
 
   return (
     <>
       <div className="pokedex--data">
         {statsAbilities === "stats" ? (
           <div className="pokedex--data__stats">
-            {state.stats.map((stat, i) => (
+            {pokemon.stats.map((stat, i) => (
               <p key={i}>
                 {stat.stat.name}: {stat.base_stat}
               </p>
@@ -19,7 +19,7 @@ const AbilitiesStats = () => {
         ) : (
           <div className="pokedex--data__abilities">
             <h1>Abilities:</h1>
-            {state.abilities.map((abilities, i) => (
+            {pokemon.abilities.map((abilities, i) => (
               <p key={i}>{abilities.ability.name}</p>
             ))}
           </div>

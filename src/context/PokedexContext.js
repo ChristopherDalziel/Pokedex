@@ -4,7 +4,7 @@ import axios from "axios";
 const PokedexContext = React.createContext([{}, () => {}]);
 
 const PokedexProvider = (props) => {
-  const [state, setState] = useState({});
+  const [pokemon, setPokemon] = useState({});
   const [loading, setLoading] = useState(true);
   let [error, setError] = useState(false);
   let [pokemonId, setPokemonId] = useState(10); //807 max
@@ -17,7 +17,7 @@ const PokedexProvider = (props) => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
       .then((res) => {
-        setState(res.data, loading);
+        setPokemon(res.data, loading);
         setLoading(false);
       })
       .catch((err) => {
@@ -35,14 +35,11 @@ const PokedexProvider = (props) => {
       });
   }, [pokemonId]);
 
-  // const types = state.types;
-
   return (
     <PokedexContext.Provider
       value={{
-        // types,
-        state,
-        setState,
+        pokemon,
+        setPokemon,
         error,
         loading,
         setLoading,
