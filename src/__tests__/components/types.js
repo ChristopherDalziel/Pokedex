@@ -7,20 +7,22 @@ import Types from "../../components/Types";
 
 describe("Type testing", () => {
   test("Type component renders as expected", () => {
-    const state = pokemonTypes;
+    const value = {};
+    // const state = pokemonTypes;
+    value.state = pokemonTypes;
 
     // returns all types
-    console.log(state.types);
+    // console.log(state.types);
 
     // returns type 1
-    console.log(state.types[0]);
+    // console.log(state.types[0]);
 
     // returns type 2
-    console.log(state.types[1]);
+    // console.log(state.types[1]);
 
     const { getByTestId } = render(
       // cannot read types of undefined error
-      <PokedexContext.Provider value={state}>
+      <PokedexContext.Provider value={value}>
         <Types />
       </PokedexContext.Provider>
     );

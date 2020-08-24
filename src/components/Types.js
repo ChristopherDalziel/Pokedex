@@ -3,9 +3,12 @@ import { PokedexContext } from "../context/PokedexContext";
 
 const Types = () => {
   const { state } = useContext(PokedexContext);
+  // const dog = useContext(PokedexContext);
+
+  // console.log(dog.state.types);
 
   // types returns an array
-  // console.log(state.types);
+  // console.log(types);
 
   return (
     <>

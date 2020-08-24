@@ -35,9 +35,12 @@ const PokedexProvider = (props) => {
       });
   }, [pokemonId]);
 
+  // const types = state.types;
+
   return (
     <PokedexContext.Provider
       value={{
+        // types,
         state,
         setState,
         error,
