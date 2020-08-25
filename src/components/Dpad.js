@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { PokedexContext } from "../context/PokedexContext";
 
 const Dpad = () => {
-  const { setPokemonId, pokemon } = useContext(PokedexContext);
+  const { pokemon, setPokemonId } = useContext(PokedexContext);
 
   return (
     <span>

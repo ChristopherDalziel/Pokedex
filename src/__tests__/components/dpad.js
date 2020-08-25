@@ -1,6 +1,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import { PokedexContext } from "../../context/PokedexContext";
+import pokemonData from "../__fixtures__/pokemon";
 import Dpad from "../../components/Dpad";
 
 describe("Dpad testing", () => {
@@ -12,9 +13,12 @@ describe("Dpad testing", () => {
   });
 
   test("Dpad calls setPokemonId when positive and negative clicks occur", () => {
+    const context = {};
+    context.pokemon = pokemonData[0];
     const setPokemonId = jest.fn();
+
     const { getByTestId } = render(
-      <PokedexContext.Provider value={{ setPokemonId }}>
+      <PokedexContext.Provider value={{ context, setPokemonId }}>
         <Dpad />
       </PokedexContext.Provider>
     );

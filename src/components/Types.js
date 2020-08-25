@@ -3,7 +3,7 @@ import { PokedexContext } from "../context/PokedexContext";
 
 const Types = () => {
   // destructuring pokemon from the PokedexContext
-  const { pokemon } = useContext(PokedexContext);
+  const { pokemon, error } = useContext(PokedexContext);
 
   // Assigning the PokedexContext to the variable of dog
   // const dog = useContext(PokedexContext);
@@ -12,17 +12,23 @@ const Types = () => {
 
   return (
     <>
-      <span className="pokedex--types">
-        {pokemon.types.map((types, i) => (
-          <div
-            data-testid={`type-${i}`}
-            className={`pokedex--types__${i}`}
-            key={i}
-          >
-            {types.type.name}
-          </div>
-        ))}
-      </span>
+      {error ? (
+        ""
+      ) : (
+        <>
+          <span className="pokedex--types">
+            {pokemon.types.map((types, i) => (
+              <div
+                data-testid={`type-${i}`}
+                className={`pokedex--types__${i}`}
+                key={i}
+              >
+                {types.type.name}
+              </div>
+            ))}
+          </span>
+        </>
+      )}
     </>
   );
 };
