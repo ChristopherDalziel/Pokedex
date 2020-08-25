@@ -6,6 +6,12 @@
   height: 577px;
   background-repeat: no-repeat;
   text-transform: capitalize;
+  overflow: hidden;
+
+  @include respond(small) {
+    position: absolute;
+    left: 10px;
+  }
 
   &--light {
     width: 58px;
@@ -108,7 +114,7 @@
   &--positiveButton {
     position: absolute;
     left: 312px;
-    top: 425px;
+    top: 420px;
     background-color: transparent;
     border: none;
     color: #fff;

@@ -10,4 +10,10 @@
   align-items: center;
   flex-direction: column;
   background-color: #87caea;
+
+  @include respond(small) {
+    height: 90vh;
+    width: 190vw;
+    overflow: scroll;
+  }
 }
