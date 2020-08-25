@@ -22,15 +22,25 @@ const PokemonForm = () => {
   };
 
   return (
-    <form className="pokedex--form" onSubmit={onSubmit}>
+    <form
+      className="pokedex--form"
+      data-testid="pokemonForm"
+      onSubmit={onSubmit}
+    >
       <input
         className="pokedex--form__search"
         placeholder="Search..."
         name="pokemon"
         onChange={onInputChange}
         autoFocus
+        data-testid="pokemonFormInput"
       ></input>
-      <input className="pokedex--form__button" type="submit" value="Go"></input>
+      <input
+        className="pokedex--form__button"
+        type="submit"
+        value="Go"
+        data-testid="pokemonFormButton"
+      ></input>
     </form>
   );
 };
