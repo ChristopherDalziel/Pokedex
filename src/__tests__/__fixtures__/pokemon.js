@@ -1150,6 +1150,13 @@ export default [
           url: "https://pokeapi.co/api/v2/type/13/",
         },
       },
+      {
+        slot: 2,
+        type: {
+          name: "water",
+          url: "https://pokeapi.co/api/v2/type/13/",
+        },
+      },
     ],
     weight: 445,
   },

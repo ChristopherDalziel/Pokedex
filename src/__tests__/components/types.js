@@ -1,13 +1,13 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import { PokedexContext } from "../../context/PokedexContext";
-import pokemonTypes from "../__fixtures__/types";
+import pokemonData from "../__fixtures__/pokemon";
 import Types from "../../components/Types";
 
 describe("Type component", () => {
   test("Type component renders and displays two different types", () => {
     const context = {};
-    context.pokemon = pokemonTypes;
+    context.pokemon = pokemonData[0];
 
     const { getByTestId } = render(
       <PokedexContext.Provider value={context}>
