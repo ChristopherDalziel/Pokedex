@@ -5,10 +5,10 @@ import Dpad from "../../components/Dpad";
 
 describe("Dpad testing", () => {
   test("Dpad renders as expected", () => {
-    render(<Dpad />);
+    const { getByTestId } = render(<Dpad />);
 
-    expect(screen.getByTestId("negativeButton")).toHaveTextContent("-");
-    expect(screen.getByTestId("positiveButton")).toHaveTextContent("+");
+    expect(getByTestId("negativeButton")).toHaveTextContent("-");
+    expect(getByTestId("positiveButton")).toHaveTextContent("+");
   });
 
   test("Dpad calls setPokemonId when positive and negative clicks occur", () => {
