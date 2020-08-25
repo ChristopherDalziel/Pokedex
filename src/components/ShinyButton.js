@@ -5,6 +5,7 @@ const ShinyButton = () => {
   const { shinyDisplay, setShinyDisplay } = useContext(PokedexContext);
   return (
     <button
+      data-testid="shinyButton"
       className="pokedex--shinyButton"
       onClick={() => setShinyDisplay(!shinyDisplay)}
     >
