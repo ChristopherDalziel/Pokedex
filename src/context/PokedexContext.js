@@ -7,7 +7,7 @@ const PokedexProvider = (props) => {
   const [pokemon, setPokemon] = useState({});
   const [loading, setLoading] = useState(true);
   let [error, setError] = useState(false);
-  let [pokemonId, setPokemonId] = useState(10); //807 max
+  let [pokemonId, setPokemonId] = useState(1); //807 max
   const [shinyDisplay, setShinyDisplay] = useState(false);
   const [power, setPower] = useState(false);
 

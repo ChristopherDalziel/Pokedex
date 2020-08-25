@@ -26,9 +26,7 @@ const Pokedex = () => {
       style={{ backgroundImage: `url(${pokedex})` }}
     >
       <PowerButton />
-      {error ? (
-        <div className="pokedex--screen__error">{errorHandling(error)}</div>
-      ) : power ? (
+      {power ? (
         <>
           {loading ? (
             <LoadingDisplay />
@@ -47,6 +45,11 @@ const Pokedex = () => {
         </>
       ) : (
         <div className="pokedex--screen__off" data-testid="screenOff" />
+      )}
+      {error ? (
+        <div className="pokedex--screen__error">{errorHandling(error)}</div>
+      ) : (
+        ""
       )}
     </div>
   );
