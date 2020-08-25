@@ -46,7 +46,7 @@ const Pokedex = () => {
           )}
         </>
       ) : (
-        <div className="pokedex--screen__off" />
+        <div className="pokedex--screen__off" data-testid="screenOff" />
       )}
     </div>
   );

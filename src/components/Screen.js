@@ -7,7 +7,7 @@ const Screen = () => {
   const { pokemon, shinyDisplay } = useContext(PokedexContext);
 
   return (
-    <div className="pokedex--screen">
+    <div className="pokedex--screen" data-testid="screen">
       <img
         className="pokedex--screen__sprite"
         src={displayShiny(
