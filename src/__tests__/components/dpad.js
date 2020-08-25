@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import { PokedexContext } from "../../context/PokedexContext";
 import Dpad from "../../components/Dpad";
 
