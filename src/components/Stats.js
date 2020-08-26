@@ -8,7 +8,7 @@ const Stats = () => {
       {error ? (
         ""
       ) : (
-        <div className="pokedex--data__stats">
+        <div className="pokedex--data__stats" data-testid="stats">
           {pokemon.stats.map((stat, i) => (
             <p key={i}>
               {stat.stat.name}: {stat.base_stat}
