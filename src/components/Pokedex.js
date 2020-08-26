@@ -3,7 +3,9 @@ import { PokedexContext } from "../context/PokedexContext";
 import pokedex from "../assets/pokedex.png";
 
 import Screen from "./Screen";
-import AbilitiesTypes from "./AbilitiesStats";
+import AbilitiesStatsButtons from "./AbilitiesStatsButtons";
+import Abilities from "./Abilities";
+import Stats from "./Stats";
 import Types from "./Types";
 import PokemonSelection from "./PokemonSelection";
 import PokemonForm from "./PokemonForm";
@@ -16,7 +18,7 @@ import PowerButton from "./PowerButton";
 import errorHandling from "../utils/errorHandling";
 
 const Pokedex = () => {
-  const { error, loading, power } = useContext(PokedexContext);
+  const { error, loading, power, statsAbilities } = useContext(PokedexContext);
 
   return (
     <div
@@ -36,7 +38,10 @@ const Pokedex = () => {
               <ShinyButton />
               <Dpad />
               <Screen />
-              <AbilitiesTypes />
+              <AbilitiesStatsButtons />
+              <div className="pokedex--data">
+                {statsAbilities === "abilities" ? <Abilities /> : <Stats />}
+              </div>
               <Types />
               <PokemonSelection />
               <PokemonForm />
