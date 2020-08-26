@@ -32,7 +32,6 @@ const PokemonForm = () => {
         placeholder="Search..."
         name="pokemon"
         onChange={onInputChange}
-        autoFocus
         data-testid="pokemonFormInput"
       ></input>
       <input
