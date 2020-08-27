@@ -17,6 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --testPathIgnorePatterns=src/__tests__/__fixtures__ --testPathIgnorePatterns=src/__tests__/__mocks__",
+    "cypress": "cypress open",
     "eject": "react-scripts eject",
     "compile:sass": "node-sass src/scss/main.scss src/css/style.css --watch"
   },
@@ -37,6 +38,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "^9.5.0",
+    "cypress": "^5.0.0",
     "eslint-plugin-react-hooks": "^4.1.0"
   }
 }
