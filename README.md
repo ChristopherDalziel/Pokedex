@@ -1,5 +1,9 @@
 # Process
 
+# Tutorial Mode
+
+![Tutorial](__README__ASSETS/pokedex-tut.png)
+
 # API
 
 [Pokèmon API](https://pokeapi.co/docs/v2)
