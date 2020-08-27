@@ -11,6 +11,7 @@ const PokedexProvider = (props) => {
   const [shinyDisplay, setShinyDisplay] = useState(false);
   const [power, setPower] = useState(false);
   const [statsAbilities, setStatsAbilities] = useState("stats");
+  const [tutorial, setTutorialDisplay] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -52,6 +53,8 @@ const PokedexProvider = (props) => {
         setPower,
         statsAbilities,
         setStatsAbilities,
+        tutorial,
+        setTutorialDisplay,
       }}
     >
       {props.children}

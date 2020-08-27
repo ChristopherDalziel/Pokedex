@@ -265,6 +265,82 @@ button {
     background: none;
     border: none; }
 
+.tutorial {
+  position: absolute;
+  width: 100vw; }
+  .tutorial--power {
+    position: absolute;
+    top: 520px;
+    left: 175px;
+    background: #03ac5e;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 190px;
+    -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75); }
+  .tutorial--shiny {
+    position: absolute;
+    top: 466px;
+    left: 150px;
+    background: #eee;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 260px;
+    -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75); }
+  .tutorial--search {
+    position: absolute;
+    top: 590px;
+    left: 170px;
+    background: #eee;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 239px;
+    -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75); }
+  .tutorial--plusMinus {
+    position: absolute;
+    top: 553px;
+    right: 540px;
+    background: #eee;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75); }
+  .tutorial--selection {
+    position: absolute;
+    top: 435px;
+    right: 125px;
+    background: #eee;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75); }
+  .tutorial--statsAbilities {
+    position: absolute;
+    top: 520px;
+    right: 300px;
+    background: #eee;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75); }
+
 .pokedex--types {
   position: absolute;
   top: 469px;
