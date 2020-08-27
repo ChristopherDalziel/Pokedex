@@ -270,6 +270,12 @@ button {
   font-family: "Nunito", sans-serif;
   font-size: 14px;
   width: 100vw; }
+  @media (max-width: 850px) {
+    .tutorial {
+      display: none; } }
+  @media (max-width: 600px) {
+    .tutorial {
+      display: none; } }
   .tutorial--button {
     background: red;
     color: #eee;
