@@ -30,7 +30,7 @@ const Tutorial = () => {
             &#8592; Click tile to display random Pokèmon
           </div>
           <div className="tutorial--statsAbilities">
-            &#8592; Toggle between Stats / Abilities
+            &#8592; Toggle between stats / abilities
           </div>
         </>
       ) : (

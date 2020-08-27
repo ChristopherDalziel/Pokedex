@@ -1,6 +1,19 @@
 .tutorial {
   position: absolute;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
   width: 100vw;
+
+  &--button {
+    background: red;
+    color: #eee;
+    display: inline-block;
+    padding: 7.5px 15px;
+    border-radius: 0 0 15px 0;
+    -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+  }
 
   &--power {
     position: absolute;
@@ -14,6 +27,7 @@
     -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    animation: fade-in 1s;
   }
 
   &--shiny {
@@ -28,6 +42,7 @@
     -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    animation: fade-in 1s;
   }
 
   &--search {
@@ -42,6 +57,7 @@
     -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    animation: fade-in 1s;
   }
 
   &--plusMinus {
@@ -56,6 +72,7 @@
     -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    animation: fade-in 1s;
   }
 
   &--selection {
@@ -70,6 +87,7 @@
     -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    animation: fade-in 1s;
   }
 
   &--statsAbilities {
@@ -84,5 +102,6 @@
     -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    animation: fade-in 1s;
   }
 }

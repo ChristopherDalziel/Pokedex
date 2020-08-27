@@ -267,7 +267,18 @@ button {
 
 .tutorial {
   position: absolute;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
   width: 100vw; }
+  .tutorial--button {
+    background: red;
+    color: #eee;
+    display: inline-block;
+    padding: 7.5px 15px;
+    border-radius: 0 0 15px 0;
+    -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75); }
   .tutorial--power {
     position: absolute;
     top: 520px;
@@ -279,7 +290,8 @@ button {
     width: 190px;
     -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75); }
+    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    animation: fade-in 1s; }
   .tutorial--shiny {
     position: absolute;
     top: 466px;
@@ -291,7 +303,8 @@ button {
     width: 260px;
     -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75); }
+    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    animation: fade-in 1s; }
   .tutorial--search {
     position: absolute;
     top: 590px;
@@ -303,7 +316,8 @@ button {
     width: 239px;
     -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75); }
+    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    animation: fade-in 1s; }
   .tutorial--plusMinus {
     position: absolute;
     top: 553px;
@@ -315,7 +329,8 @@ button {
     position: absolute;
     -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75); }
+    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    animation: fade-in 1s; }
   .tutorial--selection {
     position: absolute;
     top: 435px;
@@ -327,7 +342,8 @@ button {
     position: absolute;
     -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75); }
+    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    animation: fade-in 1s; }
   .tutorial--statsAbilities {
     position: absolute;
     top: 520px;
@@ -339,7 +355,8 @@ button {
     position: absolute;
     -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75); }
+    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
+    animation: fade-in 1s; }
 
 .pokedex--types {
   position: absolute;
