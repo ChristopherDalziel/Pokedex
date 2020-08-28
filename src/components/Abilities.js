@@ -11,9 +11,11 @@ const Abilities = () => {
       ) : (
         <>
           <div className="pokedex--data__abilities" data-testid="abilities">
-            <h1>Abilities:</h1>
+            <h1 className="pokedex--data__abilities__heading">Abilities:</h1>
             {pokemon.abilities.map((abilities, i) => (
-              <p key={i}>{abilities.ability.name}</p>
+              <p className="pokedex--data__ability" key={i}>
+                {abilities.ability.name}
+              </p>
             ))}
           </div>
         </>
