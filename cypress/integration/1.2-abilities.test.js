@@ -7,7 +7,7 @@ describe("Checks correct abilities data is displayed", () => {
       .should("have.text", "Abilities:");
   });
 
-  it("Checks abilities are displayed for selected Pokemon", () => {
+  it("Checks abilities are displayed for default Pokemon", () => {
     cy.get(".pokedex--data__ability")
       .should("be.visible")
       .should("have.text", "overgrowchlorophyll");
