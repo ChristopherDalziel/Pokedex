@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
 import { PokedexContext } from "../context/PokedexContext";
 
-// Test failing
-
 const Dpad = () => {
   const { pokemon, setPokemonId } = useContext(PokedexContext);
 

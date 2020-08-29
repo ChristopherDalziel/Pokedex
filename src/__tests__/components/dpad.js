@@ -4,6 +4,8 @@ import { PokedexContext } from "../../context/PokedexContext";
 import pokemonData from "../__fixtures__/pokemon";
 import Dpad from "../../components/Dpad";
 
+// Test failing
+
 describe("Dpad testing", () => {
   test("Dpad renders as expected", () => {
     const { getByTestId } = render(<Dpad />);
