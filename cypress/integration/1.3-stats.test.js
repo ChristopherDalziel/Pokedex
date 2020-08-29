@@ -1,5 +1,5 @@
 describe("Checks the correct stats data is displayed", () => {
-  it("", () => {
+  it("Checks stats for default Pokemon are displayed", () => {
     cy.get(".pokedex--data__stats__button").click();
 
     cy.get(".pokedex--data__stats")
