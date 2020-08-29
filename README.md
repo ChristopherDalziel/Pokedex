@@ -6,6 +6,10 @@ Nearing the initial end of the application, I began writing some tests and found
 I was now able to write some successful tests using React testing-library. I did my best to test each components functionality as I would expect it to work, which helped me understand context better along the way as well as the library. I then switched to `Cypress` to complete some end to end tests across the entire application, although I did section up the tests a little different than I normally would using Cypress since this only a way page application. I for sure still feel like I have a lot to learn in both libraries but this was a good starting point. <br />
 I finalized my app hosting using `Firebase`, a service that I had not previously attempted to host with, so another good learning opportunity under my belt for the future! I actually found Firebase to potentially be the easiest hosting setup that I have tried out so far.
 
+# Hosted Link
+
+[Pokèdex](https://pokedex-f290d.web.app)
+
 # Tutorial Mode
 
 ![Tutorial](__README__ASSETS/pokedex-tut.png)
@@ -14,7 +18,7 @@ I finalized my app hosting using `Firebase`, a service that I had not previously
 
 [Pokèmon API](https://pokeapi.co/docs/v2)
 
-# Command line
+# Command Line
 
 - npm start | runs application
 - npm test | runs React testing-library
