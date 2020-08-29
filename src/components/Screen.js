@@ -9,6 +9,7 @@ const Screen = () => {
   return (
     <div className="pokedex--screen" data-testid="screen">
       <img
+        data-testid="screen-sprite"
         className="pokedex--screen__sprite"
         src={displayShiny(
           shinyDisplay,
