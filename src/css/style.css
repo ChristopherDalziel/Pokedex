@@ -389,6 +389,7 @@ button {
   background-color: #87caea; }
   @media (max-width: 600px) {
     .container {
+      background-color: transparent;
       height: 90vh;
       width: 190vw;
       overflow: scroll; } }

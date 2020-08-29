@@ -12,6 +12,7 @@
   background-color: #87caea;
 
   @include respond(small) {
+    background-color: transparent;
     height: 90vh;
     width: 190vw;
     overflow: scroll;
