@@ -15,7 +15,13 @@ describe("Type component", () => {
       </PokedexContext.Provider>
     );
 
-    expect(getByTestId("type-0")).toHaveTextContent("electric");
-    expect(getByTestId("type-1")).toHaveTextContent("water");
+    console.log(pokemonData[0].types[0].type.name);
+
+    expect(getByTestId("type-0")).toHaveTextContent(
+      pokemonData[0].types[0].type.name
+    );
+    expect(getByTestId("type-1")).toHaveTextContent(
+      pokemonData[0].types[1].type.name
+    );
   });
 });
