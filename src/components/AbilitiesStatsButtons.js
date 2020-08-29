@@ -7,12 +7,14 @@ const AbilitiesStatsButtons = () => {
   return (
     <span>
       <button
+        data-testid="statsButton"
         className="pokedex--data__stats__button"
         onClick={() => setStatsAbilities("stats")}
       >
         Stats
       </button>
       <button
+        data-testid="abilitiesButton"
         className="pokedex--data__abilities__button"
         onClick={() => setStatsAbilities("abilities")}
       >
