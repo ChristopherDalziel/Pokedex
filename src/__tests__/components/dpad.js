@@ -25,6 +25,9 @@ describe("Dpad testing", () => {
       </PokedexContext.Provider>
     );
 
+    // fireEvent.click(getByTestId("positiveButton"));
+    // fireEvent.click(getByTestId("negativeButton"));
+
     const positiveButton = getByTestId("positiveButton");
     fireEvent.click(positiveButton);
 
