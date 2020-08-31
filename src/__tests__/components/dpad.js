@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import { PokedexContext } from "../../context/PokedexContext";
 import pokemonData from "../__fixtures__/pokemon";
 import Dpad from "../../components/Dpad";
@@ -25,14 +25,13 @@ describe("Dpad testing", () => {
       </PokedexContext.Provider>
     );
 
-    // fireEvent.click(getByTestId("positiveButton"));
-    // fireEvent.click(getByTestId("negativeButton"));
-
     const positiveButton = getByTestId("positiveButton");
     fireEvent.click(positiveButton);
 
     const negativeButton = getByTestId("negativeButton");
     fireEvent.click(negativeButton);
+
+    screen.debug();
 
     expect(setPokemonId).toHaveBeenCalledTimes(2);
   });
