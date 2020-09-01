@@ -18,3 +18,13 @@
     overflow: scroll;
   }
 }
+
+.github {
+  padding: 20px;
+  font-size: 38px;
+  color: #eee;
+
+  &:hover {
+    color: #f0072d;
+  }
+}
