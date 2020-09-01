@@ -399,6 +399,16 @@ button {
 .github {
   padding: 20px;
   font-size: 38px;
-  color: #eee; }
+  color: #eee;
+  transition: transform 0.3s; }
   .github:hover {
-    color: #f0072d; }
+    color: #f0072d;
+    cursor: pointer;
+    transform: translateY(-1.5px) scale(1.01); }
+  .github:active {
+    transform: translateY(0); }
+  @media (max-width: 600px) {
+    .github {
+      color: #f0072d; }
+      .github:hover {
+        color: #eee; } }

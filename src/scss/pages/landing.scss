@@ -23,8 +23,23 @@
   padding: 20px;
   font-size: 38px;
   color: #eee;
+  transition: transform 0.3s;
 
   &:hover {
     color: #f0072d;
+    cursor: pointer;
+    transform: translateY(-1.5px) scale(1.01);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @include respond(small) {
+    color: #f0072d;
+
+    &:hover {
+      color: #eee;
+    }
   }
 }
