@@ -22,11 +22,11 @@
 .github {
   padding: 20px;
   font-size: 38px;
-  color: #eee;
+  color: $color-white;
   transition: transform 0.3s;
 
   &:hover {
-    color: #f0072d;
+    color: $color-red-pokemon;
     cursor: pointer;
     transform: translateY(-1.5px) scale(1.01);
   }
@@ -36,10 +36,10 @@
   }
 
   @include respond(small) {
-    color: #f0072d;
+    color: $color-red-pokemon;
 
     &:hover {
-      color: #eee;
+      color: $color-white;
     }
   }
 }
