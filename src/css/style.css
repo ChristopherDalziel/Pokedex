@@ -1,11 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+/*
+0-300px: Small phone
+300-600px: Phone
+600-900px: Tablet portrait
+900-1200px: Tablet landscape
+[1200-1800px: Normal styles apply]
+1800px +: Big desktop
+
+/*
+$breakpoint argument choices:
+- small phone
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+*/
 @keyframes light {
   0% {
     background-color: #39beff4a;
     box-shadow: none; }
   50% {
     background-color: #39beff4a;
-    box-shadow: 0 0 12px 8px white; }
+    box-shadow: 0 0 12px 8px #fff; }
   100% {
     background-color: #39beff4a;
     box-shadow: none; } }
@@ -14,7 +32,7 @@
   0% {
     box-shadow: none; }
   50% {
-    box-shadow: 0 0 12px 8px white; }
+    box-shadow: 0 0 12px 8px #fff; }
   100% {
     box-shadow: none; } }
 
@@ -22,7 +40,7 @@
   0% {
     box-shadow: none; }
   50% {
-    box-shadow: 0 0 10px 6px white; }
+    box-shadow: 0 0 10px 6px #fff; }
   100% {
     box-shadow: none; } }
 
@@ -35,6 +53,30 @@
 :focus {
   border: none;
   outline: none; }
+
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 30%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box; }
 
 button {
   transition: transform 0.3s; }
@@ -53,10 +95,6 @@ button {
   background-repeat: no-repeat;
   text-transform: capitalize;
   overflow: hidden; }
-  @media (max-width: 600px) {
-    .pokedex {
-      position: absolute;
-      left: 10px; } }
   .pokedex--light {
     width: 58px;
     height: 60px;
@@ -151,7 +189,7 @@ button {
   position: absolute;
   top: 183px;
   right: 100px;
-  color: white;
+  color: #fff;
   width: 225px;
   height: 80px;
   font-size: 10px;
@@ -186,8 +224,8 @@ button {
     .pokedex--form__search::placeholder {
       color: #555; }
   .pokedex--form__button {
-    background: black;
-    color: white;
+    background: #000;
+    color: #fff;
     border: none;
     height: 32px;
     width: 32px;
@@ -270,17 +308,11 @@ button {
   font-family: "Nunito", sans-serif;
   font-size: 14px;
   width: 100vw; }
-  @media (max-width: 850px) {
-    .tutorial {
-      display: none; } }
-  @media (max-width: 600px) {
-    .tutorial {
-      display: none; } }
   .tutorial--button {
     background: #f0072d;
     font-weight: 400;
     font-size: 16px;
-    color: #eee;
+    color: #fff;
     display: inline-block;
     padding: 7.5px 15px;
     border-radius: 0 0 15px 0;
@@ -304,7 +336,7 @@ button {
     position: absolute;
     top: 466px;
     left: 150px;
-    background: #eee;
+    background: #fff;
     display: inline-block;
     padding: 5px 10px;
     border-radius: 5px;
@@ -317,7 +349,7 @@ button {
     position: absolute;
     top: 590px;
     left: 170px;
-    background: #eee;
+    background: #fff;
     display: inline-block;
     padding: 5px 10px;
     border-radius: 5px;
@@ -330,7 +362,7 @@ button {
     position: absolute;
     top: 553px;
     right: 540px;
-    background: #eee;
+    background: #fff;
     display: inline-block;
     padding: 5px 10px;
     border-radius: 5px;
@@ -343,7 +375,7 @@ button {
     position: absolute;
     top: 435px;
     right: 125px;
-    background: #eee;
+    background: #fff;
     display: inline-block;
     padding: 5px 10px;
     border-radius: 5px;
@@ -356,7 +388,7 @@ button {
     position: absolute;
     top: 520px;
     right: 300px;
-    background: #eee;
+    background: #fff;
     display: inline-block;
     padding: 5px 10px;
     border-radius: 5px;
@@ -389,12 +421,6 @@ button {
   align-items: center;
   flex-direction: column;
   background-color: #87caea; }
-  @media (max-width: 600px) {
-    .container {
-      background-color: transparent;
-      height: 90vh;
-      width: 190vw;
-      overflow: scroll; } }
 
 .github {
   padding: 20px;
@@ -407,8 +433,3 @@ button {
     transform: translateY(-1.5px) scale(1.01); }
   .github:active {
     transform: translateY(0); }
-  @media (max-width: 600px) {
-    .github {
-      color: #f0072d; }
-      .github:hover {
-        color: #eee; } }

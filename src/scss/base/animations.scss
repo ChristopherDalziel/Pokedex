@@ -1,14 +1,14 @@
 @keyframes light {
   0% {
-    background-color: #39beff4a;
+    background-color: $color-light-primary;
     box-shadow: none;
   }
   50% {
-    background-color: #39beff4a;
-    box-shadow: 0 0 12px 8px white;
+    background-color: $color-light-primary;
+    box-shadow: 0 0 12px 8px $color-white;
   }
   100% {
-    background-color: #39beff4a;
+    background-color: $color-light-primary;
     box-shadow: none;
   }
 }
@@ -18,7 +18,7 @@
     box-shadow: none;
   }
   50% {
-    box-shadow: 0 0 12px 8px white;
+    box-shadow: 0 0 12px 8px $color-white;
   }
   100% {
     box-shadow: none;
@@ -30,7 +30,7 @@
     box-shadow: none;
   }
   50% {
-    box-shadow: 0 0 10px 6px white;
+    box-shadow: 0 0 10px 6px $color-white;
   }
   100% {
     box-shadow: none;

@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
+@import "./abstracts/functions.scss";
 @import "./abstracts/mixins.scss";
+@import "./abstracts/variables.scss";
 
 @import "./base/animations.scss";
 @import "./base/base.scss";
