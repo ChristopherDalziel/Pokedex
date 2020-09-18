@@ -100,49 +100,49 @@ button {
     height: 6rem;
     border-radius: 50%;
     position: absolute;
-    top: 20px;
-    left: 50px;
+    top: 2rem;
+    left: 5rem;
     animation-duration: 1s;
     animation-name: light;
     animation-iteration-count: infinite; }
     .pokedex--light__red {
-      width: 19px;
-      height: 19px;
+      width: 1.9rem;
+      height: 1.9rem;
       border-radius: 50%;
       position: absolute;
-      top: 16.1px;
-      left: 119.2px;
+      top: 1.61rem;
+      left: 11.92rem;
       animation-duration: 1s;
       animation-name: lightSmall;
       animation-iteration-count: 2; }
     .pokedex--light__yellow {
-      width: 19px;
-      height: 19px;
+      width: 1.9rem;
+      height: 1.9rem;
       border-radius: 50%;
       position: absolute;
-      top: 16.1px;
-      left: 152px;
+      top: 1.61rem;
+      left: 15.2rem;
       animation-delay: 0.5s;
       animation-duration: 1s;
       animation-name: lightSmall;
       animation-iteration-count: 2; }
       .pokedex--light__yellow_big {
-        width: 28px;
-        height: 28px;
+        width: 2.8rem;
+        height: 2.8rem;
         border-radius: 50%;
         position: absolute;
-        top: 403.8px;
-        right: 91.5px;
+        top: 40.38rem;
+        right: 9.15rem;
         animation-duration: 1s;
         animation-name: lightSecondary;
         animation-iteration-count: 3; }
     .pokedex--light__green {
-      width: 19px;
-      height: 19px;
+      width: 1.9rem;
+      height: 1.9rem;
       border-radius: 50%;
       position: absolute;
-      top: 16.1px;
-      left: 182.5px;
+      top: 1.61rem;
+      left: 18.25rem;
       animation-delay: 1s;
       animation-duration: 1s;
       animation-name: lightSmall;
