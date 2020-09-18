@@ -1,10 +1,10 @@
 .pokedex--form {
   position: absolute;
-  top: 464px;
-  left: 100px;
+  top: 46.4rem;
+  left: 10rem;
 
   &__search {
-    width: 78px;
+    width: 7.8rem;
     background: none;
     border: none;
     font-size: 1.6rem;
@@ -18,8 +18,8 @@
     background: $color-black;
     color: $color-white;
     border: none;
-    height: 32px;
-    width: 32px;
+    height: 3.2rem;
+    width: 3.2rem;
     border-radius: 50%;
     transition: transform 0.3s;
 

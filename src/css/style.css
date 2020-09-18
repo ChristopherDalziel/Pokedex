@@ -149,10 +149,10 @@ button {
       animation-iteration-count: 2; }
   .pokedex--shinyButton {
     position: absolute;
-    left: 96px;
-    top: 344px;
-    width: 25px;
-    height: 25px;
+    left: 9.6rem;
+    top: 34.4rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     background-color: transparent;
     border: none;
@@ -160,26 +160,26 @@ button {
     z-index: 1; }
   .pokedex--onButton {
     position: absolute;
-    left: 40px;
-    top: 385px;
-    width: 52px;
-    height: 52px;
+    left: 4rem;
+    top: 38.5rem;
+    width: 5.2rem;
+    height: 5.2rem;
     border-radius: 50%;
     background-color: transparent;
     border: none;
     color: #fff; }
   .pokedex--negativeButton {
     position: absolute;
-    left: 257px;
-    top: 414px;
+    left: 25.7rem;
+    top: 41.4rem;
     background-color: transparent;
     border: none;
     color: #fff;
     font-size: 4rem; }
   .pokedex--positiveButton {
     position: absolute;
-    left: 308px;
-    top: 414px;
+    left: 30.8rem;
+    top: 41.4rem;
     background-color: transparent;
     border: none;
     color: #fff;
@@ -214,10 +214,10 @@ button {
 
 .pokedex--form {
   position: absolute;
-  top: 464px;
-  left: 100px; }
+  top: 46.4rem;
+  left: 10rem; }
   .pokedex--form__search {
-    width: 78px;
+    width: 7.8rem;
     background: none;
     border: none;
     font-size: 1.6rem; }
@@ -227,8 +227,8 @@ button {
     background: #000;
     color: #fff;
     border: none;
-    height: 32px;
-    width: 32px;
+    height: 3.2rem;
+    width: 3.2rem;
     border-radius: 50%;
     transition: transform 0.3s; }
     .pokedex--form__button:hover {

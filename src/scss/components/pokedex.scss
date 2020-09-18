@@ -79,10 +79,10 @@
 
   &--shinyButton {
     position: absolute;
-    left: 96px;
-    top: 344px;
-    width: 25px;
-    height: 25px;
+    left: 9.6rem;
+    top: 34.4rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     background-color: transparent;
     border: none;
@@ -92,10 +92,10 @@
 
   &--onButton {
     position: absolute;
-    left: 40px;
-    top: 385px;
-    width: 52px;
-    height: 52px;
+    left: 4rem;
+    top: 38.5rem;
+    width: 5.2rem;
+    height: 5.2rem;
     border-radius: 50%;
     background-color: transparent;
     border: none;
@@ -104,8 +104,8 @@
 
   &--negativeButton {
     position: absolute;
-    left: 257px;
-    top: 414px;
+    left: 25.7rem;
+    top: 41.4rem;
     background-color: transparent;
     border: none;
     color: $color-white;
@@ -114,8 +114,8 @@
 
   &--positiveButton {
     position: absolute;
-    left: 308px;
-    top: 414px;
+    left: 30.8rem;
+    top: 41.4rem;
     background-color: transparent;
     border: none;
     color: $color-white;
