@@ -2,23 +2,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 237px;
-  height: 158px;
+  width: 23.7rem;
+  height: 15.8rem;
   background-color: $color-white;
   color: #ccc;
   position: absolute;
-  top: 169px;
-  left: 73px;
+  top: 16.9rem;
+  left: 7.3rem;
   border-radius: 10px;
   animation: fade-in 1s;
 
   &__off {
-    width: 237px;
-    height: 158px;
-    background-color: #012924;
+    width: 23.7rem;
+    height: 15.8rem;
+    background-color: $color-off;
     position: absolute;
-    top: 169px;
-    left: 73px;
+    top: 17rem;
+    left: 7.3rem;
     border-radius: 10px;
   }
 
@@ -27,28 +27,32 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 169px;
-    left: 73px;
+    top: 17rem;
+    left: 7.3rem;
     border-radius: 10px;
-    width: 232px;
-    height: 158px;
+    width: 23.7rem;
+    height: 15.8rem;
     text-align: center;
     background-color: $color-white;
     padding: 5px;
   }
 
   &__load {
-    width: 237px;
-    height: 158px;
+    width: 23.7rem;
+    height: 15.8rem;
     position: absolute;
-    top: 169px;
-    left: 73px;
+    top: 16.9rem;
+    left: 7.3rem;
     border-radius: 10px;
   }
 
   &__sprite {
     position: absolute;
     width: 120px;
+
+    @include respond(phone) {
+      width: 90px;
+    }
   }
 
   &__name {
@@ -58,7 +62,7 @@
 
   &__pokeNumber {
     margin-left: 5px;
-    font-size: 94px;
+    font-size: 9.4rem;
     font-weight: 1000;
   }
 }

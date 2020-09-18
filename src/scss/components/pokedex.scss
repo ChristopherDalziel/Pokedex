@@ -2,8 +2,9 @@
   font-family: "Nunito", sans-serif;
   position: relative;
   margin-top: 125px;
-  width: 786px;
-  height: 577px;
+  width: 78.6rem;
+  height: 57.7rem;
+  background-size: 100%;
   background-repeat: no-repeat;
   text-transform: capitalize;
   overflow: hidden;
@@ -14,8 +15,8 @@
   }
 
   &--light {
-    width: 58px;
-    height: 60px;
+    width: 5.8rem;
+    height: 6rem;
     border-radius: 50%;
     position: absolute;
     top: 20px;
@@ -108,7 +109,7 @@
     background-color: transparent;
     border: none;
     color: $color-white;
-    font-size: 40px;
+    font-size: 4rem;
   }
 
   &--positiveButton {
@@ -118,6 +119,6 @@
     background-color: transparent;
     border: none;
     color: $color-white;
-    font-size: 40px;
+    font-size: 4rem;
   }
 }

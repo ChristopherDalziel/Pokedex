@@ -1,7 +1,7 @@
 .tutorial {
   position: absolute;
   font-family: "Nunito", sans-serif;
-  font-size: 14px;
+  font-size: 1.4rem;
   width: 100vw;
 
   @include respond(medium) {
@@ -15,7 +15,7 @@
   &--button {
     background: #f0072d;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: $color-white;
     display: inline-block;
     padding: 7.5px 15px;

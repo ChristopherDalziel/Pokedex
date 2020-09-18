@@ -89,14 +89,15 @@ button {
   font-family: "Nunito", sans-serif;
   position: relative;
   margin-top: 125px;
-  width: 786px;
-  height: 577px;
+  width: 78.6rem;
+  height: 57.7rem;
+  background-size: 100%;
   background-repeat: no-repeat;
   text-transform: capitalize;
   overflow: hidden; }
   .pokedex--light {
-    width: 58px;
-    height: 60px;
+    width: 5.8rem;
+    height: 6rem;
     border-radius: 50%;
     position: absolute;
     top: 20px;
@@ -174,7 +175,7 @@ button {
     background-color: transparent;
     border: none;
     color: #fff;
-    font-size: 40px; }
+    font-size: 4rem; }
   .pokedex--positiveButton {
     position: absolute;
     left: 308px;
@@ -182,7 +183,7 @@ button {
     background-color: transparent;
     border: none;
     color: #fff;
-    font-size: 40px; }
+    font-size: 4rem; }
 
 .pokedex--data {
   position: absolute;
@@ -191,7 +192,7 @@ button {
   color: #fff;
   width: 225px;
   height: 80px;
-  font-size: 10px;
+  font-size: 1rem;
   z-index: 2;
   animation: fade-in 1s; }
   .pokedex--data__stats__button {
@@ -200,7 +201,7 @@ button {
     left: 465px;
     background: none;
     border: none;
-    font-size: 12px;
+    font-size: 1.2rem;
     cursor: pointer; }
   .pokedex--data__abilities__button {
     position: absolute;
@@ -208,7 +209,7 @@ button {
     left: 507.5px;
     background: none;
     border: none;
-    font-size: 12px;
+    font-size: 1.2rem;
     cursor: pointer; }
 
 .pokedex--form {
@@ -219,7 +220,7 @@ button {
     width: 78px;
     background: none;
     border: none;
-    font-size: 16px; }
+    font-size: 1.6rem; }
     .pokedex--form__search::placeholder {
       color: #555; }
   .pokedex--form__button {
@@ -240,61 +241,64 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 237px;
-  height: 158px;
+  width: 23.7rem;
+  height: 15.8rem;
   background-color: #fff;
   color: #ccc;
   position: absolute;
-  top: 169px;
-  left: 73px;
+  top: 16.9rem;
+  left: 7.3rem;
   border-radius: 10px;
   animation: fade-in 1s; }
   .pokedex--screen__off {
-    width: 237px;
-    height: 158px;
+    width: 23.7rem;
+    height: 15.8rem;
     background-color: #012924;
     position: absolute;
-    top: 169px;
-    left: 73px;
+    top: 17rem;
+    left: 7.3rem;
     border-radius: 10px; }
   .pokedex--screen__error {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 169px;
-    left: 73px;
+    top: 17rem;
+    left: 7.3rem;
     border-radius: 10px;
-    width: 232px;
-    height: 158px;
+    width: 23.7rem;
+    height: 15.8rem;
     text-align: center;
     background-color: #fff;
     padding: 5px; }
   .pokedex--screen__load {
-    width: 237px;
-    height: 158px;
+    width: 23.7rem;
+    height: 15.8rem;
     position: absolute;
-    top: 169px;
-    left: 73px;
+    top: 16.9rem;
+    left: 7.3rem;
     border-radius: 10px; }
   .pokedex--screen__sprite {
     position: absolute;
     width: 120px; }
+    @media (max-width: 37.5em) {
+      .pokedex--screen__sprite {
+        width: 90px; } }
   .pokedex--screen__name {
     position: absolute;
     top: 10px; }
   .pokedex--screen__pokeNumber {
     margin-left: 5px;
-    font-size: 94px;
+    font-size: 9.4rem;
     font-weight: 1000; }
 
 .pokedex--select {
   position: absolute;
-  top: 288px;
-  left: 455px;
+  top: 28.8rem;
+  left: 45.5rem;
   display: flex;
   flex-flow: row wrap;
-  width: 250px;
+  width: 25rem;
   animation: fade-in 1s; }
   .pokedex--select__button {
     width: 47.5px;
@@ -305,12 +309,12 @@ button {
 .tutorial {
   position: absolute;
   font-family: "Nunito", sans-serif;
-  font-size: 14px;
+  font-size: 1.4rem;
   width: 100vw; }
   .tutorial--button {
     background: #f0072d;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #fff;
     display: inline-block;
     padding: 7.5px 15px;
@@ -399,15 +403,15 @@ button {
 
 .pokedex--types {
   position: absolute;
-  top: 469px;
+  top: 46.9rem;
   margin-left: 20px;
   color: white; }
   .pokedex--types__0 {
     position: absolute;
-    left: 460px; }
+    left: 46rem; }
   .pokedex--types__1 {
     position: absolute;
-    left: 595px; }
+    left: 59.5rem; }
 
 * {
   margin: 0;
@@ -420,11 +424,17 @@ button {
   align-items: center;
   flex-direction: column;
   background-color: #87caea; }
+  @media (max-width: 37.5em) {
+    .container {
+      background-color: transparent;
+      height: 90vh;
+      width: 190vw;
+      overflow: scroll; } }
 
 .github {
-  padding: 20px;
-  font-size: 38px;
-  color: #eee;
+  padding: 2rem;
+  font-size: 3.8rem;
+  color: #fff;
   transition: transform 0.3s; }
   .github:hover {
     color: #f0072d;

@@ -11,7 +11,7 @@
   flex-direction: column;
   background-color: #87caea;
 
-  @include respond(small) {
+  @include respond(phone) {
     background-color: transparent;
     height: 90vh;
     width: 190vw;
@@ -20,8 +20,8 @@
 }
 
 .github {
-  padding: 20px;
-  font-size: 38px;
+  padding: 2rem;
+  font-size: 3.8rem;
   color: $color-white;
   transition: transform 0.3s;
 
