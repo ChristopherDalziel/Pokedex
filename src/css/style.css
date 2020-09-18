@@ -324,47 +324,47 @@ button {
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75); }
   .tutorial--power {
     position: absolute;
-    top: 520px;
-    left: 175px;
+    top: 52rem;
+    left: 17.5rem;
     background: #03ac5e;
     display: inline-block;
     padding: 5px 10px;
     border-radius: 5px;
-    width: 190px;
+    width: 19rem;
     -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     animation: fade-in 1s; }
   .tutorial--shiny {
     position: absolute;
-    top: 466px;
-    left: 150px;
+    top: 46.6rem;
+    left: 15rem;
     background: #fff;
     display: inline-block;
     padding: 5px 10px;
     border-radius: 5px;
-    width: 260px;
+    width: 26rem;
     -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     animation: fade-in 1s; }
   .tutorial--search {
     position: absolute;
-    top: 590px;
-    left: 170px;
+    top: 59rem;
+    left: 17rem;
     background: #fff;
     display: inline-block;
     padding: 5px 10px;
     border-radius: 5px;
-    width: 239px;
+    width: 23.9rem;
     -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     animation: fade-in 1s; }
   .tutorial--plusMinus {
     position: absolute;
-    top: 553px;
-    right: 540px;
+    top: 55.3rem;
+    right: 54rem;
     background: #fff;
     display: inline-block;
     padding: 5px 10px;
@@ -376,8 +376,8 @@ button {
     animation: fade-in 1s; }
   .tutorial--selection {
     position: absolute;
-    top: 435px;
-    right: 125px;
+    top: 43.5rem;
+    right: 12.5rem;
     background: #fff;
     display: inline-block;
     padding: 5px 10px;
@@ -389,8 +389,8 @@ button {
     animation: fade-in 1s; }
   .tutorial--statsAbilities {
     position: absolute;
-    top: 520px;
-    right: 300px;
+    top: 52rem;
+    right: 30rem;
     background: #fff;
     display: inline-block;
     padding: 5px 10px;
