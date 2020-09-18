@@ -442,7 +442,8 @@ button {
   padding: 2rem;
   font-size: 3.8rem;
   color: #fff;
-  transition: transform 0.3s; }
+  transition: transform 0.3s;
+  backface-visibility: hidden; }
   .github:hover {
     color: #f0072d;
     cursor: pointer;
