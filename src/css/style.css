@@ -301,8 +301,8 @@ button {
   width: 25rem;
   animation: fade-in 1s; }
   .pokedex--select__button {
-    width: 47.5px;
-    height: 36.5px;
+    width: 4.75rem;
+    height: 3.65rem;
     background: none;
     border: none; }
 
