@@ -79,7 +79,7 @@
 
   &--shinyButton {
     position: absolute;
-    left: 9.6rem;
+    left: 9.4rem;
     top: 34.4rem;
     width: 2.5rem;
     height: 2.5rem;
@@ -88,6 +88,7 @@
     border: none;
     color: $color-white;
     z-index: 1;
+    backface-visibility: hidden;
   }
 
   &--onButton {
@@ -100,6 +101,7 @@
     background-color: transparent;
     border: none;
     color: $color-white;
+    backface-visibility: hidden;
   }
 
   &--negativeButton {
@@ -110,6 +112,7 @@
     border: none;
     color: $color-white;
     font-size: 4rem;
+    backface-visibility: hidden;
   }
 
   &--positiveButton {
@@ -120,5 +123,6 @@
     border: none;
     color: $color-white;
     font-size: 4rem;
+    backface-visibility: hidden;
   }
 }

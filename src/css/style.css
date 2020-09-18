@@ -78,7 +78,7 @@ body {
   box-sizing: border-box; }
 
 button {
-  transition: transform 0.3s; }
+  transition: transform 0.2s; }
   button:hover {
     cursor: pointer;
     transform: translateY(-1.5px) scale(1.01); }
@@ -149,7 +149,7 @@ button {
       animation-iteration-count: 2; }
   .pokedex--shinyButton {
     position: absolute;
-    left: 9.6rem;
+    left: 9.4rem;
     top: 34.4rem;
     width: 2.5rem;
     height: 2.5rem;
@@ -157,7 +157,8 @@ button {
     background-color: transparent;
     border: none;
     color: #fff;
-    z-index: 1; }
+    z-index: 1;
+    backface-visibility: hidden; }
   .pokedex--onButton {
     position: absolute;
     left: 4rem;
@@ -167,7 +168,8 @@ button {
     border-radius: 50%;
     background-color: transparent;
     border: none;
-    color: #fff; }
+    color: #fff;
+    backface-visibility: hidden; }
   .pokedex--negativeButton {
     position: absolute;
     left: 25.7rem;
@@ -175,7 +177,8 @@ button {
     background-color: transparent;
     border: none;
     color: #fff;
-    font-size: 4rem; }
+    font-size: 4rem;
+    backface-visibility: hidden; }
   .pokedex--positiveButton {
     position: absolute;
     left: 30.8rem;
@@ -183,7 +186,8 @@ button {
     background-color: transparent;
     border: none;
     color: #fff;
-    font-size: 4rem; }
+    font-size: 4rem;
+    backface-visibility: hidden; }
 
 .pokedex--data {
   position: absolute;
@@ -202,7 +206,8 @@ button {
     background: none;
     border: none;
     font-size: 1.2rem;
-    cursor: pointer; }
+    cursor: pointer;
+    backface-visibility: hidden; }
   .pokedex--data__abilities__button {
     position: absolute;
     top: 40.2rem;
@@ -210,7 +215,8 @@ button {
     background: none;
     border: none;
     font-size: 1.2rem;
-    cursor: pointer; }
+    cursor: pointer;
+    backface-visibility: hidden; }
 
 .pokedex--form {
   position: absolute;
@@ -304,7 +310,8 @@ button {
     width: 4.75rem;
     height: 3.65rem;
     background: none;
-    border: none; }
+    border: none;
+    backface-visibility: hidden; }
 
 .tutorial {
   position: absolute;
