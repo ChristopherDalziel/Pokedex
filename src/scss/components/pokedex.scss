@@ -9,9 +9,9 @@
   text-transform: capitalize;
   overflow: hidden;
 
-  @include respond(small) {
+  @include respond(phone) {
     position: absolute;
-    left: 10px;
+    width: 40rem;
   }
 
   &--light {

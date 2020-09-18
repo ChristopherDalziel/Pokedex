@@ -13,9 +13,8 @@
 
   @include respond(phone) {
     background-color: transparent;
-    height: 90vh;
-    width: 190vw;
-    overflow: scroll;
+    overflow: hidden;
+    height: 100%;
   }
 }
 

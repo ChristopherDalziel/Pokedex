@@ -4,6 +4,10 @@
   font-size: 1.4rem;
   width: 100vw;
 
+  @include respond(phone) {
+    display: none;
+  }
+
   &--button {
     background: #f0072d;
     font-weight: 400;

@@ -95,6 +95,10 @@ button {
   background-repeat: no-repeat;
   text-transform: capitalize;
   overflow: hidden; }
+  @media (max-width: 37.5em) {
+    .pokedex {
+      position: absolute;
+      width: 40rem; } }
   .pokedex--light {
     width: 5.8rem;
     height: 6rem;
@@ -256,6 +260,12 @@ button {
   left: 7.3rem;
   border-radius: 10px;
   animation: fade-in 1s; }
+  @media (max-width: 37.5em) {
+    .pokedex--screen {
+      top: 10rem;
+      left: 4rem;
+      width: 10rem;
+      height: 7rem; } }
   .pokedex--screen__off {
     width: 23.7rem;
     height: 15.8rem;
@@ -264,6 +274,13 @@ button {
     top: 17rem;
     left: 7.3rem;
     border-radius: 10px; }
+    @media (max-width: 37.5em) {
+      .pokedex--screen__off {
+        top: 8.65rem;
+        left: 3.65rem;
+        width: 12.2rem;
+        height: 8rem;
+        border-radius: 3px; } }
   .pokedex--screen__error {
     display: flex;
     justify-content: center;
@@ -277,6 +294,13 @@ button {
     text-align: center;
     background-color: #fff;
     padding: 5px; }
+    @media (max-width: 37.5em) {
+      .pokedex--screen__error {
+        top: 8.65rem;
+        left: 3.65rem;
+        width: 12.2rem;
+        height: 8rem;
+        border-radius: 3px; } }
   .pokedex--screen__load {
     width: 23.7rem;
     height: 15.8rem;
@@ -284,6 +308,13 @@ button {
     top: 16.9rem;
     left: 7.3rem;
     border-radius: 10px; }
+    @media (max-width: 37.5em) {
+      .pokedex--screen__load {
+        top: 8.65rem;
+        left: 3.65rem;
+        width: 12.2rem;
+        height: 8rem;
+        border-radius: 3px; } }
   .pokedex--screen__sprite {
     position: absolute;
     width: 120px; }
@@ -292,7 +323,7 @@ button {
         width: 90px; } }
   .pokedex--screen__name {
     position: absolute;
-    top: 10px; }
+    top: 1rem; }
   .pokedex--screen__pokeNumber {
     margin-left: 5px;
     font-size: 9.4rem;
@@ -318,6 +349,9 @@ button {
   font-family: "Nunito", sans-serif;
   font-size: 1.4rem;
   width: 100vw; }
+  @media (max-width: 37.5em) {
+    .tutorial {
+      display: none; } }
   .tutorial--button {
     background: #f0072d;
     font-weight: 400;
@@ -434,9 +468,8 @@ button {
   @media (max-width: 37.5em) {
     .container {
       background-color: transparent;
-      height: 90vh;
-      width: 190vw;
-      overflow: scroll; } }
+      overflow: hidden;
+      height: 100%; } }
 
 .github {
   padding: 2rem;

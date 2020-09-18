@@ -12,6 +12,13 @@
   border-radius: 10px;
   animation: fade-in 1s;
 
+  @include respond(phone) {
+    top: 10rem;
+    left: 4rem;
+    width: 10rem;
+    height: 7rem;
+  }
+
   &__off {
     width: 23.7rem;
     height: 15.8rem;
@@ -20,6 +27,14 @@
     top: 17rem;
     left: 7.3rem;
     border-radius: 10px;
+
+    @include respond(phone) {
+      top: 8.65rem;
+      left: 3.65rem;
+      width: 12.2rem;
+      height: 8rem;
+      border-radius: 3px;
+    }
   }
 
   &__error {
@@ -35,6 +50,14 @@
     text-align: center;
     background-color: $color-white;
     padding: 5px;
+
+    @include respond(phone) {
+      top: 8.65rem;
+      left: 3.65rem;
+      width: 12.2rem;
+      height: 8rem;
+      border-radius: 3px;
+    }
   }
 
   &__load {
@@ -44,6 +67,14 @@
     top: 16.9rem;
     left: 7.3rem;
     border-radius: 10px;
+
+    @include respond(phone) {
+      top: 8.65rem;
+      left: 3.65rem;
+      width: 12.2rem;
+      height: 8rem;
+      border-radius: 3px;
+    }
   }
 
   &__sprite {
@@ -57,7 +88,7 @@
 
   &__name {
     position: absolute;
-    top: 10px;
+    top: 1rem;
   }
 
   &__pokeNumber {
