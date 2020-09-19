@@ -79,10 +79,10 @@
 
   &__sprite {
     position: absolute;
-    width: 120px;
+    width: 12rem;
 
     @include respond(phone) {
-      width: 9rem;
+      margin-left: 2rem;
     }
   }
 
