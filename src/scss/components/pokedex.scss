@@ -25,6 +25,13 @@
     animation-name: light;
     animation-iteration-count: infinite;
 
+    @include respond(phone) {
+      width: 4rem;
+      height: 4rem;
+      top: 0.8rem;
+      left: 2rem;
+    }
+
     &__red {
       width: 1.9rem;
       height: 1.9rem;
@@ -35,13 +42,16 @@
       animation-duration: 1s;
       animation-name: lightSmall;
       animation-iteration-count: 2;
+
+      @include respond(phone) {
+        display: none;
+      }
     }
 
     &__yellow {
       width: 1.9rem;
       height: 1.9rem;
       border-radius: 50%;
-
       position: absolute;
       top: 1.61rem;
       left: 15.2rem;
@@ -49,6 +59,10 @@
       animation-duration: 1s;
       animation-name: lightSmall;
       animation-iteration-count: 2;
+
+      @include respond(phone) {
+        display: none;
+      }
 
       &_big {
         width: 2.8rem;
@@ -60,6 +74,10 @@
         animation-duration: 1s;
         animation-name: lightSecondary;
         animation-iteration-count: 3;
+
+        @include respond(phone) {
+          display: none;
+        }
       }
     }
 
@@ -89,6 +107,13 @@
     color: $color-white;
     z-index: 1;
     backface-visibility: hidden;
+
+    @include respond(phone) {
+      top: 16.8rem;
+      left: 4.25rem;
+      font-size: 1rem;
+      z-index: 999;
+    }
   }
 
   &--onButton {
@@ -102,6 +127,13 @@
     border: none;
     color: $color-white;
     backface-visibility: hidden;
+
+    @include respond(phone) {
+      top: 18.3rem;
+      left: 0.8rem;
+      font-size: 1rem;
+      z-index: 999;
+    }
   }
 
   &--negativeButton {

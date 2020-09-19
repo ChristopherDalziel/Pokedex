@@ -4,6 +4,10 @@
   margin-left: 20px;
   color: white;
 
+  @include respond(phone) {
+    top: 5rem;
+  }
+
   &__0 {
     position: absolute;
     left: 46rem;

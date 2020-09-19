@@ -9,6 +9,13 @@
   z-index: 2;
   animation: fade-in 1s;
 
+  @include respond(phone) {
+    top: 9.5rem;
+    right: 1.7rem;
+    width: 15rem;
+    font-size: 0.5rem;
+  }
+
   &__stats {
     &__button {
       position: absolute;

@@ -13,7 +13,7 @@
   animation: fade-in 1s;
 
   @include respond(phone) {
-    top: 10rem;
+    top: 9rem;
     left: 4rem;
     width: 10rem;
     height: 7rem;
@@ -82,18 +82,27 @@
     width: 120px;
 
     @include respond(phone) {
-      width: 90px;
+      width: 9rem;
     }
   }
 
   &__name {
     position: absolute;
     top: 1rem;
+
+    @include respond(phone) {
+      top: 0.5rem;
+    }
   }
 
   &__pokeNumber {
-    margin-left: 5px;
+    margin-left: 0.5rem;
     font-size: 9.4rem;
     font-weight: 1000;
+
+    @include respond(phone) {
+      font-size: 4.5rem;
+      margin-left: 1.8rem;
+    }
   }
 }
