@@ -80,9 +80,10 @@
   &__sprite {
     position: absolute;
     width: 12rem;
+    z-index: 999;
 
     @include respond(phone) {
-      margin-left: 2rem;
+      margin-left: 1rem;
     }
   }
 
@@ -91,7 +92,7 @@
     top: 1rem;
 
     @include respond(phone) {
-      top: 0.5rem;
+      top: 0;
     }
   }
 
@@ -101,7 +102,7 @@
     font-weight: 1000;
 
     @include respond(phone) {
-      font-size: 4.5rem;
+      font-size: 9rem;
       margin-left: 1.8rem;
     }
   }

@@ -4,7 +4,7 @@
   left: 10rem;
 
   @include respond(phone) {
-    top: 16.7rem;
+    top: 20.5rem;
     left: 5rem;
     font-size: 8rem;
   }
@@ -21,7 +21,7 @@
 
     @include respond(phone) {
       width: 3.5rem;
-      font-size: 0.8rem;
+      font-size: 8px;
     }
   }
 
@@ -46,7 +46,7 @@
     @include respond(phone) {
       height: 2rem;
       width: 2rem;
-      font-size: 1.2rem;
+      font-size: 5px;
     }
   }
 }

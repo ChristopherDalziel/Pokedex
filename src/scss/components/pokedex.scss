@@ -113,7 +113,7 @@
     backface-visibility: hidden;
 
     @include respond(phone) {
-      top: 16.8rem;
+      top: 16.9rem;
       left: 4.25rem;
       font-size: 1rem;
       z-index: 999;
@@ -133,7 +133,7 @@
     backface-visibility: hidden;
 
     @include respond(phone) {
-      top: 18.3rem;
+      top: 18.5rem;
       left: 0.8rem;
       font-size: 1rem;
       z-index: 999;
@@ -151,8 +151,8 @@
     backface-visibility: hidden;
 
     @include respond(phone) {
-      top: 21rem;
-      left: 12.8rem;
+      top: 21.7rem;
+      left: 13.3rem;
       font-size: 2rem;
     }
   }
@@ -168,8 +168,8 @@
     backface-visibility: hidden;
 
     @include respond(phone) {
-      top: 21rem;
-      left: 15.8rem;
+      top: 21.7rem;
+      left: 15.9rem;
       font-size: 2rem;
     }
   }

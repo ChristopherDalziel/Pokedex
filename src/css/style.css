@@ -183,7 +183,7 @@ button {
     backface-visibility: hidden; }
     @media (max-width: 37.5em) {
       .pokedex--shinyButton {
-        top: 16.8rem;
+        top: 16.9rem;
         left: 4.25rem;
         font-size: 1rem;
         z-index: 999; } }
@@ -200,7 +200,7 @@ button {
     backface-visibility: hidden; }
     @media (max-width: 37.5em) {
       .pokedex--onButton {
-        top: 18.3rem;
+        top: 18.5rem;
         left: 0.8rem;
         font-size: 1rem;
         z-index: 999; } }
@@ -215,8 +215,8 @@ button {
     backface-visibility: hidden; }
     @media (max-width: 37.5em) {
       .pokedex--negativeButton {
-        top: 21rem;
-        left: 12.8rem;
+        top: 21.7rem;
+        left: 13.3rem;
         font-size: 2rem; } }
   .pokedex--positiveButton {
     position: absolute;
@@ -229,8 +229,8 @@ button {
     backface-visibility: hidden; }
     @media (max-width: 37.5em) {
       .pokedex--positiveButton {
-        top: 21rem;
-        left: 15.8rem;
+        top: 21.7rem;
+        left: 15.9rem;
         font-size: 2rem; } }
 
 .pokedex--data {
@@ -245,10 +245,10 @@ button {
   animation: fade-in 1s; }
   @media (max-width: 37.5em) {
     .pokedex--data {
-      top: 9.5rem;
+      top: 9.2rem;
       right: 1.7rem;
       width: 15rem;
-      font-size: 0.5rem; } }
+      font-size: 3.5px; } }
   .pokedex--data__stats__button {
     position: absolute;
     top: 40.2rem;
@@ -260,9 +260,9 @@ button {
     backface-visibility: hidden; }
     @media (max-width: 37.5em) {
       .pokedex--data__stats__button {
-        top: 20.4rem;
+        top: 20.5rem;
         left: 26.2rem;
-        font-size: 0.6rem; } }
+        font-size: 5px; } }
   .pokedex--data__abilities__button {
     position: absolute;
     top: 40.2rem;
@@ -276,7 +276,7 @@ button {
       .pokedex--data__abilities__button {
         top: 20.5rem;
         left: 23.45rem;
-        font-size: 0.5rem; } }
+        font-size: 5px; } }
 
 .pokedex--form {
   position: absolute;
@@ -284,7 +284,7 @@ button {
   left: 10rem; }
   @media (max-width: 37.5em) {
     .pokedex--form {
-      top: 16.7rem;
+      top: 20.5rem;
       left: 5rem;
       font-size: 8rem; } }
   .pokedex--form__search {
@@ -297,7 +297,7 @@ button {
     @media (max-width: 37.5em) {
       .pokedex--form__search {
         width: 3.5rem;
-        font-size: 0.8rem; } }
+        font-size: 8px; } }
   .pokedex--form__button {
     background: #000;
     color: #fff;
@@ -315,7 +315,7 @@ button {
       .pokedex--form__button {
         height: 2rem;
         width: 2rem;
-        font-size: 1.2rem; } }
+        font-size: 5px; } }
 
 .pokedex--screen {
   display: flex;
@@ -387,23 +387,24 @@ button {
         border-radius: 3px; } }
   .pokedex--screen__sprite {
     position: absolute;
-    width: 12rem; }
+    width: 12rem;
+    z-index: 999; }
     @media (max-width: 37.5em) {
       .pokedex--screen__sprite {
-        margin-left: 2rem; } }
+        margin-left: 1rem; } }
   .pokedex--screen__name {
     position: absolute;
     top: 1rem; }
     @media (max-width: 37.5em) {
       .pokedex--screen__name {
-        top: 0.5rem; } }
+        top: 0; } }
   .pokedex--screen__pokeNumber {
     margin-left: 0.5rem;
     font-size: 9.4rem;
     font-weight: 1000; }
     @media (max-width: 37.5em) {
       .pokedex--screen__pokeNumber {
-        font-size: 4.5rem;
+        font-size: 9rem;
         margin-left: 1.8rem; } }
 
 .pokedex--select {

@@ -10,10 +10,10 @@
   animation: fade-in 1s;
 
   @include respond(phone) {
-    top: 9.5rem;
+    top: 9.2rem;
     right: 1.7rem;
     width: 15rem;
-    font-size: 0.5rem;
+    font-size: 3.5px;
   }
 
   &__stats {
@@ -28,9 +28,9 @@
       backface-visibility: hidden;
 
       @include respond(phone) {
-        top: 20.4rem;
+        top: 20.5rem;
         left: 26.2rem;
-        font-size: 0.6rem;
+        font-size: 5px;
       }
     }
   }
@@ -49,7 +49,7 @@
       @include respond(phone) {
         top: 20.5rem;
         left: 23.45rem;
-        font-size: 0.5rem;
+        font-size: 5px;
       }
     }
   }
