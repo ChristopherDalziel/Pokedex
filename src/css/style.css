@@ -258,6 +258,11 @@ button {
     font-size: 1.2rem;
     cursor: pointer;
     backface-visibility: hidden; }
+    @media (max-width: 37.5em) {
+      .pokedex--data__stats__button {
+        top: 20.4rem;
+        left: 26.2rem;
+        font-size: 0.6rem; } }
   .pokedex--data__abilities__button {
     position: absolute;
     top: 40.2rem;
@@ -267,6 +272,11 @@ button {
     font-size: 1.2rem;
     cursor: pointer;
     backface-visibility: hidden; }
+    @media (max-width: 37.5em) {
+      .pokedex--data__abilities__button {
+        top: 20.4rem;
+        left: 23.4rem;
+        font-size: 0.6rem; } }
 
 .pokedex--form {
   position: absolute;
