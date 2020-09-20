@@ -239,7 +239,6 @@ button {
   right: 10rem;
   color: #fff;
   width: 22.5rem;
-  height: 8rem;
   font-size: 1rem;
   z-index: 2;
   animation: fade-in 1s; }
@@ -583,3 +582,8 @@ button {
     transform: translateY(-1.5px) scale(1.01); }
   .github:active {
     transform: translateY(0); }
+  @media (max-width: 37.5em) {
+    .github {
+      color: #f0072d; }
+      .github:hover {
+        color: #fff; } }

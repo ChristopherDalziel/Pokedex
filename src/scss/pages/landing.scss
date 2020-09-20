@@ -35,7 +35,7 @@
     transform: translateY(0);
   }
 
-  @include respond(small) {
+  @include respond(phone) {
     color: $color-red-pokemon;
 
     &:hover {
