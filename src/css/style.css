@@ -534,10 +534,12 @@ button {
   position: absolute;
   top: 46.9rem;
   margin-left: 2rem;
-  color: #fff; }
+  color: #fff;
+  font-size: 1.6rem; }
   @media (max-width: 37.5em) {
     .pokedex--types {
-      top: 23.8rem; } }
+      top: 23.8rem;
+      font-size: 1rem; } }
   .pokedex--types__0 {
     position: absolute;
     left: 46rem; }

@@ -3,9 +3,11 @@
   top: 46.9rem;
   margin-left: 2rem;
   color: $color-white;
+  font-size: 1.6rem;
 
   @include respond(phone) {
     top: 23.8rem;
+    font-size: 1rem;
   }
 
   &__0 {
