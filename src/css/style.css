@@ -533,17 +533,23 @@ button {
 .pokedex--types {
   position: absolute;
   top: 46.9rem;
-  margin-left: 20px;
-  color: white; }
+  margin-left: 2rem;
+  color: #fff; }
   @media (max-width: 37.5em) {
     .pokedex--types {
-      top: 5rem; } }
+      top: 23.8rem; } }
   .pokedex--types__0 {
     position: absolute;
     left: 46rem; }
+    @media (max-width: 37.5em) {
+      .pokedex--types__0 {
+        left: 22.3rem; } }
   .pokedex--types__1 {
     position: absolute;
     left: 59.5rem; }
+    @media (max-width: 37.5em) {
+      .pokedex--types__1 {
+        left: 28.9rem; } }
 
 * {
   margin: 0;

@@ -1,19 +1,27 @@
 .pokedex--types {
   position: absolute;
   top: 46.9rem;
-  margin-left: 20px;
-  color: white;
+  margin-left: 2rem;
+  color: $color-white;
 
   @include respond(phone) {
-    top: 5rem;
+    top: 23.8rem;
   }
 
   &__0 {
     position: absolute;
     left: 46rem;
+
+    @include respond(phone) {
+      left: 22.3rem;
+    }
   }
   &__1 {
     position: absolute;
     left: 59.5rem;
+
+    @include respond(phone) {
+      left: 28.9rem;
+    }
   }
 }
