@@ -3,6 +3,12 @@
   top: 46.4rem;
   left: 10rem;
 
+  @include respond(phone) {
+    top: 16.7rem;
+    left: 5rem;
+    font-size: 8rem;
+  }
+
   &__search {
     width: 7.8rem;
     background: none;
@@ -11,6 +17,11 @@
 
     &::placeholder {
       color: #555;
+    }
+
+    @include respond(phone) {
+      width: 3.5rem;
+      font-size: 0.8rem;
     }
   }
 
@@ -30,6 +41,12 @@
 
     &:active {
       transform: translateY(0);
+    }
+
+    @include respond(phone) {
+      height: 2rem;
+      width: 2rem;
+      font-size: 1.2rem;
     }
   }
 }

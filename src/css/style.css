@@ -272,6 +272,11 @@ button {
   position: absolute;
   top: 46.4rem;
   left: 10rem; }
+  @media (max-width: 37.5em) {
+    .pokedex--form {
+      top: 16.7rem;
+      left: 5rem;
+      font-size: 8rem; } }
   .pokedex--form__search {
     width: 7.8rem;
     background: none;
@@ -279,6 +284,10 @@ button {
     font-size: 1.6rem; }
     .pokedex--form__search::placeholder {
       color: #555; }
+    @media (max-width: 37.5em) {
+      .pokedex--form__search {
+        width: 3.5rem;
+        font-size: 0.8rem; } }
   .pokedex--form__button {
     background: #000;
     color: #fff;
@@ -292,6 +301,11 @@ button {
       transform: translateY(-1.5px) scale(1.01); }
     .pokedex--form__button:active {
       transform: translateY(0); }
+    @media (max-width: 37.5em) {
+      .pokedex--form__button {
+        height: 2rem;
+        width: 2rem;
+        font-size: 1.2rem; } }
 
 .pokedex--screen {
   display: flex;
