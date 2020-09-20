@@ -404,12 +404,23 @@ button {
   flex-flow: row wrap;
   width: 25rem;
   animation: fade-in 1s; }
+  @media (max-width: 37.5em) {
+    .pokedex--select {
+      top: 14.5rem;
+      left: 23.1rem;
+      width: 13rem; } }
   .pokedex--select__button {
     width: 4.75rem;
     height: 3.65rem;
     background: none;
     border: none;
     backface-visibility: hidden; }
+    @media (max-width: 37.5em) {
+      .pokedex--select__button {
+        font-size: 1rem;
+        width: 2.5rem;
+        height: 2rem;
+        font-size: 0.9rem; } }
 
 .tutorial {
   position: absolute;

@@ -7,11 +7,24 @@
   width: 25rem;
   animation: fade-in 1s;
 
+  @include respond(phone) {
+    top: 14.5rem;
+    left: 23.1rem;
+    width: 13rem;
+  }
+
   &__button {
     width: 4.75rem;
     height: 3.65rem;
     background: none;
     border: none;
     backface-visibility: hidden;
+
+    @include respond(phone) {
+      font-size: 1rem;
+      width: 2.5rem;
+      height: 2rem;
+      font-size: 0.9rem;
+    }
   }
 }
