@@ -111,12 +111,12 @@
     color: $color-white;
     z-index: 1;
     backface-visibility: hidden;
+    z-index: 999;
 
     @include respond(phone) {
       top: 16.9rem;
       left: 4.25rem;
       font-size: 1rem;
-      z-index: 999;
     }
   }
 
@@ -131,12 +131,12 @@
     border: none;
     color: $color-white;
     backface-visibility: hidden;
+    z-index: 999;
 
     @include respond(phone) {
       top: 18.5rem;
       left: 0.8rem;
       font-size: 1rem;
-      z-index: 999;
     }
   }
 
@@ -149,6 +149,7 @@
     color: $color-white;
     font-size: 4rem;
     backface-visibility: hidden;
+    z-index: 999;
 
     @include respond(phone) {
       top: 21.7rem;
@@ -166,6 +167,7 @@
     color: $color-white;
     font-size: 4rem;
     backface-visibility: hidden;
+    z-index: 999;
 
     @include respond(phone) {
       top: 21.7rem;
