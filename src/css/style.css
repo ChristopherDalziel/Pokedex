@@ -166,6 +166,9 @@ button {
       animation-duration: 1s;
       animation-name: lightSmall;
       animation-iteration-count: 2; }
+      @media (max-width: 37.5em) {
+        .pokedex--light__green {
+          display: none; } }
   .pokedex--shinyButton {
     position: absolute;
     left: 9.4rem;
@@ -210,6 +213,11 @@ button {
     color: #fff;
     font-size: 4rem;
     backface-visibility: hidden; }
+    @media (max-width: 37.5em) {
+      .pokedex--negativeButton {
+        top: 21rem;
+        left: 12.8rem;
+        font-size: 2rem; } }
   .pokedex--positiveButton {
     position: absolute;
     left: 30.8rem;
@@ -219,6 +227,11 @@ button {
     color: #fff;
     font-size: 4rem;
     backface-visibility: hidden; }
+    @media (max-width: 37.5em) {
+      .pokedex--positiveButton {
+        top: 21rem;
+        left: 15.8rem;
+        font-size: 2rem; } }
 
 .pokedex--data {
   position: absolute;

@@ -92,6 +92,10 @@
       animation-duration: 1s;
       animation-name: lightSmall;
       animation-iteration-count: 2;
+
+      @include respond(phone) {
+        display: none;
+      }
     }
   }
 
@@ -145,6 +149,12 @@
     color: $color-white;
     font-size: 4rem;
     backface-visibility: hidden;
+
+    @include respond(phone) {
+      top: 21rem;
+      left: 12.8rem;
+      font-size: 2rem;
+    }
   }
 
   &--positiveButton {
@@ -156,5 +166,11 @@
     color: $color-white;
     font-size: 4rem;
     backface-visibility: hidden;
+
+    @include respond(phone) {
+      top: 21rem;
+      left: 15.8rem;
+      font-size: 2rem;
+    }
   }
 }
