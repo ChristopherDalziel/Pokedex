@@ -274,9 +274,9 @@ button {
     backface-visibility: hidden; }
     @media (max-width: 37.5em) {
       .pokedex--data__abilities__button {
-        top: 20.4rem;
-        left: 23.4rem;
-        font-size: 0.6rem; } }
+        top: 20.5rem;
+        left: 23.45rem;
+        font-size: 0.5rem; } }
 
 .pokedex--form {
   position: absolute;
