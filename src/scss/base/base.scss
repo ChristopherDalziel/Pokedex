@@ -25,6 +25,7 @@ html {
   }
 
   @include respond(phone) {
+    // Removed REM usage here because it was causing issues on iOS v android
     font-size: 10px; // 1rem = 4.8px, 8/16 = 30% (For example now 40px will be 32px)
   }
 
