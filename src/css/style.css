@@ -217,7 +217,7 @@ button {
     z-index: 999; }
     @media (max-width: 37.5em) {
       .pokedex--negativeButton {
-        top: 21.2rem;
+        top: 20.9rem;
         left: 13rem;
         font-size: 2rem; } }
   .pokedex--positiveButton {
@@ -232,7 +232,7 @@ button {
     z-index: 999; }
     @media (max-width: 37.5em) {
       .pokedex--positiveButton {
-        top: 21.2rem;
+        top: 20.9rem;
         left: 15.56rem;
         font-size: 2rem; } }
 
