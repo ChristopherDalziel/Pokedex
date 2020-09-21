@@ -69,7 +69,7 @@ html {
       font-size: 50%; } }
   @media (max-width: 37.5em) {
     html {
-      font-size: 30%; } }
+      font-size: 10px; } }
   @media (min-width: 112.5em) {
     html {
       font-size: 75%; } }
@@ -98,7 +98,8 @@ button {
   @media (max-width: 37.5em) {
     .pokedex {
       position: absolute;
-      width: 40rem; } }
+      width: 40rem;
+      margin-top: 8rem; } }
   .pokedex--light {
     width: 5.8rem;
     height: 6rem;
@@ -184,7 +185,7 @@ button {
     z-index: 999; }
     @media (max-width: 37.5em) {
       .pokedex--shinyButton {
-        top: 16.9rem;
+        top: 16.8rem;
         left: 4.25rem;
         font-size: 1rem; } }
   .pokedex--onButton {
@@ -201,7 +202,7 @@ button {
     z-index: 999; }
     @media (max-width: 37.5em) {
       .pokedex--onButton {
-        top: 18.5rem;
+        top: 18.3rem;
         left: 0.8rem;
         font-size: 1rem; } }
   .pokedex--negativeButton {
@@ -216,8 +217,8 @@ button {
     z-index: 999; }
     @media (max-width: 37.5em) {
       .pokedex--negativeButton {
-        top: 21.7rem;
-        left: 13.3rem;
+        top: 21.2rem;
+        left: 13rem;
         font-size: 2rem; } }
   .pokedex--positiveButton {
     position: absolute;
@@ -231,8 +232,8 @@ button {
     z-index: 999; }
     @media (max-width: 37.5em) {
       .pokedex--positiveButton {
-        top: 21.7rem;
-        left: 15.9rem;
+        top: 21.2rem;
+        left: 15.56rem;
         font-size: 2rem; } }
 
 .pokedex--data {
@@ -249,7 +250,7 @@ button {
       top: 9.2rem;
       right: 1.7rem;
       width: 15rem;
-      font-size: 3.5px; } }
+      font-size: 4.4px; } }
   .pokedex--data__stats__button {
     position: absolute;
     top: 40.2rem;
@@ -285,7 +286,7 @@ button {
   left: 10rem; }
   @media (max-width: 37.5em) {
     .pokedex--form {
-      top: 20.5rem;
+      top: 16.55rem;
       left: 5rem;
       font-size: 8rem; } }
   .pokedex--form__search {
@@ -405,7 +406,7 @@ button {
     font-weight: 1000; }
     @media (max-width: 37.5em) {
       .pokedex--screen__pokeNumber {
-        font-size: 9rem;
+        font-size: 4.5rem;
         margin-left: 1.8rem; } }
 
 .pokedex--select {
