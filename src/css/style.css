@@ -247,10 +247,13 @@ button {
   animation: fade-in 1s; }
   @media (max-width: 37.5em) {
     .pokedex--data {
-      top: 9.2rem;
-      right: 1.7rem;
-      width: 15rem;
-      font-size: 4.4px; } }
+      top: 9.45rem;
+      right: 6.7rem;
+      width: 10rem;
+      height: 4.2rem;
+      font-size: 4.8px !important;
+      overflow: scroll;
+      border-radius: 3px; } }
   .pokedex--data__stats__button {
     position: absolute;
     top: 40.2rem;
