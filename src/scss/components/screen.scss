@@ -64,14 +64,14 @@
     width: 23.7rem;
     height: 15.8rem;
     position: absolute;
-    top: 16.9rem;
+    top: 17rem;
     left: 7.3rem;
     border-radius: 10px;
 
     @include respond(phone) {
       top: 8.65rem;
-      left: 3.65rem;
-      width: 12.2rem;
+      left: 4rem;
+      width: 11rem;
       height: 8rem;
       border-radius: 3px;
     }
@@ -83,6 +83,7 @@
     z-index: 998;
 
     @include respond(phone) {
+      width: 8rem;
       margin-left: 1rem;
     }
   }
