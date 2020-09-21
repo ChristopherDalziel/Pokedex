@@ -27,6 +27,7 @@
     top: 17rem;
     left: 7.3rem;
     border-radius: 10px;
+    z-index: 999;
 
     @include respond(phone) {
       top: 8.65rem;
@@ -50,6 +51,7 @@
     text-align: center;
     background-color: $color-white;
     padding: 5px;
+    z-index: 998;
 
     @include respond(phone) {
       top: 8.65rem;
@@ -80,7 +82,7 @@
   &__sprite {
     position: absolute;
     width: 12rem;
-    z-index: 998;
+    z-index: 997;
 
     @include respond(phone) {
       width: 8rem;

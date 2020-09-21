@@ -348,7 +348,8 @@ button {
     position: absolute;
     top: 17rem;
     left: 7.3rem;
-    border-radius: 10px; }
+    border-radius: 10px;
+    z-index: 999; }
     @media (max-width: 37.5em) {
       .pokedex--screen__off {
         top: 8.65rem;
@@ -368,7 +369,8 @@ button {
     height: 15.8rem;
     text-align: center;
     background-color: #fff;
-    padding: 5px; }
+    padding: 5px;
+    z-index: 998; }
     @media (max-width: 37.5em) {
       .pokedex--screen__error {
         top: 8.65rem;
@@ -393,7 +395,7 @@ button {
   .pokedex--screen__sprite {
     position: absolute;
     width: 12rem;
-    z-index: 998; }
+    z-index: 997; }
     @media (max-width: 37.5em) {
       .pokedex--screen__sprite {
         width: 8rem;

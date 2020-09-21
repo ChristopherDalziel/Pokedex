@@ -14,6 +14,11 @@ I finalized my app hosting using `Firebase`, a service that I had not previously
 
 ![Tutorial](__README__ASSETS/pokedex-tut.png)
 
+# Updated and Mobile View
+
+![Mobile view](__README__ASSETS/pokedex-mob.png)
+![Updated scss/media queries](__README__ASSETS/pokedex-update.png)
+
 # API
 
 [Pokèmon API](https://pokeapi.co/docs/v2)
