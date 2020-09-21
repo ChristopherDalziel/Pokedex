@@ -23,8 +23,8 @@
 
   &--power {
     position: absolute;
-    top: 52rem;
-    left: 17.5rem;
+    top: 44.7rem;
+    left: 16.5rem;
     background: #03ac5e;
     display: inline-block;
     padding: 5px 10px;
@@ -34,11 +34,20 @@
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     animation: fade-in 1s;
+
+    @include respond(tab-land) {
+      left: 10rem;
+    }
+
+    @include respond(tab-port) {
+      top: 44.5rem;
+      left: 1.5rem;
+    }
   }
 
   &--shiny {
     position: absolute;
-    top: 46.6rem;
+    top: 39rem;
     left: 15rem;
     background: $color-white;
     display: inline-block;
@@ -49,11 +58,19 @@
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     animation: fade-in 1s;
+
+    @include respond(tab-land) {
+      left: 8rem;
+    }
+
+    @include respond(tab-port) {
+      left: 0.5rem;
+    }
   }
 
   &--search {
     position: absolute;
-    top: 59rem;
+    top: 51rem;
     left: 17rem;
     background: $color-white;
     display: inline-block;
@@ -64,11 +81,20 @@
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     animation: fade-in 1s;
+
+    @include respond(tab-land) {
+      top: 51.2rem;
+      left: 12rem;
+    }
+
+    @include respond(tab-port) {
+      left: 0.5rem;
+    }
   }
 
   &--plusMinus {
     position: absolute;
-    top: 55.3rem;
+    top: 34em;
     right: 54rem;
     background: $color-white;
     display: inline-block;
@@ -79,11 +105,19 @@
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     animation: fade-in 1s;
+
+    @include respond(tab-land) {
+      right: 49rem;
+    }
+
+    @include respond(tab-port) {
+      right: 38rem;
+    }
   }
 
   &--selection {
     position: absolute;
-    top: 43.5rem;
+    top: 35.9rem;
     right: 12.5rem;
     background: $color-white;
     display: inline-block;
@@ -94,11 +128,19 @@
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     animation: fade-in 1s;
+
+    @include respond(tab-land) {
+      right: 8rem;
+    }
+
+    @include respond(tab-port) {
+      right: 0;
+    }
   }
 
   &--statsAbilities {
     position: absolute;
-    top: 52rem;
+    top: 44.4rem;
     right: 30rem;
     background: $color-white;
     display: inline-block;
@@ -109,5 +151,13 @@
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     animation: fade-in 1s;
+
+    @include respond(tab-land) {
+      right: 25rem;
+    }
+
+    @include respond(tab-port) {
+      right: 14rem;
+    }
   }
 }

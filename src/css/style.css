@@ -460,8 +460,8 @@ button {
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75); }
   .tutorial--power {
     position: absolute;
-    top: 52rem;
-    left: 17.5rem;
+    top: 44.7rem;
+    left: 16.5rem;
     background: #03ac5e;
     display: inline-block;
     padding: 5px 10px;
@@ -471,9 +471,16 @@ button {
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     animation: fade-in 1s; }
+    @media (max-width: 75em) {
+      .tutorial--power {
+        left: 10rem; } }
+    @media (max-width: 56.25em) {
+      .tutorial--power {
+        top: 44.5rem;
+        left: 1.5rem; } }
   .tutorial--shiny {
     position: absolute;
-    top: 46.6rem;
+    top: 39rem;
     left: 15rem;
     background: #fff;
     display: inline-block;
@@ -484,9 +491,15 @@ button {
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     animation: fade-in 1s; }
+    @media (max-width: 75em) {
+      .tutorial--shiny {
+        left: 8rem; } }
+    @media (max-width: 56.25em) {
+      .tutorial--shiny {
+        left: 0.5rem; } }
   .tutorial--search {
     position: absolute;
-    top: 59rem;
+    top: 51rem;
     left: 17rem;
     background: #fff;
     display: inline-block;
@@ -497,9 +510,16 @@ button {
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     animation: fade-in 1s; }
+    @media (max-width: 75em) {
+      .tutorial--search {
+        top: 51.2rem;
+        left: 12rem; } }
+    @media (max-width: 56.25em) {
+      .tutorial--search {
+        left: 0.5rem; } }
   .tutorial--plusMinus {
     position: absolute;
-    top: 55.3rem;
+    top: 34em;
     right: 54rem;
     background: #fff;
     display: inline-block;
@@ -510,9 +530,15 @@ button {
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     animation: fade-in 1s; }
+    @media (max-width: 75em) {
+      .tutorial--plusMinus {
+        right: 49rem; } }
+    @media (max-width: 56.25em) {
+      .tutorial--plusMinus {
+        right: 38rem; } }
   .tutorial--selection {
     position: absolute;
-    top: 43.5rem;
+    top: 35.9rem;
     right: 12.5rem;
     background: #fff;
     display: inline-block;
@@ -523,9 +549,15 @@ button {
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     animation: fade-in 1s; }
+    @media (max-width: 75em) {
+      .tutorial--selection {
+        right: 8rem; } }
+    @media (max-width: 56.25em) {
+      .tutorial--selection {
+        right: 0; } }
   .tutorial--statsAbilities {
     position: absolute;
-    top: 52rem;
+    top: 44.4rem;
     right: 30rem;
     background: #fff;
     display: inline-block;
@@ -536,6 +568,12 @@ button {
     -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
     animation: fade-in 1s; }
+    @media (max-width: 75em) {
+      .tutorial--statsAbilities {
+        right: 25rem; } }
+    @media (max-width: 56.25em) {
+      .tutorial--statsAbilities {
+        right: 14rem; } }
 
 .pokedex--types {
   position: absolute;
